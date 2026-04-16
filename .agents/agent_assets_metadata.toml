@@ -1,0 +1,44 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "mapjt3OQFIhVohHuVux4j"
+uri = "file://artifacts/finutility/public/images/hero-dashboard.png"
+type = "image"
+title = "Modern financial dashboard illustration"
+
+[[generated]]
+id = "FRDQasRHChjWG7SYaJEz8"
+uri = "file://artifacts/finutility/public/images/compound-interest.png"
+type = "image"
+title = "Compound interest growing plant"
+
+[[generated]]
+id = "x8jRuVeZwJpnG4k_wKeVM"
+uri = "file://artifacts/finutility/public/images/mortgage.png"
+type = "image"
+title = "Modern suburban house exterior"
+
+[[generated]]
+id = "DtVfbOzhjMbE1SPGXTl_x"
+uri = "file://artifacts/finutility/public/images/loan.png"
+type = "image"
+title = "Handshake over financial documents"
+
+[[generated]]
+id = "ywsowW8NA-6Giyba1c8rc"
+uri = "file://artifacts/finutility/public/images/currency.png"
+type = "image"
+title = "Global currency symbols floating"
+
+[[generated]]
+id = "eWBcXj49kX0kPLgHxS3f0"
+uri = "file://artifacts/finutility/public/images/crypto.png"
+type = "image"
+title = "Glowing crypto coins"
+
+[[generated]]
+id = "jSxLnl_RDv_JD3ZIjS2uJ"
+uri = "file://artifacts/finutility/public/images/savings.png"
+type = "image"
+title = "Savings jar with house"
