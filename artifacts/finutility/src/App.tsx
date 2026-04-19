@@ -16,6 +16,7 @@ import CurrencyConverter from "@/pages/currency-converter";
 import CryptoProfitCalculator from "@/pages/crypto-profit";
 import SavingsGoalCalculator from "@/pages/savings-goal";
 
+import NewsPage from "@/pages/news";
 import ArticlePage from "@/pages/article";
 import LegalPage from "@/pages/legal";
 import ContactPage from "@/pages/contact";
@@ -39,6 +40,8 @@ function Router() {
       <Route path="/crypto-profit-calculator" component={CryptoProfitCalculator} />
       <Route path="/savings-goal-calculator" component={SavingsGoalCalculator} />
       
+      <Route path="/news" component={NewsPage} />
+
       {/* Educational Articles (reusing a generic article template for MVP) */}
       <Route path="/what-is-compound-interest" component={ArticlePage} />
       <Route path="/how-compound-interest-works" component={ArticlePage} />

@@ -1,20 +1,73 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import { useLocation } from "wouter";
-import { Search, Calculator, Home, Briefcase, Bitcoin, PiggyBank, DollarSign, TrendingUp, CheckCircle2, Star, ArrowRight } from "lucide-react";
+import { Search, Home, Briefcase, Bitcoin, PiggyBank, DollarSign, TrendingUp, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AdPlaceholder } from "@/components/AdPlaceholder";
+import { AIBar } from "@/components/AIBar";
 import { ToolCard } from "@/components/ToolCard";
 import { CategoryCard } from "@/components/CategoryCard";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { parseNaturalLanguage } from "@/lib/nlParser";
 import { motion } from "framer-motion";
+import heroBackground from "@assets/Landing7.jpeg";
+import heroDashboard from "@assets/Landing62.jpeg";
+import step1Image from "@assets/Landing47.jpeg";
+import step2Image from "@assets/Landing66.jpeg";
+import step3Image from "@assets/Landing6.jpeg";
+import articleCompound from "@assets/Landing41.jpeg";
+import articleMortgage from "@assets/Landing37.jpeg";
+import articleCrypto from "@assets/Crypto3.jpeg";
+import categoryFinance from "@assets/Landing41.jpeg";
+import categoryCrypto from "@assets/Crypto3.jpeg";
+import categoryLoans from "@assets/Landing37.jpeg";
+import toolSavings from "@assets/Landing39.jpeg";
+import toolCurrency from "@assets/Landing7.jpeg";
+import carouselImg1 from "@assets/Landing62.jpeg";
+import carouselImg2 from "@assets/Crypto3.jpeg";
+import carouselImg3 from "@assets/Landing15.jpeg";
+import carouselImg4 from "@assets/Landing14.jpeg";
+import carouselImg5 from "@assets/Landing22.jpeg";
+import carouselImg6 from "@assets/Landing49.jpeg";
+import carouselImg7 from "@assets/Landing47.jpeg";
+import carouselImg8 from "@assets/Landing48.jpeg";
+import carouselImg9 from "@assets/Landing65.jpeg";
+import carouselImg10 from "@assets/Landing67.jpeg";
+
+const carouselImages = [
+  { src: carouselImg1, label: "Finance Dashboard", message: "Your wealth, visualized.", gradient: "from-emerald-300 to-cyan-300" },
+  { src: carouselImg2, label: "Crypto Trading", message: "Trade smarter with real data.", gradient: "from-fuchsia-300 to-violet-300" },
+  { src: carouselImg3, label: "Personal Finance App", message: "Your money, your rules.", gradient: "from-blue-300 to-indigo-300" },
+  { src: carouselImg4, label: "Investment Dashboard", message: "Smart investments start here.", gradient: "from-orange-300 to-amber-300" },
+  { src: carouselImg5, label: "Global Currency", message: "Convert anything, instantly.", gradient: "from-cyan-300 to-sky-300" },
+  { src: carouselImg6, label: "Smart Financial Tools", message: "AI-powered financial clarity.", gradient: "from-violet-300 to-pink-300" },
+  { src: carouselImg7, label: "Data Analysis", message: "Visualize your wealth journey.", gradient: "from-lime-300 to-emerald-300" },
+  { src: carouselImg8, label: "Market Trading", message: "Master the market.", gradient: "from-rose-300 to-orange-300" },
+  { src: carouselImg9, label: "Mortgage Calculator", message: "Own your dream home.", gradient: "from-indigo-300 to-blue-300" },
+  { src: carouselImg10, label: "Loan Breakdown", message: "Break down every payment.", gradient: "from-teal-300 to-cyan-300" },
+];
 
 export default function HomePage() {
   const [, setLocation] = useLocation();
   const [query, setQuery] = useState("");
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center" });
+  const [carouselIndex, setCarouselIndex] = useState(0);
+
+  const scrollCarouselTo = useCallback((index: number) => emblaApi?.scrollTo(index), [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setCarouselIndex(emblaApi.selectedScrollSnap());
+    emblaApi.on("select", onSelect);
+    const timer = setInterval(() => emblaApi.scrollNext(), 3500);
+    return () => {
+      emblaApi.off("select", onSelect);
+      clearInterval(timer);
+    };
+  }, [emblaApi]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -56,8 +109,10 @@ export default function HomePage() {
       <main className="flex-1">
         {/* Section 1: Hero */}
         <section className="relative overflow-hidden bg-slate-950 pt-24 pb-32">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 z-0"></div>
-          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-0"></div>
+          <div className="absolute inset-0 z-0">
+            <img src={heroBackground} alt="" className="w-full h-full object-cover object-center" />
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-blue-950/80 to-slate-900/85"></div>
+          </div>
           
           <div className="container mx-auto px-4 md:px-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -125,7 +180,7 @@ export default function HomePage() {
               >
                 <div className="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full"></div>
                 <img 
-                  src="/images/hero-dashboard.png" 
+                  src={heroDashboard}
                   alt="Modern financial dashboard UI mockup" 
                   className="relative z-10 w-full max-w-lg mx-auto rounded-2xl shadow-2xl shadow-black/50 border border-white/10"
                 />
@@ -161,8 +216,19 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* AI Bar */}
+        <AIBar
+          placeholder="Ask anything about your finances, e.g. 'Compound interest on $10k at 5% for 20 years'"
+          suggestions={[
+            "What is compound interest?",
+            "How much mortgage can I afford on $80k salary?",
+            "Calculate crypto profit on $5,000 investment",
+            "Best savings rate for $50k over 10 years?",
+          ]}
+        />
+
         {/* Section 2: Trust Strip */}
-        <section className="bg-slate-50 border-b border-slate-200 py-12">
+        <section className="bg-slate-50 border-b border-slate-200 py-6">
           <div className="container mx-auto px-4 md:px-8">
             <motion.div 
               variants={containerVariants}
@@ -191,6 +257,13 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Ad above Featured Calculators */}
+        <div className="bg-white px-4 pt-4 pb-0">
+          <div className="container mx-auto px-4 md:px-8">
+            <AdPlaceholder />
+          </div>
+        </div>
+
         {/* Section 3: Featured Calculators */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4 md:px-8">
@@ -212,6 +285,8 @@ export default function HomePage() {
                   description="See how your money can grow exponentially over time with regular contributions."
                   href="/compound-interest-calculator"
                   icon={<TrendingUp className="h-7 w-7" />}
+                  backgroundImage={articleCompound}
+                  titleGradient="from-emerald-300 to-teal-300"
                 />
               </motion.div>
               <motion.div variants={itemVariants}>
@@ -220,6 +295,8 @@ export default function HomePage() {
                   description="Estimate your monthly mortgage payments including taxes, insurance, and HOA."
                   href="/mortgage-calculator"
                   icon={<Home className="h-7 w-7" />}
+                  backgroundImage={articleMortgage}
+                  titleGradient="from-blue-300 to-indigo-300"
                 />
               </motion.div>
               <motion.div variants={itemVariants}>
@@ -228,6 +305,8 @@ export default function HomePage() {
                   description="Calculate your monthly payments, total interest, and payoff timeline for any loan."
                   href="/loan-payment-calculator"
                   icon={<Briefcase className="h-7 w-7" />}
+                  backgroundImage={step2Image}
+                  titleGradient="from-orange-300 to-amber-300"
                 />
               </motion.div>
               <motion.div variants={itemVariants}>
@@ -236,6 +315,8 @@ export default function HomePage() {
                   description="Check exchange rates and convert between over 20 global currencies instantly."
                   href="/currency-converter"
                   icon={<DollarSign className="h-7 w-7" />}
+                  backgroundImage={toolCurrency}
+                  titleGradient="from-cyan-300 to-sky-300"
                 />
               </motion.div>
               <motion.div variants={itemVariants}>
@@ -244,6 +325,8 @@ export default function HomePage() {
                   description="Calculate your net profit, ROI, and break-even price for cryptocurrency trades."
                   href="/crypto-profit-calculator"
                   icon={<Bitcoin className="h-7 w-7" />}
+                  backgroundImage={articleCrypto}
+                  titleGradient="from-fuchsia-300 to-violet-300"
                 />
               </motion.div>
               <motion.div variants={itemVariants}>
@@ -252,17 +335,56 @@ export default function HomePage() {
                   description="Find out exactly how much you need to save monthly to reach your financial target."
                   href="/savings-goal-calculator"
                   icon={<PiggyBank className="h-7 w-7" />}
+                  backgroundImage={toolSavings}
+                  titleGradient="from-lime-300 to-emerald-300"
                 />
               </motion.div>
             </motion.div>
             
-            <div className="mt-16 text-center">
-              <AdPlaceholder />
-            </div>
           </div>
         </section>
 
-        {/* Section 4: How It Works */}
+        {/* Section 4: Image Carousel */}
+        <section className="py-24 bg-slate-900 overflow-hidden">
+          <div className="container mx-auto px-4 md:px-8 mb-12 text-center">
+            <h2 className="text-4xl font-black text-white mb-4">Built for Every Financial Need</h2>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">Powerful tools designed for real-world financial decisions.</p>
+          </div>
+
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-4 px-8">
+              {carouselImages.map((img, i) => (
+                <div
+                  key={i}
+                  className="relative shrink-0 w-[85vw] md:w-[55vw] lg:w-[40vw] rounded-2xl overflow-hidden shadow-2xl cursor-pointer transition-all duration-500"
+                  style={{ opacity: i === carouselIndex ? 1 : 0.45, transform: i === carouselIndex ? "scale(1)" : "scale(0.93)" }}
+                  onClick={() => scrollCarouselTo(i)}
+                >
+                  <img src={img.src} alt={img.label} className="w-full h-64 md:h-80 object-cover" />
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-slate-900/30 to-transparent"></div>
+                  <div className="absolute inset-0 flex flex-col justify-end p-6 gap-2">
+                    <p className={`text-2xl font-black text-transparent bg-clip-text bg-linear-to-r ${img.gradient} leading-tight drop-shadow-lg`}>
+                      {img.message}
+                    </p>
+                    <span className="text-white/70 font-medium text-sm bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20 w-fit">{img.label}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex justify-center gap-2 mt-8">
+            {carouselImages.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => scrollCarouselTo(i)}
+                className={`h-2 rounded-full transition-all duration-300 ${i === carouselIndex ? "w-8 bg-blue-400" : "w-2 bg-slate-600 hover:bg-slate-400"}`}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* Section 5: How It Works */}
         <section className="py-24 bg-slate-50 overflow-hidden">
           <div className="container mx-auto px-4 md:px-8">
             <div className="text-center mb-20">
@@ -302,8 +424,8 @@ export default function HomePage() {
                 </div>
                 <div className="w-full md:w-1/2 order-1 md:order-2">
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                    <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay"></div>
-                    <img src="/images/hero-dashboard.png" alt="Person typing on laptop" className="w-full h-auto object-cover scale-110" />
+                    <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay z-10"></div>
+                    <img src={step1Image} alt="Person reviewing financial data on laptop" className="w-full h-72 md:h-96 object-cover object-center" />
                   </div>
                 </div>
               </motion.div>
@@ -317,18 +439,8 @@ export default function HomePage() {
                 className="flex flex-col md:flex-row items-center gap-12 lg:gap-20"
               >
                 <div className="w-full md:w-1/2">
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl p-8 bg-white border border-slate-100">
-                    {/* Mock chart illustration */}
-                    <div className="flex items-end gap-2 h-48 mb-6">
-                      <div className="w-1/6 bg-blue-100 rounded-t-sm h-1/6"></div>
-                      <div className="w-1/6 bg-blue-200 rounded-t-sm h-2/6"></div>
-                      <div className="w-1/6 bg-blue-300 rounded-t-sm h-3/6"></div>
-                      <div className="w-1/6 bg-blue-400 rounded-t-sm h-4/6"></div>
-                      <div className="w-1/6 bg-blue-500 rounded-t-sm h-5/6"></div>
-                      <div className="w-1/6 bg-blue-600 rounded-t-sm h-full"></div>
-                    </div>
-                    <div className="h-4 bg-slate-100 rounded w-full mb-3"></div>
-                    <div className="h-4 bg-slate-100 rounded w-2/3"></div>
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <img src={step2Image} alt="Loan calculator with visual breakdown" className="w-full h-72 md:h-96 object-cover object-top" />
                   </div>
                 </div>
                 <div className="w-full md:w-1/2">
@@ -364,7 +476,7 @@ export default function HomePage() {
               >
                 <div className="w-full md:w-1/2 order-2 md:order-1">
                   <div className="h-12 w-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">3</div>
-                  <h3 className="text-3xl font-bold text-slate-900 mb-4">Understand with AI insights</h3>
+                  <h3 className="text-3xl font-bold text-slate-900 mb-4">Understand with Financial Insights</h3>
                   <p className="text-lg text-slate-600 leading-relaxed mb-6">
                     Raw numbers aren't enough. Our AI analyzes your specific calculation to provide contextual advice, highlighting risks and opportunities.
                   </p>
@@ -384,27 +496,22 @@ export default function HomePage() {
                   </ul>
                 </div>
                 <div className="w-full md:w-1/2 order-1 md:order-2">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-xl border border-blue-100">
-                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="h-8 w-8 bg-blue-100 rounded-full flex items-center justify-center">
-                          <span className="text-blue-600 font-bold">AI</span>
-                        </div>
-                        <div className="font-bold text-slate-900">AI Insight</div>
-                      </div>
-                      <div className="space-y-3">
-                        <div className="h-3 bg-slate-100 rounded w-full"></div>
-                        <div className="h-3 bg-slate-100 rounded w-11/12"></div>
-                        <div className="h-3 bg-slate-100 rounded w-full"></div>
-                        <div className="h-3 bg-slate-100 rounded w-4/5"></div>
-                      </div>
-                    </div>
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <img src={step3Image} alt="AI-powered financial insights" className="w-full h-72 md:h-96 object-cover object-center" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent"></div>
                   </div>
                 </div>
               </motion.div>
             </div>
           </div>
         </section>
+
+        {/* Ad above Explore Categories */}
+        <div className="bg-white px-4 pt-10 pb-0">
+          <div className="container mx-auto px-4 md:px-8">
+            <AdPlaceholder />
+          </div>
+        </div>
 
         {/* Section 5: Category Explorer */}
         <section className="py-24 bg-white">
@@ -432,7 +539,9 @@ export default function HomePage() {
                   description="Wealth building, savings goals, and compound interest."
                   href="/finance"
                   icon={<TrendingUp className="h-8 w-8" />}
-                  colorClass="text-emerald-600 bg-emerald-100 shadow-emerald-500/20"
+                  colorClass="text-emerald-400 bg-emerald-500/20 shadow-emerald-500/20"
+                  backgroundImage={categoryFinance}
+                  titleGradient="from-emerald-300 to-teal-300"
                 />
               </motion.div>
               <motion.div variants={itemVariants} className="h-full">
@@ -441,7 +550,9 @@ export default function HomePage() {
                   description="Trading profits, ROI calculators, and conversion tools."
                   href="/crypto"
                   icon={<Bitcoin className="h-8 w-8" />}
-                  colorClass="text-orange-500 bg-orange-100 shadow-orange-500/20"
+                  colorClass="text-fuchsia-400 bg-fuchsia-500/20 shadow-fuchsia-500/20"
+                  backgroundImage={categoryCrypto}
+                  titleGradient="from-fuchsia-300 to-violet-300"
                 />
               </motion.div>
               <motion.div variants={itemVariants} className="h-full">
@@ -450,7 +561,9 @@ export default function HomePage() {
                   description="Mortgages, auto loans, and debt payoff planning."
                   href="/loans"
                   icon={<Home className="h-8 w-8" />}
-                  colorClass="text-indigo-600 bg-indigo-100 shadow-indigo-500/20"
+                  colorClass="text-blue-400 bg-blue-500/20 shadow-blue-500/20"
+                  backgroundImage={categoryLoans}
+                  titleGradient="from-blue-300 to-indigo-300"
                 />
               </motion.div>
             </motion.div>
@@ -469,11 +582,9 @@ export default function HomePage() {
               {/* Article 1 */}
               <a href="/what-is-compound-interest" className="group block h-full">
                 <div className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 transition-all duration-300 group-hover:border-blue-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
-                  <div className="h-48 bg-gradient-to-br from-emerald-900 to-slate-800 relative">
-                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
-                    <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:opacity-50 transition-opacity">
-                      <TrendingUp className="h-20 w-20 text-emerald-400" />
-                    </div>
+                  <div className="h-48 relative overflow-hidden">
+                    <img src={articleCompound} alt="Growing plants on stacked coins representing compound interest" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-800/80 via-slate-800/20 to-transparent"></div>
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3">Investing • 5 min read</div>
@@ -486,11 +597,9 @@ export default function HomePage() {
               {/* Article 2 */}
               <a href="/how-to-calculate-mortgage-payments" className="group block h-full">
                 <div className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 transition-all duration-300 group-hover:border-blue-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
-                  <div className="h-48 bg-gradient-to-br from-indigo-900 to-slate-800 relative">
-                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
-                    <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:opacity-50 transition-opacity">
-                      <Home className="h-20 w-20 text-indigo-400" />
-                    </div>
+                  <div className="h-48 relative overflow-hidden">
+                    <img src={articleMortgage} alt="House model with calculator and keys" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-800/80 via-slate-800/20 to-transparent"></div>
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-3">Real Estate • 8 min read</div>
@@ -503,11 +612,9 @@ export default function HomePage() {
               {/* Article 3 */}
               <a href="/crypto-profit-vs-loss-explained" className="group block h-full">
                 <div className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 transition-all duration-300 group-hover:border-blue-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
-                  <div className="h-48 bg-gradient-to-br from-orange-900 to-slate-800 relative">
-                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
-                    <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:opacity-50 transition-opacity">
-                      <Bitcoin className="h-20 w-20 text-orange-400" />
-                    </div>
+                  <div className="h-48 relative overflow-hidden">
+                    <img src={articleCrypto} alt="Crypto trading dashboard" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-800/80 via-slate-800/20 to-transparent"></div>
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="text-xs font-bold uppercase tracking-wider text-orange-400 mb-3">Crypto • 6 min read</div>
@@ -520,71 +627,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Section 7: Testimonials */}
-        <section className="py-24 bg-slate-50">
-          <div className="container mx-auto px-4 md:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-black text-slate-900 mb-4">Loved by Smart Planners</h2>
-              <p className="text-lg text-slate-500 max-w-2xl mx-auto">See how people use our tools to make life-changing financial decisions.</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
-                <div className="flex text-amber-400 mb-4">
-                  <Star className="h-5 w-5 fill-current" />
-                  <Star className="h-5 w-5 fill-current" />
-                  <Star className="h-5 w-5 fill-current" />
-                  <Star className="h-5 w-5 fill-current" />
-                  <Star className="h-5 w-5 fill-current" />
-                </div>
-                <p className="text-slate-700 leading-relaxed mb-6 italic">"I used the mortgage calculator to confirm I could actually afford my first home. The breakdown of taxes and insurance gave me the confidence to make an offer. Way better than the basic bank calculators."</p>
-                <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500">SM</div>
-                  <div>
-                    <div className="font-bold text-slate-900">Sarah M.</div>
-                    <div className="text-sm text-slate-500">First-time Homebuyer</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
-                <div className="flex text-amber-400 mb-4">
-                  <Star className="h-5 w-5 fill-current" />
-                  <Star className="h-5 w-5 fill-current" />
-                  <Star className="h-5 w-5 fill-current" />
-                  <Star className="h-5 w-5 fill-current" />
-                  <Star className="h-5 w-5 fill-current" />
-                </div>
-                <p className="text-slate-700 leading-relaxed mb-6 italic">"The AI insights on the compound interest tool blew my mind. It showed me that just adding $50 more per month would shave 3 years off my retirement goal. I updated my auto-transfer that same day."</p>
-                <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500">JD</div>
-                  <div>
-                    <div className="font-bold text-slate-900">James D.</div>
-                    <div className="text-sm text-slate-500">Retail Investor</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative">
-                <div className="flex text-amber-400 mb-4">
-                  <Star className="h-5 w-5 fill-current" />
-                  <Star className="h-5 w-5 fill-current" />
-                  <Star className="h-5 w-5 fill-current" />
-                  <Star className="h-5 w-5 fill-current" />
-                  <Star className="h-5 w-5 fill-current" />
-                </div>
-                <p className="text-slate-700 leading-relaxed mb-6 italic">"The natural language search is incredible. I literally just typed 'loan of 15k at 8% for 4 years' and boom—there was my amortization table. Fast, clean, and exactly what I needed."</p>
-                <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500">ML</div>
-                  <div>
-                    <div className="font-bold text-slate-900">Marcus L.</div>
-                    <div className="text-sm text-slate-500">Small Business Owner</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Section 7: Image Carousel — placeholder, moved above */}
 
         {/* Section 8: CTA Banner */}
         <section className="py-24 relative overflow-hidden">

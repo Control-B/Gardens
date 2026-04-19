@@ -14,7 +14,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Button } from "@/components/ui/button";
 import { MOCK_RATES } from "@/lib/calculators";
 import { generateCurrencyInsight } from "@/lib/aiInsights";
-import { Search, ArrowRightLeft, Zap, Clock, ShieldCheck, DollarSign, Bitcoin } from "lucide-react";
+import { Search, ArrowRightLeft, Zap, Clock, ShieldCheck, DollarSign, Bitcoin, TrendingUp } from "lucide-react";
 import { parseNaturalLanguage } from "@/lib/nlParser";
 import { motion } from "framer-motion";
 
@@ -104,7 +104,7 @@ export default function CurrencyConverter() {
                     <Zap className="h-4 w-4 text-yellow-400" /> Instant results
                   </div>
                   <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium">
-                    <Clock className="h-4 w-4 text-blue-400" /> AI-powered insights
+                    <Clock className="h-4 w-4 text-blue-400" /> Financial Insights
                   </div>
                   <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium">
                     <ShieldCheck className="h-4 w-4 text-green-400" /> Free forever

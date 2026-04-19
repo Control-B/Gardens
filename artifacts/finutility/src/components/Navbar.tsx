@@ -8,12 +8,11 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { label: "Home", href: "/" },
+    { label: "Solutions", href: "/" },
     { label: "Finance", href: "/finance" },
     { label: "Crypto", href: "/crypto" },
     { label: "Loans", href: "/loans" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
+    { label: "News", href: "/news" },
   ];
 
   return (
@@ -26,8 +25,8 @@ export function Navbar() {
           <span className="text-xl font-bold text-foreground">FinUtility <span className="text-primary text-sm font-semibold">AI</span></span>
         </Link>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-6">
+        {/* Desktop Nav — centered */}
+        <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -40,6 +39,10 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
+        </div>
+
+        {/* CTA stays right-aligned */}
+        <div className="hidden md:flex">
           <Button size="sm" asChild>
             <Link href="/compound-interest-calculator" data-testid="link-nav-cta">Start Calculating</Link>
           </Button>
@@ -67,7 +70,7 @@ export function Navbar() {
               className={`text-base font-medium py-2 transition-colors hover:text-primary ${
                 location === link.href ? "text-primary" : "text-muted-foreground"
               }`}
-              data-testid={`link-mobile-nav-${link.label.toLowerCase()}`}
+              data-testid={`link-mobile-nav-${link.label.toLowerCase().replace(" ", "-")}`}
             >
               {link.label}
             </Link>

@@ -18,7 +18,7 @@ export default function LegalPage() {
               The information and calculators provided on FinUtility AI are for educational and informational purposes only. They do not constitute financial, legal, tax, or investment advice. 
             </p>
             <p>
-              While we strive to ensure the accuracy of our mathematical models, FinUtility AI makes no guarantees regarding the accuracy, completeness, or applicability of any calculations to your specific situation. The AI insights provided are generated based on deterministic logic and should not be interpreted as personalized financial advice.
+              While we strive to ensure the accuracy of our mathematical models, FinUtility AI makes no guarantees regarding the accuracy, completeness, or applicability of any calculations to your specific situation. The financial insights provided are generated based on your calculator inputs and publicly available market data, and should not be interpreted as personalized financial advice.
             </p>
             <p>
               Always consult with a qualified financial professional, CPA, or registered investment advisor before making significant financial decisions.
@@ -34,7 +34,7 @@ export default function LegalPage() {
 
             <h2 className="text-foreground">Terms of Use</h2>
             <p>
-              By using FinUtility AI, you agree to use the site for personal, non-commercial purposes. You may not scrape, copy, or reverse-engineer our proprietary calculators or AI insight logic without explicit permission.
+              By using FinUtility AI, you agree to use the site for personal, non-commercial purposes. You may not scrape, copy, or reverse-engineer our proprietary calculators or insight logic without explicit permission.
             </p>
           </div>
         </div>

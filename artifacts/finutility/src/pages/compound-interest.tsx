@@ -93,7 +93,7 @@ export default function CompoundInterestCalculator() {
                     <Zap className="h-4 w-4 text-yellow-400" /> Instant results
                   </div>
                   <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium">
-                    <Clock className="h-4 w-4 text-blue-400" /> AI-powered insights
+                    <Clock className="h-4 w-4 text-blue-400" /> Financial Insights
                   </div>
                   <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium">
                     <ShieldCheck className="h-4 w-4 text-green-400" /> Free forever

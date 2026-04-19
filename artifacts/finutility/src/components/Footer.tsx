@@ -14,7 +14,7 @@ export function Footer() {
               <span className="text-xl font-bold text-white">FinUtility <span className="text-primary text-sm font-semibold">AI</span></span>
             </Link>
             <p className="text-sm text-slate-400 mb-6 leading-relaxed pr-4">
-              Your smart financial hub. We provide free, fast, and secure tools to help you calculate your future, manage debt, and analyze investments with AI-powered insights.
+              Your smart financial hub. We provide free, fast, and secure tools to help you calculate your future, manage debt, and analyze investments with data-driven financial insights.
             </p>
           </div>
           
