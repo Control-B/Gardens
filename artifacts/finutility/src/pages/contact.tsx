@@ -38,13 +38,13 @@ export default function ContactPage() {
           <div className="mx-auto max-w-2xl">
             <h1 className="text-4xl font-black text-foreground mb-4 text-center">Contact Us</h1>
             <p className="text-lg text-muted-foreground text-center mb-12">
-              Have a question, feedback, or a feature request? We’d love to hear from you at support@omniweb.ai.
+              Have a question, feedback, or a feature request? We’d love to hear from you at support@gardens.ai.
             </p>
           </div>
 
           <div className="mx-auto max-w-2xl bg-white p-8 rounded-xl border border-border shadow-sm">
             <div className="mb-6 rounded-lg bg-slate-50 border border-slate-200 px-4 py-3 text-sm text-slate-600">
-              Prefer email? Reach us directly at <a href="mailto:support@omniweb.ai" className="font-semibold text-primary hover:underline">support@omniweb.ai</a>.
+              Prefer email? Reach us directly at <a href="mailto:support@gardens.ai" className="font-semibold text-primary hover:underline">support@gardens.ai</a>.
             </div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
@@ -66,7 +66,7 @@ export default function ContactPage() {
           </div>
 
           <div className="mt-16">
-            <EducationalContentBlock {...contactEducationContent} theme="blue" />
+            <EducationalContentBlock {...contactEducationContent} theme="emerald" />
           </div>
 
           <div className="mt-16">

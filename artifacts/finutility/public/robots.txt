@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://freetawn.com/sitemap.xml
+Disallow: /privacy-policy
+Disallow: /terms-of-use
+Disallow: /disclaimer
+
+Sitemap: https://gardens.ai/sitemap.xml

@@ -19,260 +19,364 @@ export interface TrustContentEntry {
 
 export const homeTrustContent: TrustContentEntry = {
   eyebrow: "Trust and clarity",
-  heading: "Why the homepage focuses on privacy, education, and practical use",
+  heading: "Gardens is built for homeowners who want real answers, not vague estimates",
   intro:
-    "Freetawn is designed to help visitors move from a broad financial question to a useful tool or guide without creating account friction, exaggerated promises, or confusion about what the site can and cannot do.",
+    "Gardens is designed to help you move from a home or garden question to a useful calculator and practical guide — without account walls, exaggerated claims, or confusing jargon.",
   surface: "light",
-  accent: "blue",
+  accent: "emerald",
   items: [
     {
       title: "Education before pressure",
-      description: "The homepage highlights calculators, guides, and examples so users can explore concepts before making a financial commitment.",
+      description: "Every calculator is paired with a plain-English guide explaining what the numbers mean and what to do with them.",
       icon: BookMarked,
     },
     {
       title: "Private by default",
-      description: "Core tools are built to feel browser-first and simple, which helps people test scenarios without needing to hand over personal account data.",
+      description: "All calculations happen in your browser. No account required, no data stored, no tracking of your project details.",
       icon: Lock,
     },
     {
-      title: "Expectation-setting",
-      description: "The site is framed as an educational financial hub, not as a lender, broker, or provider of individualized financial advice.",
+      title: "Honest estimates",
+      description: "Cost ranges are based on real market data. We flag where local costs vary significantly so you know when to get a local quote.",
       icon: ShieldCheck,
     },
   ],
 };
 
-export const financeTrustContent: TrustContentEntry = {
+export const homeImprovementTrustContent: TrustContentEntry = {
   eyebrow: "Trust and disclosure",
-  heading: "Why the finance section emphasizes planning over hype",
+  heading: "Home improvement estimates are planning tools — not contractor quotes",
   intro:
-    "Finance tools can influence long-term choices, so this section is written to help users compare tradeoffs, question assumptions, and treat every output as a planning aid rather than a guaranteed result.",
+    "Our calculators provide realistic cost benchmarks based on national averages and material costs. Your actual project cost depends on local labor rates, material availability, and specific site conditions.",
   surface: "dark",
   accent: "emerald",
   items: [
     {
-      title: "Scenario testing",
-      description: "Calculators are intended to compare savings, investing, and exchange-rate possibilities before users rely on a single plan.",
+      title: "Benchmark, not quote",
+      description: "Estimates help you know if a contractor quote is reasonable — always get 3 quotes before committing to any major project.",
       icon: Eye,
     },
     {
-      title: "No guaranteed outcomes",
-      description: "Returns, rates, and market conditions can change, so examples and outputs should be checked against current real-world terms.",
+      title: "Permit requirements vary",
+      description: "Building codes and permit requirements differ by city and county. Always verify requirements with your local building department.",
       icon: CircleAlert,
     },
     {
-      title: "Concept-first learning",
-      description: "Guides and FAQs are included so users can understand the reasoning behind the math instead of trusting a number in isolation.",
+      title: "Professional verification still matters",
+      description: "Major structural, electrical, plumbing, and gas work should always be performed by licensed professionals.",
+      icon: ShieldCheck,
+    },
+  ],
+};
+
+export const gardenTrustContent: TrustContentEntry = {
+  eyebrow: "Trust and disclosure",
+  heading: "Garden planning tools are a starting point — local conditions determine real results",
+  intro:
+    "Plant spacing, soil requirements, and planting times in our guides are based on general best practices. Your specific climate, soil type, and microclimate will affect actual results.",
+  surface: "dark",
+  accent: "emerald",
+  items: [
+    {
+      title: "Climate zones vary",
+      description: "USDA hardiness zones are a guide — local microclimates, last frost dates, and soil type all affect what grows well in your specific yard.",
+      icon: Eye,
+    },
+    {
+      title: "Soil testing before amending",
+      description: "We recommend testing your soil pH and composition before purchasing amendments — guessing often leads to over- or under-treatment.",
+      icon: CircleAlert,
+    },
+    {
+      title: "Local nurseries know best",
+      description: "A local independent nursery is the best resource for plant selection, timing, and soil advice specific to your area.",
       icon: BookMarked,
     },
   ],
 };
 
-export const cryptoTrustContent: TrustContentEntry = {
+export const exteriorTrustContent: TrustContentEntry = {
   eyebrow: "Trust and disclosure",
-  heading: "Why the crypto section is framed around caution, not excitement",
+  heading: "Exterior project estimates depend heavily on local labor and material costs",
   intro:
-    "Crypto tools are most useful when users understand fees, volatility, and downside risk, so this section is structured to support disciplined analysis rather than momentum-driven decisions.",
+    "Roofing, fencing, and exterior painting costs vary significantly by region. Our calculators provide national average baselines — compare against local quotes before finalizing any project budget.",
   surface: "dark",
-  accent: "fuchsia",
+  accent: "emerald",
   items: [
     {
-      title: "Volatility awareness",
-      description: "Price movement alone never tells the full story, which is why calculations focus on net outcomes, break-even levels, and realistic trade costs.",
+      title: "Regional cost variation",
+      description: "Labor costs in high-cost metro areas can be 40–70% higher than national averages shown in calculators.",
       icon: Eye,
     },
     {
-      title: "No trade endorsement",
-      description: "Freetawn does not recommend a token, exchange, or strategy simply because it is mentioned or modeled on the page.",
-      icon: CircleAlert,
-    },
-    {
-      title: "Research still matters",
-      description: "Outputs should be paired with independent market research, tax guidance, and risk management before users act on a scenario.",
-      icon: ShieldCheck,
-    },
-  ],
-};
-
-export const loansTrustContent: TrustContentEntry = {
-  eyebrow: "Trust and disclosure",
-  heading: "Why the loans section is built around affordability and realism",
-  intro:
-    "Borrowing tools can shape major life decisions, so the content focuses on total cost, payment clarity, and realistic tradeoffs rather than simply helping users qualify for the largest possible loan.",
-  surface: "dark",
-  accent: "indigo",
-  items: [
-    {
-      title: "Affordability over approval",
-      description: "The goal is to help users test what stays manageable in real life, not what a lender might approve on paper.",
-      icon: Eye,
-    },
-    {
-      title: "Full-cost framing",
-      description: "Taxes, insurance, fees, and interest all affect the real borrowing picture, so the page encourages broader cost awareness.",
+      title: "HOA and permit requirements",
+      description: "Exterior changes often require HOA approval and building permits. Verify requirements before purchasing materials.",
       icon: FileCheck,
     },
     {
-      title: "Professional advice still matters",
-      description: "Major borrowing decisions should still be reviewed with qualified lenders, advisors, or legal professionals when appropriate.",
+      title: "Licensed contractors for major work",
+      description: "Roofing, structural work, and major exterior renovations should be performed by licensed, insured contractors.",
       icon: ShieldCheck,
     },
   ],
 };
 
-export const compoundInterestTrustContent: TrustContentEntry = {
+export const roofCostTrustContent: TrustContentEntry = {
   eyebrow: "Trust and disclosure",
-  heading: "Why compound interest results should be treated as directional planning tools",
+  heading: "Roof cost estimates are benchmarks for evaluating contractor quotes",
   intro:
-    "This calculator helps users understand how rate, time, and contributions interact, but future outcomes depend on changing returns, personal behavior, and market conditions that no static model can guarantee.",
+    "This calculator helps you understand the realistic cost range for a roof replacement before you call contractors. Actual quotes will vary based on your specific roof geometry, local labor rates, and material availability.",
   surface: "light",
-  accent: "blue",
+  accent: "emerald",
   items: [
-    { title: "Assumption-driven outputs", description: "The result depends on the return rate, frequency, and contribution schedule entered by the user, so small assumption changes can materially alter the projection.", icon: FileCheck },
-    { title: "No promised returns", description: "Historical averages and hypothetical growth rates should not be interpreted as guaranteed account performance.", icon: CircleAlert },
-    { title: "Best for planning", description: "The calculator is designed to support savings and investing conversations, not to replace individualized investment advice.", icon: ShieldCheck },
+    {
+      title: "Estimate, not quote",
+      description: "Use this result to identify whether contractor bids are in a reasonable range — not as the final project budget.",
+      icon: FileCheck,
+    },
+    {
+      title: "Site-specific factors matter",
+      description: "Roof access difficulty, existing damage, ventilation issues, and local permit fees can all change the final cost.",
+      icon: Eye,
+    },
+    {
+      title: "Always verify with 3 contractors",
+      description: "For a project this size, getting at least 3 licensed contractor quotes is essential. Verify insurance and check references.",
+      icon: ShieldCheck,
+    },
   ],
 };
 
-export const mortgageTrustContent: TrustContentEntry = {
+export const paintTrustContent: TrustContentEntry = {
   eyebrow: "Trust and disclosure",
-  heading: "Why mortgage estimates should be used as planning references, not final loan terms",
+  heading: "Paint quantity estimates depend on actual wall measurements and paint quality",
   intro:
-    "Mortgage costs depend on lender terms, taxes, insurance, and personal credit factors, so this page is built to improve clarity and comparison rather than to simulate an exact loan offer.",
+    "This calculator gives you a starting point for how much paint to buy. Coverage rates vary by paint brand, quality, and surface condition. Always check the specific paint can label for its stated coverage rate.",
   surface: "light",
-  accent: "indigo",
+  accent: "emerald",
   items: [
-    { title: "Estimate, not quote", description: "Monthly payment outputs help with budgeting, but actual offers can vary based on credit, fees, escrow, and local property factors.", icon: FileCheck },
-    { title: "Ownership costs matter", description: "The page encourages users to think beyond principal and interest by factoring in taxes, insurance, and related housing obligations.", icon: Eye },
-    { title: "Big decisions need verification", description: "Users should still confirm final terms with lenders and review the legal and financial details of any home purchase carefully.", icon: ShieldCheck },
+    {
+      title: "Coverage rates vary by product",
+      description: "Premium paints often cover 15–20% more area per gallon than budget options. Check the label before calculating.",
+      icon: Eye,
+    },
+    {
+      title: "Surface condition affects consumption",
+      description: "Rough, porous, or previously unpainted surfaces absorb more paint. Add a second coat or primer for best results.",
+      icon: CircleAlert,
+    },
+    {
+      title: "Buy in the same dye lot",
+      description: "If you need multiple gallons, have them mixed in the same batch to ensure consistent color throughout the project.",
+      icon: ShieldCheck,
+    },
   ],
 };
 
-export const loanPaymentTrustContent: TrustContentEntry = {
+export const lawnCareTrustContent: TrustContentEntry = {
   eyebrow: "Trust and disclosure",
-  heading: "Why loan payment estimates should be paired with real lender details",
+  heading: "Lawn care cost estimates are regional averages — local prices vary",
   intro:
-    "This page helps users understand repayment structure and total cost, but real loans can include fees, rate differences, and contract terms that go beyond a simplified calculator model.",
+    "Lawn care service costs depend on your region, lawn condition, and service provider. The estimates here are based on national averages for a well-maintained lawn in a mid-cost region.",
   surface: "light",
-  accent: "indigo",
+  accent: "emerald",
   items: [
-    { title: "Monthly payment is only one metric", description: "The page emphasizes total interest and full repayment cost so users do not judge a loan only by the monthly figure.", icon: Eye },
-    { title: "APR and fees still matter", description: "A calculator can model the payment, but lender documentation is still needed to confirm the actual borrowing cost.", icon: FileCheck },
-    { title: "Decision support, not advice", description: "The goal is to help users compare scenarios and ask better questions before signing a borrowing agreement.", icon: ShieldCheck },
+    {
+      title: "Regional price variation",
+      description: "Lawn care costs in urban markets can be 30–50% higher than rural or suburban averages shown in the calculator.",
+      icon: Eye,
+    },
+    {
+      title: "Grass type matters",
+      description: "Warm-season and cool-season grasses have different maintenance needs and cost profiles — especially for fertilizing and aeration timing.",
+      icon: CircleAlert,
+    },
+    {
+      title: "Always get local quotes",
+      description: "Use these estimates to benchmark local quotes, but get at least 2–3 quotes from local services before deciding.",
+      icon: ShieldCheck,
+    },
   ],
 };
 
-export const currencyTrustContent: TrustContentEntry = {
+export const fenceCostTrustContent: TrustContentEntry = {
   eyebrow: "Trust and disclosure",
-  heading: "Why exchange-rate results should be read as reference values",
+  heading: "Fence cost estimates are material benchmarks — labor and local factors vary",
   intro:
-    "Currency conversion tools are useful for planning and comparison, but real provider rates, transfer fees, and timing can all change the amount someone ultimately receives.",
+    "This calculator provides realistic material cost estimates and national average labor costs. Your actual fence project cost depends on local labor rates, terrain, soil conditions, and material availability.",
   surface: "light",
-  accent: "blue",
+  accent: "emerald",
   items: [
-    { title: "Reference-rate mindset", description: "The page is designed to help users understand rate relationships rather than guarantee a provider’s final conversion offer.", icon: Eye },
-    { title: "Provider spread matters", description: "A service can charge through weaker exchange rates, transfer fees, or both, so users should compare the all-in cost.", icon: CircleAlert },
-    { title: "Useful for planning", description: "The output is best used for travel, transfers, and budgeting scenarios before a real transaction is initiated.", icon: ShieldCheck },
+    {
+      title: "Material costs change seasonally",
+      description: "Lumber prices in particular fluctuate significantly. Check current prices at your local lumber yard before finalizing the budget.",
+      icon: Eye,
+    },
+    {
+      title: "Underground utilities",
+      description: "Always call 811 before digging post holes. Utility strikes are dangerous and can result in costly repairs and fines.",
+      icon: CircleAlert,
+    },
+    {
+      title: "Check property lines",
+      description: "Install a fence only on your confirmed property. Survey errors have led to costly fence removal and neighbor disputes.",
+      icon: ShieldCheck,
+    },
   ],
 };
 
-export const cryptoProfitTrustContent: TrustContentEntry = {
+export const gardenPlantingTrustContent: TrustContentEntry = {
   eyebrow: "Trust and disclosure",
-  heading: "Why crypto profit estimates should be treated as trade-planning inputs",
+  heading: "Planting estimates are based on standard spacing guidelines — adjust for your specific plants",
   intro:
-    "This page helps users model trade outcomes after fees and quantity, but actual execution can still differ because of spread, slippage, taxes, and fast-moving market conditions.",
+    "Plant spacing recommendations vary by variety, climate, and growing method. Our calculator uses general guidelines — always verify spacing for the specific cultivar you are planting.",
   surface: "light",
-  accent: "fuchsia",
+  accent: "emerald",
   items: [
-    { title: "Net figures are still estimates", description: "The calculator improves realism, but it cannot fully predict the exact execution environment of a real trade.", icon: FileCheck },
-    { title: "Tax impact may differ", description: "Users should not treat the page as a substitute for tax treatment or jurisdiction-specific reporting guidance.", icon: CircleAlert },
-    { title: "Best used before acting", description: "The main value is in helping traders test entry, exit, and fee assumptions before risking capital.", icon: ShieldCheck },
+    {
+      title: "Variety-specific spacing matters",
+      description: "Spacing requirements for determinate vs. indeterminate tomatoes, for example, differ by 50% or more. Check seed packets or plant tags.",
+      icon: Eye,
+    },
+    {
+      title: "Soil depth affects root growth",
+      description: "Root vegetables need 12–18 inches of loose soil. Verify your raised bed depth before planning a root crop.",
+      icon: FileCheck,
+    },
+    {
+      title: "Yield estimates are approximate",
+      description: "Harvest yields depend on weather, pest pressure, watering consistency, and growing season length — estimates are averages only.",
+      icon: CircleAlert,
+    },
   ],
 };
 
-export const savingsGoalTrustContent: TrustContentEntry = {
+export const renovationTrustContent: TrustContentEntry = {
   eyebrow: "Trust and disclosure",
-  heading: "Why savings-goal projections should be used to shape realistic plans",
+  heading: "Renovation estimates are planning benchmarks — actual costs require contractor quotes",
   intro:
-    "Savings timelines depend on contribution consistency, yield assumptions, and changing life circumstances, so this page is best used to refine a plan rather than to promise a finish date.",
+    "Home renovation budgets depend on your home's age, current condition, material selections, and local labor costs. This calculator provides a realistic starting range — always verify with professional estimates before committing funds.",
   surface: "light",
-  accent: "blue",
+  accent: "emerald",
   items: [
-    { title: "Consistency changes outcomes", description: "The model assumes a savings pattern, but real budgets can shift because of emergencies, debt, or income changes.", icon: Eye },
-    { title: "Yield is not guaranteed", description: "Expected return inputs are useful for scenario planning, but real account performance and rates can move over time.", icon: CircleAlert },
-    { title: "Useful for pacing decisions", description: "The page works best when users compare different timelines and monthly contributions to find a sustainable target path.", icon: ShieldCheck },
+    {
+      title: "Hidden conditions are common",
+      description: "Older homes frequently reveal plumbing, electrical, or structural issues once walls are opened. Always hold a contingency budget.",
+      icon: CircleAlert,
+    },
+    {
+      title: "Permits affect scope and timeline",
+      description: "Permitted work requires inspection and may affect timeline. Budget for permit fees in your total project cost.",
+      icon: FileCheck,
+    },
+    {
+      title: "Get professional design input",
+      description: "For full room renovations, a design consultation ($100–$500) often prevents expensive material or layout mistakes.",
+      icon: ShieldCheck,
+    },
   ],
 };
 
 export const guidesTrustContent: TrustContentEntry = {
   eyebrow: "Trust and clarity",
-  heading: "Readers should know how the guide content is meant to help",
+  heading: "Our guides are educational — they explain concepts, not provide professional advice",
   intro:
-    "These guides are built to support financial understanding and better questions. They are not individualized financial, tax, or legal advice, which is why Freetawn keeps calculators, policies, and support links close to the learning experience.",
+    "Gardens guides help you understand home and garden topics clearly. They are not a substitute for licensed contractor assessments, building inspections, or professional design services.",
   surface: "light",
-  accent: "blue",
+  accent: "emerald",
   items: [
-    { title: "Educational by design", description: "Guides are written to explain concepts and tradeoffs clearly, not to pressure readers into one financial move.", icon: BookMarked },
-    { title: "Transparent context", description: "Articles are paired with calculators and support pages so readers can test assumptions instead of relying on guesswork.", icon: Eye },
-    { title: "Privacy-first tools", description: "Core calculations are designed to stay simple and browser-first, helping users explore scenarios without account friction.", icon: ShieldCheck },
-  ],
-};
-
-export const newsTrustContent: TrustContentEntry = {
-  eyebrow: "Trust and disclosure",
-  heading: "Why this news page is framed around caution and context",
-  intro:
-    "Freetawn surfaces financial headlines to help readers stay informed, but the page is intentionally structured around source labels, market context, and clear disclaimers so readers do not confuse information access with individualized advice.",
-  surface: "dark",
-  accent: "blue",
-  footnote:
-    "News content is sourced from third-party RSS feeds and refreshed daily. Market tape data is provided via an external widget. Freetawn does not produce, verify, or endorse any article or quote. This is not financial advice.",
-  items: [
-    { title: "Third-party sourcing", description: "Headlines come from external feeds and are presented for educational awareness, not as direct trading instructions.", icon: Eye },
-    { title: "No endorsement", description: "Coverage of an article, market move, or asset should not be interpreted as Freetawn recommending a purchase, sale, or strategy.", icon: CircleAlert },
-    { title: "Context-first reading", description: "Readers are encouraged to verify details, compare sources, and pair market coverage with calculators before acting on any scenario.", icon: ShieldCheck },
+    {
+      title: "Educational by design",
+      description: "Guides are written to explain concepts and real-world cost ranges — not to replace professional assessment of your specific situation.",
+      icon: BookMarked,
+    },
+    {
+      title: "Transparent context",
+      description: "Articles are paired with calculators and legal pages so readers can test assumptions and understand our site's purpose.",
+      icon: Eye,
+    },
+    {
+      title: "Privacy-first tools",
+      description: "All calculators work in your browser without storing your project details or requiring an account.",
+      icon: ShieldCheck,
+    },
   ],
 };
 
 export const contactTrustContent: TrustContentEntry = {
   eyebrow: "Trust and support",
-  heading: "Why the contact page focuses on clear communication and responsible help",
+  heading: "We welcome questions, corrections, and feedback",
   intro:
-    "Support channels matter most when users need clarification, want to report an issue, or need to understand how a calculator or guide should be interpreted.",
+    "When something is unclear, incorrect, or missing from our tools and guides, hearing from you directly is the fastest way to improve the platform for everyone.",
   surface: "light",
-  accent: "blue",
+  accent: "emerald",
   items: [
-    { title: "Questions are welcome", description: "Users can reach out for clarification, corrections, feedback, or partnership inquiries when something needs explanation.", icon: BookMarked },
-    { title: "Support is not advice", description: "Responses can help explain the site and its tools, but they are not a substitute for personalized professional advice.", icon: CircleAlert },
-    { title: "Transparency matters", description: "Direct contact helps users verify assumptions and flag unclear content before relying on a financial result.", icon: ShieldCheck },
-  ],
-};
-
-export const articleTrustContent: TrustContentEntry = {
-  eyebrow: "Trust and context",
-  heading: "How to use a financial guide responsibly",
-  intro:
-    "Guide pages are written to explain financial concepts in plain language, but they are meant to build understanding and support better questions rather than to replace personal financial, tax, or legal guidance.",
-  surface: "light",
-  accent: "blue",
-  items: [
-    { title: "Framework, not final answer", description: "The guide gives structure and vocabulary, but users should still test the topic with their own numbers and circumstances.", icon: BookMarked },
-    { title: "Examples are illustrative", description: "Scenario examples are educational and may not reflect current rates, fees, or policy terms in the user’s exact situation.", icon: FileCheck },
-    { title: "Pair reading with tools", description: "The strongest use case is learning the concept, then validating the scenario with a calculator and independent verification.", icon: ShieldCheck },
+    {
+      title: "Questions are welcome",
+      description: "If a calculator result seems off or a guide doesn't address your situation, reach out and we'll help clarify.",
+      icon: BookMarked,
+    },
+    {
+      title: "Support is not professional advice",
+      description: "We can explain our tools and content, but cannot provide project-specific professional recommendations.",
+      icon: CircleAlert,
+    },
+    {
+      title: "Feedback improves the platform",
+      description: "Corrections, missing content suggestions, and usability feedback all help make Gardens more useful and accurate.",
+      icon: ShieldCheck,
+    },
   ],
 };
 
 export const legalTrustContent: TrustContentEntry = {
   eyebrow: "Policy clarity",
-  heading: "Why these policy pages emphasize transparency and limits",
+  heading: "These policy pages exist to be clear about what Gardens is and is not",
   intro:
-    "Legal and policy pages exist to clarify how the site works, what users can expect, and where the limits of responsibility and advice begin.",
+    "Legal and policy pages clarify how the site works, what users can expect, and where the limits of our responsibility begin.",
   surface: "light",
-  accent: "amber",
+  accent: "emerald",
   items: [
-    { title: "Clear boundaries", description: "The policies explain what the platform is for and what it is not intended to replace in a real financial decision process.", icon: FileCheck },
-    { title: "Privacy and accountability", description: "The site aims to be transparent about data handling, educational purpose, and the role of third-party services where relevant.", icon: Lock },
-    { title: "Questions can be raised", description: "Users can still contact support for clarification on policy language, privacy concerns, or general trust questions.", icon: ShieldCheck },
+    {
+      title: "Clear boundaries",
+      description: "Gardens is an educational platform. It does not provide professional contractor, legal, or engineering advice.",
+      icon: FileCheck,
+    },
+    {
+      title: "Privacy and data handling",
+      description: "All calculations are performed in your browser. We explain exactly how analytics and cookies work in our Privacy Policy.",
+      icon: Lock,
+    },
+    {
+      title: "Questions are welcome",
+      description: "Contact us with any policy clarification, privacy concern, or general trust question.",
+      icon: ShieldCheck,
+    },
+  ],
+};
+
+export const articleTrustContent: TrustContentEntry = {
+  eyebrow: "Trust and context",
+  heading: "How to use a home and garden guide responsibly",
+  intro:
+    "Guide pages are written to explain concepts and provide realistic cost ranges, but they are not a substitute for on-site professional assessment of your specific home and project.",
+  surface: "light",
+  accent: "emerald",
+  items: [
+    {
+      title: "Framework, not final answer",
+      description: "The guide gives structure and context, but your specific conditions — home age, local codes, climate — require verification.",
+      icon: BookMarked,
+    },
+    {
+      title: "Examples are illustrative",
+      description: "STAR scenarios show realistic outcomes but may not reflect current material prices or labor costs in your specific market.",
+      icon: FileCheck,
+    },
+    {
+      title: "Pair reading with calculators",
+      description: "The strongest use of these guides is learning the concept, then using the relevant calculator to model your own project.",
+      icon: ShieldCheck,
+    },
   ],
 };

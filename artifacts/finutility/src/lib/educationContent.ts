@@ -12,290 +12,290 @@ export interface EducationalContentEntry {
 }
 
 export const homeEducationContent: EducationalContentEntry = {
-  eyebrow: "Why this matters",
-  heading: "Financial education helps users avoid expensive mistakes",
+  eyebrow: "Learn before you spend",
+  heading: "Smart homeowners understand costs before picking up the phone",
   intro:
-    "A calculator can produce a number in seconds, but better financial decisions happen when users understand the concepts behind that number, the tradeoffs involved, and the risks of relying on assumptions they have never checked.",
+    "Every home and garden project has hidden costs, better alternatives, and common mistakes that turn a $500 job into a $3,000 problem. Our tools pair calculators with plain-English education so you can make confident decisions before committing to any project.",
   cards: [
     {
-      title: "What Freetawn helps explain",
+      title: "What Gardens helps you understand",
       description:
-        "Freetawn pairs tools with context so users can learn how savings, debt, home buying, currency conversion, and crypto scenarios actually work before making a decision.",
+        "Gardens pairs cost calculators with real-world guidance — so you know what a roof costs before getting a quote, how much paint to buy before you shop, and what lawn care you can DIY before signing a contract.",
       bullets: [
-        "Interest rates change affordability, total cost, and opportunity cost over time.",
-        "Timelines and monthly contributions can matter more than one headline number.",
-        "Comparing multiple scenarios helps users spot realistic options instead of guessing.",
+        "Material choices affect long-term cost more than any single contractor quote.",
+        "Project scope and timing can save thousands when planned correctly.",
+        "The right tool for the job matters — and the right information matters even more.",
       ],
     },
     {
-      title: "Problems users face without context",
+      title: "Mistakes that cost homeowners money",
       description:
-        "People often focus on the monthly payment alone and miss the total cost, the effect of fees, or the long-term impact of delaying a savings plan or borrowing too aggressively.",
+        "Without accurate cost benchmarks, homeowners routinely overpay for labor, buy the wrong materials, and skip prep steps that cause projects to fail early.",
       bullets: [
-        "A low payment can still hide years of extra interest and cash-flow pressure.",
-        "Ignoring inflation, fees, and taxes can make a plan look safer than it really is.",
-        "Confusion around core terms leads many users to avoid planning until a decision becomes urgent.",
+        "Getting only one quote means paying 20–40% more than necessary.",
+        "Choosing materials by price alone often leads to early replacement and higher total cost.",
+        "Skipping permits or hiring unlicensed workers can void homeowner's insurance and reduce resale value.",
       ],
     },
   ],
 };
 
-export const financeEducationContent: EducationalContentEntry = {
-  eyebrow: "Finance basics",
-  heading: "Core money concepts become easier when you see the math and the meaning together",
+export const homeImprovementEducationContent: EducationalContentEntry = {
+  eyebrow: "Home improvement basics",
+  heading: "Understanding project scope and costs before work begins saves real money",
   intro:
-    "Personal finance decisions are connected. Saving, borrowing, investing, and spending all compete for the same cash flow, which is why good tools should explain both the result and the reason behind it.",
+    "Home improvement decisions are often made under pressure — a leaking roof, a broken HVAC, a growing family. Better decisions come from understanding material options, realistic cost ranges, and which work genuinely requires licensed professionals.",
   cards: [
     {
-      title: "What users should understand first",
+      title: "What homeowners should understand first",
       description:
-        "Before using any finance calculator, it helps to understand how growth rates, contribution size, debt costs, and time horizons work together.",
+        "Before starting any project, it helps to understand the scope of work, permit requirements, and the true cost difference between DIY and professional installation.",
       bullets: [
-        "Compound growth rewards early action and consistency more than perfect timing.",
-        "Small rate changes can have a major effect when applied over many years.",
-        "Emergency savings and debt strategy often shape how much someone can invest safely.",
+        "Permits protect your home's resale value and your insurance coverage.",
+        "Material quality affects long-term performance more than brand name or appearance.",
+        "Labor costs vary significantly by region — getting local estimates is essential.",
       ],
     },
     {
-      title: "What goes wrong without a plan",
+      title: "What goes wrong without planning",
       description:
-        "Users who do not understand core finance concepts often under-save, over-borrow, or assume short-term affordability means long-term sustainability.",
+        "Projects that start without accurate budgets run over cost. Jobs started without permits create legal and resale headaches. Work done out of season or in poor weather fails faster.",
       bullets: [
-        "It becomes easy to underestimate how fast interest can help or hurt over time.",
-        "People may chase a target amount without checking whether the monthly plan is realistic.",
-        "Financial stress rises when decisions are made from guesswork instead of scenario testing.",
+        "Scope creep is the leading cause of renovation budget overruns.",
+        "Hiring the lowest bidder without checking references costs more in corrections.",
+        "Starting exterior projects too late in fall or too early in spring reduces material performance.",
       ],
     },
   ],
 };
 
-export const cryptoEducationContent: EducationalContentEntry = {
-  eyebrow: "Crypto education",
-  heading: "Crypto tools work best when traders understand risk, fees, and realistic expectations",
+export const gardenEducationContent: EducationalContentEntry = {
+  eyebrow: "Gardening basics",
+  heading: "Successful gardens start with understanding soil, spacing, and seasonality",
   intro:
-    "Crypto markets move fast, but disciplined decisions still depend on basic concepts: entry price, exit price, fees, break-even levels, and the risk of volatility changing a trade before emotions settle.",
+    "Gardening failures are almost always preventable — they come from poor soil prep, incorrect plant spacing, or wrong plant selection for the climate. Understanding the fundamentals before planting season saves money and frustration.",
   cards: [
     {
-      title: "Concepts every trader should know",
+      title: "What every gardener should know first",
       description:
-        "A profitable trade is not just about price movement. It also depends on how much capital was committed, what fees were paid, and how much downside the trader can tolerate.",
+        "Before buying plants or seeds, understanding soil health, sun requirements, and planting zones eliminates the guesswork that kills gardens before they start.",
       bullets: [
-        "ROI helps compare trade performance across different position sizes.",
-        "Break-even levels show the minimum price needed before a trade truly turns positive.",
-        "Volatility can create large swings that punish traders who do not size positions carefully.",
+        "Soil pH affects nutrient availability more than fertilizer choices.",
+        "Sun mapping — tracking light patterns for 2 days — prevents planting shade plants in full sun.",
+        "Knowing your USDA hardiness zone determines which plants survive your winters.",
       ],
     },
     {
-      title: "Common mistakes beginners make",
+      title: "Why gardens fail without the right plan",
       description:
-        "Without a basic framework, many users focus only on upside and ignore slippage, taxes, exchange fees, and the psychological cost of chasing momentum.",
+        "Most garden disappointments come from over-planting small spaces, choosing plants that don't suit the climate, or skipping soil prep in favor of jumping straight to planting.",
       bullets: [
-        "Fees and spread can quietly erase what looked like a winning trade.",
-        "Buying without a target or exit plan often turns volatility into panic decisions.",
-        "Confusing speculation with long-term planning can expose users to more risk than they intended.",
+        "Overcrowded plants compete for nutrients and create disease pressure.",
+        "Annuals that look good in April often fail in July heat without proper selection.",
+        "Skipping compost amendment is the single most common cause of poor yield.",
       ],
     },
   ],
 };
 
-export const loansEducationContent: EducationalContentEntry = {
-  eyebrow: "Borrowing basics",
-  heading: "Loan education helps borrowers understand the payment, the payoff timeline, and the real total cost",
+export const exteriorEducationContent: EducationalContentEntry = {
+  eyebrow: "Exterior and curb appeal",
+  heading: "The right exterior upgrades add more home value than almost any interior renovation",
   intro:
-    "Loans are often judged by the monthly payment first, but the true borrowing decision depends on interest, term length, fees, down payment size, and how much flexibility remains in the household budget afterward.",
+    "Roofing, fencing, painting, and landscaping are the highest-ROI home improvements for resale value and curb appeal. Understanding material choices and maintenance requirements helps homeowners invest wisely in their home's exterior.",
   cards: [
     {
-      title: "What borrowers should compare",
+      title: "Where exterior dollars go furthest",
       description:
-        "The most useful comparison is not just which loan feels affordable today, but which one stays manageable and costs less over the full term.",
+        "REMODELING Magazine's annual Cost vs. Value report consistently shows exterior projects — garage doors, siding, entry doors, and decks — return 60–90% of cost at resale, often outperforming kitchen and bath remodels.",
       bullets: [
-        "Shorter terms usually reduce total interest even when the monthly payment is higher.",
-        "APR, taxes, insurance, and other costs can change the true payment materially.",
-        "Extra principal payments can shorten the loan and reduce lifetime borrowing cost.",
+        "A new garage door returns 93–102% of cost on average at resale.",
+        "Fresh exterior paint returns $2–$5 for every $1 spent when selling.",
+        "Landscaping improvements return 100–200% of cost at resale for well-maintained properties.",
       ],
     },
     {
-      title: "Problems caused by loan confusion",
+      title: "Common exterior mistakes to avoid",
       description:
-        "Users who do not understand amortization, escrow costs, or total interest can borrow more than they intended and still feel surprised by the long-term burden.",
+        "Exterior projects done poorly are more visible and harder to hide than interior work. Poor material selection, incorrect installation, or deferred maintenance turn curb appeal into a liability.",
       bullets: [
-        "A longer term can look easier monthly while adding years of extra interest.",
-        "Missing taxes, insurance, or PMI creates unrealistic housing expectations.",
-        "Borrowers may delay repayment strategy and lose easy chances to save on interest.",
+        "Choosing paint or stain without proper surface prep leads to peeling within 2 years.",
+        "Installing fence without checking property lines or HOA rules creates legal issues.",
+        "Using pressure-treated wood for vegetable garden beds introduces chemical concerns.",
       ],
     },
   ],
 };
 
-export const compoundInterestEducationContent: EducationalContentEntry = {
-  eyebrow: "Concept guide",
-  heading: "Compound interest is powerful because growth starts earning growth",
+export const roofCostEducationContent: EducationalContentEntry = {
+  eyebrow: "Roof cost guide",
+  heading: "A roof replacement is one of the largest home investments — understanding your options saves thousands",
   intro:
-    "Many users know compounding is important, but they often underestimate how dramatically time, frequency, and steady contributions can change a future balance.",
+    "The material you choose, the timing of replacement, and the contractor you hire all significantly affect what you pay and how long the result lasts. This calculator helps you benchmark costs before getting contractor quotes.",
   cards: [
     {
-      title: "What this calculator teaches",
+      title: "What the roof cost calculator helps clarify",
       description:
-        "This tool shows how principal, return rate, contribution size, and time interact so users can see why long-term consistency matters so much.",
+        "The calculator shows estimated costs by material type and roof size so you can compare options and identify whether contractor quotes are in a reasonable range.",
       bullets: [
-        "Starting earlier can outweigh trying to contribute far more later.",
-        "Recurring monthly additions accelerate growth because each new dollar gets time to compound.",
-        "Comparing different rates helps users understand the cost of staying in low-yield accounts for too long.",
+        "Material alone can vary from $90 to $1,000+ per roofing square depending on type.",
+        "Roof pitch multiplies material needs — steeper roofs cost 20–40% more to install.",
+        "Old roof removal adds $50+ per square — often worth asking contractors to itemize separately.",
       ],
     },
     {
-      title: "What happens when people misunderstand compounding",
+      title: "What homeowners miss in roofing decisions",
       description:
-        "Without context, users may delay investing, assume small contributions are pointless, or expect unrealistic returns without recognizing the time required.",
+        "Focusing only on the lowest quote often means choosing the lowest-grade material or skipping ice-and-water shield underlayment that prevents costly interior water damage.",
       bullets: [
-        "Waiting a few years can reduce long-term growth far more than most people expect.",
-        "Focusing only on rate and ignoring contribution habits leads to weaker planning.",
-        "Confusing average returns with guaranteed outcomes can create false confidence.",
+        "Manufacturer warranties often require specific installation practices — ask if the crew is certified.",
+        "Ventilation issues shorten any roof's life significantly — verify soffit and ridge vents are adequate.",
+        "Insurance claims after hail damage may cover upgrades in material quality — always ask your adjuster.",
       ],
     },
   ],
 };
 
-export const mortgageEducationContent: EducationalContentEntry = {
-  eyebrow: "Mortgage concepts",
-  heading: "A mortgage payment is only one part of the home affordability picture",
+export const paintEducationContent: EducationalContentEntry = {
+  eyebrow: "Paint buying guide",
+  heading: "Buying the right amount of paint is the first step toward a professional result",
   intro:
-    "Home buyers often center the conversation on principal and interest, but real affordability also depends on taxes, insurance, HOA costs, cash reserves, maintenance, and how stable the monthly budget remains after closing.",
+    "Too little paint forces you to buy a second batch that may not match the original. Too much wastes $30–$60 per extra gallon. The paint calculator gives you an exact target before you shop.",
   cards: [
     {
-      title: "What to understand before buying",
+      title: "What the paint calculator helps you understand",
       description:
-        "Mortgage planning becomes clearer when users see how down payment size, rate changes, and term length affect both cash flow and lifetime cost.",
+        "The calculator accounts for wall area, door and window deductions, number of coats, and coverage rate so you leave the store with exactly what you need.",
       bullets: [
-        "A lower rate can save tens of thousands of dollars over the life of the loan.",
-        "A larger down payment may improve approval odds and reduce monthly strain.",
-        "Escrow items can make the real payment higher than the headline mortgage quote.",
+        "Coverage rates vary by paint type — flat paints cover more per gallon than semi-gloss.",
+        "Dark colors and dramatic color changes require more coats than same-shade touch-ups.",
+        "Adding 10% waste factor prevents falling short mid-wall on a large room.",
       ],
     },
     {
-      title: "Problems buyers face without mortgage literacy",
+      title: "Paint quality decisions that matter",
       description:
-        "Without a full understanding of mortgage structure, buyers can target homes based on a narrow payment estimate and overlook the long-term ownership burden.",
+        "Cheap paint costs more over time — it requires more coats, fades faster, and doesn't clean without removing the finish. Buying better quality paint saves money and time.",
       bullets: [
-        "Unexpected taxes or insurance increases can upset a previously comfortable budget.",
-        "Choosing the maximum approved amount may leave too little room for maintenance or emergencies.",
-        "Missing the tradeoff between 15-year and 30-year loans can create either payment stress or excess interest.",
+        "Premium paint ($50–$70/gallon) typically covers 10–15% more area per gallon than budget paint.",
+        "Washable finishes (eggshell, satin) are worth the premium for kitchens, baths, and kids' rooms.",
+        "The right primer cuts total paint consumption by 20–30% on previously unpainted surfaces.",
       ],
     },
   ],
 };
 
-export const loanPaymentEducationContent: EducationalContentEntry = {
-  eyebrow: "Loan fundamentals",
-  heading: "Loan payments make more sense when users can see principal, interest, and term tradeoffs together",
+export const lawnCareEducationContent: EducationalContentEntry = {
+  eyebrow: "Lawn care fundamentals",
+  heading: "Understanding when and why to apply lawn treatments prevents costly over-treatment and under-treatment",
   intro:
-    "Whether the loan is personal, auto, or student-related, the payment formula is only the starting point. Better decisions come from understanding how interest accumulates and how the repayment term changes the total cost.",
+    "Lawn care is a schedule-driven discipline — applying fertilizer at the wrong time, mowing too short, or watering incorrectly causes the same visible damage as neglect. The lawn care calculator helps plan services against your lawn size and real costs.",
   cards: [
     {
-      title: "How to read a loan result",
+      title: "What makes a lawn care plan effective",
       description:
-        "The monthly payment helps with budget planning, but the total interest and total repayment show whether the structure is efficient over time.",
+        "The best lawn care programs are based on grass type, soil condition, and seasonal timing — not just whatever a service company offers as a default annual package.",
       bullets: [
-        "Longer terms reduce the payment but usually increase total interest materially.",
-        "Higher rates change both affordability and the speed of principal reduction.",
-        "Early extra payments often save more interest than many borrowers realize.",
+        "Cool-season grasses (fescue, bluegrass) need fall fertilizing — not spring.",
+        "Mowing height is more important than mowing frequency for lawn health.",
+        "Aeration is only worth doing on compacted soil — testing with a screwdriver saves the cost on healthy lawns.",
       ],
     },
     {
-      title: "Why people get trapped by loan math",
+      title: "Why lawn care programs often waste money",
       description:
-        "Borrowers who only compare monthly payments can accept loans that seem manageable at first but cost far more over the life of the debt.",
+        "Pre-packaged lawn service contracts include treatments your lawn may not need and apply them on fixed schedules that ignore weather, growth, and actual soil conditions.",
       bullets: [
-        "A cheaper monthly figure can hide a much more expensive total repayment.",
-        "Ignoring APR and fees creates an incomplete picture of what a lender is charging.",
-        "Without a payoff plan, debt can stay around longer than originally intended.",
+        "Over-fertilizing causes excessive growth that requires more mowing and creates thatch buildup.",
+        "Applying weed control after weeds have set seed is too late — timing matters.",
+        "Watering too often with shallow water trains shallow roots that die in drought.",
       ],
     },
   ],
 };
 
-export const cryptoProfitEducationContent: EducationalContentEntry = {
-  eyebrow: "Trade education",
-  heading: "Crypto profit is more than price appreciation on a chart",
+export const fenceCostEducationContent: EducationalContentEntry = {
+  eyebrow: "Fence planning guide",
+  heading: "Accurate fence cost estimates prevent budget surprises when you're mid-project",
   intro:
-    "True trade performance depends on entry cost, exit value, quantity, fees, and the discipline to compare outcome scenarios before the market forces a fast decision.",
+    "Fence costs depend on material, height, linear footage, terrain, and gates. This calculator gives you a realistic material and labor baseline before you call a single contractor.",
   cards: [
     {
-      title: "What this tool helps users understand",
+      title: "What drives fence cost",
       description:
-        "The calculator turns a trade idea into actual numbers so users can compare gross gains, net profit, ROI, and break-even levels in one place.",
+        "The calculator shows why material choice matters as much as size — a vinyl fence can cost 2× a wood fence upfront but requires almost no maintenance for 25+ years.",
       bullets: [
-        "Break-even price tells users the exact line between profit and loss after costs.",
-        "ROI helps normalize results across trades of different sizes.",
-        "Fee awareness matters because even small charges can add up across active trading.",
+        "Post spacing affects material quantities significantly — standard is 6–8 ft on center.",
+        "Gate openings require extra hardware and framing that adds $100–$300 per gate.",
+        "Sloped terrain requires step-down or raked panels that increase labor cost 15–30%.",
       ],
     },
     {
-      title: "What goes wrong without profit discipline",
+      title: "What homeowners overlook when estimating fence costs",
       description:
-        "When traders skip the math, they often make emotional decisions based on price headlines instead of actual portfolio impact.",
+        "Most cost overruns come from surprises discovered mid-installation: underground utilities, rocky soil, incorrect property line measurements, or HOA requirement conflicts.",
       bullets: [
-        "A trade that looks successful in percentage terms may still deliver weak net profit after fees.",
-        "Without a break-even level, it is harder to set rational exits and protect capital.",
-        "Users can confuse temporary price momentum with a well-planned risk-adjusted trade.",
+        "Call 811 before digging any post holes — utility strikes are dangerous and costly.",
+        "Check your property survey before marking fence lines — neighbor disputes are expensive.",
+        "HOA approval for fence style and height should be confirmed before purchasing materials.",
       ],
     },
   ],
 };
 
-export const currencyEducationContent: EducationalContentEntry = {
-  eyebrow: "Exchange-rate basics",
-  heading: "Currency conversion is easier to trust when users understand rates, spread, and fees",
+export const gardenPlantingEducationContent: EducationalContentEntry = {
+  eyebrow: "Planting planning guide",
+  heading: "The right plant spacing is the most important decision in garden design",
   intro:
-    "A quoted exchange rate is useful, but the real-world amount someone receives also depends on provider markups, timing, transfer fees, and how currencies move in response to economic conditions.",
+    "Overcrowded plants compete for nutrients and light, creating weak growth and disease pressure. Too much spacing wastes productive bed area and lets weeds establish. The planting calculator finds the right balance for your specific plants and bed size.",
   cards: [
     {
-      title: "What the exchange result means",
+      title: "What the planting calculator shows",
       description:
-        "This tool helps users see the relationship between a base amount, the exchange rate, and the converted value so international decisions become easier to compare.",
+        "The calculator determines how many plants fit your bed dimensions at proper spacing, how much soil you need to fill raised beds, and the estimated total cost before you shop.",
       bullets: [
-        "Mid-market rates provide a clean reference point for understanding fair value.",
-        "Converting larger sums makes small markup differences more important.",
-        "Exchange-rate moves are often linked to inflation, interest rates, and global risk sentiment.",
+        "Square-foot gardening spacing differs from traditional row spacing by 40–60%.",
+        "Soil volume calculations prevent under-filling raised beds — settling reduces depth by 15–20%.",
+        "Plant cost estimates help you decide whether to start from seed or buy transplants.",
       ],
     },
     {
-      title: "Common mistakes in currency planning",
+      title: "Planning mistakes that reduce garden yield",
       description:
-        "Without a basic understanding of spread and fees, users may overestimate what they will receive and choose providers based on convenience rather than cost.",
+        "Most first-time gardeners plant too close together, use insufficient soil depth, and put the wrong plants in available sun conditions — all preventable with basic planning.",
       bullets: [
-        "Airport and last-minute exchanges often produce worse outcomes than expected.",
-        "A provider can advertise low fees while offering a weaker exchange rate.",
-        "Ignoring volatility creates budgeting problems for travel, remote work, or international payments.",
+        "Tomatoes planted less than 24 inches apart produce significantly less per plant.",
+        "Raised beds need a minimum of 6 inches of quality soil — most need 12 inches for root vegetables.",
+        "Shade mapping before planting prevents wasted investment on sun-loving plants in low-light areas.",
       ],
     },
   ],
 };
 
-export const savingsGoalEducationContent: EducationalContentEntry = {
-  eyebrow: "Savings strategy",
-  heading: "Savings goals become more realistic when users understand pace, yield, and tradeoffs",
+export const renovationEducationContent: EducationalContentEntry = {
+  eyebrow: "Renovation planning",
+  heading: "Accurate renovation budgets include contingency, scope, and sequence — not just material cost",
   intro:
-    "A target amount alone does not create a plan. Reaching a goal depends on contribution size, timeline, starting balance, expected yield, and whether the monthly requirement still fits daily life.",
+    "Home renovation projects run over budget 75% of the time. The primary reasons are underestimating scope, ignoring hidden conditions, and skipping the contingency buffer. This calculator helps you build a realistic starting estimate.",
   cards: [
     {
-      title: "What this calculator helps clarify",
+      title: "What the renovation calculator helps establish",
       description:
-        "Users can work backward from a goal or forward from a monthly savings amount to see how realistic the plan is before committing to it.",
+        "The calculator provides realistic cost ranges by room type and renovation scope, plus a contingency recommendation, so you enter contractor conversations with a benchmarked budget.",
       bullets: [
-        "A longer timeline can reduce monthly pressure and make a goal more sustainable.",
-        "Yield can shorten the journey, especially when contributions stay consistent.",
-        "Seeing both time-to-goal and required monthly savings helps users choose a workable path.",
+        "Cosmetic, mid-range, and full renovations have very different cost profiles for the same room.",
+        "A 15–20% contingency is standard practice — unexpected conditions are common in older homes.",
+        "Financing costs are part of the real project cost — the calculator shows monthly payments to help plan cash flow.",
       ],
     },
     {
-      title: "Why savings goals often fail",
+      title: "Why renovation budgets fail without proper planning",
       description:
-        "Many goals break down because the target is emotionally motivating but the monthly plan is disconnected from income, debt, or emergency needs.",
+        "Homeowners who enter renovation projects with only a rough number in mind frequently face 30–50% budget overruns when hidden conditions, material delays, or scope changes emerge.",
       bullets: [
-        "Unrealistic monthly contributions can cause people to quit after a few months.",
-        "Keeping all savings in low-yield accounts may delay progress unnecessarily.",
-        "Ignoring competing goals like debt payoff or housing costs leads to constant plan changes.",
+        "Opening walls in older homes commonly reveals plumbing, electrical, or mold issues not visible at quote time.",
+        "Material cost volatility means prices quoted in winter may differ significantly from spring start dates.",
+        "Sequencing mistakes — like tiling before plumbing rough-in is done — create expensive redo costs.",
       ],
     },
   ],
@@ -303,28 +303,28 @@ export const savingsGoalEducationContent: EducationalContentEntry = {
 
 export const contactEducationContent: EducationalContentEntry = {
   eyebrow: "Support and trust",
-  heading: "Clear support matters when users are making important money decisions",
+  heading: "Clear support matters when you are planning a significant home investment",
   intro:
-    "Financial tools are most helpful when users can ask questions, report unclear wording, and flag anything that could affect how they interpret a result. Contact information helps turn a calculator site into a more trustworthy learning platform.",
+    "Home and garden projects involve real money and real risk. Questions about how to use our calculators, interpret results, or find local resources are always welcome.",
   cards: [
     {
       title: "Why users reach out",
       description:
-        "Questions often come up when someone is comparing large financial choices such as borrowing, saving, investing, or evaluating a trade with several moving parts.",
+        "Homeowners contact us when planning large projects, comparing contractor quotes, or trying to understand whether a calculator result is in the right range for their area.",
       bullets: [
-        "Users may want clarification on assumptions, fees, or how a result was calculated.",
-        "Feedback helps improve guides, FAQs, and explanations for future visitors.",
-        "Partnership, correction, and support requests all help keep Freetawn useful and credible.",
+        "Regional cost variations can make national averages misleading — we can help contextualize results.",
+        "Feedback helps improve calculator accuracy and guide content for future visitors.",
+        "Partnership and content correction requests help keep Gardens useful and credible.",
       ],
     },
     {
-      title: "How better communication helps",
+      title: "How better information helps",
       description:
-        "When users can contact the site easily, they are more likely to verify details, slow down before acting on a number, and treat the tools as part of a learning process rather than a final answer.",
+        "When users can ask questions and verify results, they are more likely to catch planning errors before committing money — which is exactly what this platform is designed to enable.",
       bullets: [
-        "Good support encourages users to double-check assumptions before making major commitments.",
-        "Clear communication helps surface missing topics and confusing areas quickly.",
-        "Trust grows when educational tools feel transparent, reachable, and open to improvement.",
+        "Good communication helps surface missing topics and confusing areas in our tools.",
+        "Trust grows when educational tools are transparent, reachable, and open to improvement.",
+        "Users who verify estimates before hiring contractors avoid the most common overpayment scenarios.",
       ],
     },
   ],
@@ -332,57 +332,57 @@ export const contactEducationContent: EducationalContentEntry = {
 
 export const guidesEducationContent: EducationalContentEntry = {
   eyebrow: "Learning before acting",
-  heading: "Financial guides are most useful when they connect the concept to a real decision",
+  heading: "Home and garden guides are most useful when they connect the concept to a real project decision",
   intro:
-    "A good guide should do more than define a term. It should help readers understand why the concept matters, how it affects a real-world choice, and what risks appear when the math is misunderstood or ignored.",
+    "A good guide should do more than explain a technique. It should help you understand why the approach works, what goes wrong without it, and how to estimate the real cost of the choice you're making.",
   cards: [
     {
       title: "What the guides are designed to do",
       description:
-        "Freetawn guides are written to make technical finance topics easier to understand without stripping away the context that helps users make smarter decisions.",
+        "Gardens guides are written to make home improvement and gardening topics accessible without glossing over the practical details that determine success or failure.",
       bullets: [
-        "Each guide pairs a plain-English explanation with a relevant calculator or tool.",
-        "Topics focus on practical decisions such as borrowing, saving, investing, and evaluating tradeoffs.",
-        "Readers can move from theory to their own numbers without leaving the learning flow.",
+        "Each guide pairs a plain-English explanation with a relevant calculator or cost tool.",
+        "Topics focus on real decisions: when to DIY, what materials to use, and how to avoid common mistakes.",
+        "Readers can move from understanding to their own project numbers without leaving the learning flow.",
       ],
     },
     {
-      title: "Why financial literacy changes outcomes",
+      title: "Why home improvement knowledge changes outcomes",
       description:
-        "People often make expensive mistakes when they understand a label or headline but not the mechanism underneath it, such as how interest compounds, how loan amortization shifts over time, or how exchange-rate costs really work.",
+        "Homeowners who understand the scope of work before talking to contractors are dramatically less likely to be overcharged, miss important details, or make decisions they later regret.",
       bullets: [
-        "Education reduces guesswork and helps users compare scenarios with more confidence.",
-        "Understanding assumptions makes it easier to spot unrealistic promises or weak plans.",
-        "Conceptual clarity helps readers ask better questions before making a major commitment.",
+        "Education reduces guesswork and helps you compare contractor quotes intelligently.",
+        "Understanding scope makes it easier to spot unrealistic timelines or suspicious bids.",
+        "Conceptual clarity helps you ask the right questions before work begins.",
       ],
     },
   ],
 };
 
-export const newsEducationContent: EducationalContentEntry = {
-  eyebrow: "Reading markets well",
-  heading: "Market news is more helpful when readers understand context, not just headlines",
+export const articleTrustContent = {
+  eyebrow: "Using this guide responsibly",
+  heading: "How to use a home and garden guide effectively",
   intro:
-    "Financial headlines move fast, but better decisions usually come from understanding why a story matters, what indicators connect to it, and where sensational framing can create more heat than signal.",
+    "Guide pages explain concepts and provide realistic cost ranges, but local conditions, material prices, and labor costs vary. Always verify estimates with local contractors before committing to a project budget.",
   cards: [
     {
-      title: "How to use a market news page well",
+      title: "Estimates are starting points, not final quotes",
       description:
-        "Readers get more value from market coverage when they treat headlines as starting points for understanding trends, risk, and economic context rather than standalone instructions to act immediately.",
+        "Calculator outputs and guide cost ranges give you a realistic benchmark — but local labor rates, permit fees, and current material prices affect your actual project cost.",
       bullets: [
-        "Cross-category reading helps connect rates, equities, crypto, and personal finance effects.",
-        "Repeated themes across sources often matter more than one dramatic headline.",
-        "Market stories become more useful when paired with tools that explain cost, return, or affordability.",
+        "Get 3 contractor quotes for any project over $2,000.",
+        "Verify material costs at your local supplier before finalizing a budget.",
+        "Check your local building department for permit requirements before starting work.",
       ],
     },
     {
-      title: "Why context protects users",
+      title: "Pair reading with your own numbers",
       description:
-        "Without context, readers can misread volatility, overreact to single-day moves, or confuse third-party commentary with tailored financial advice.",
+        "The best use of these guides is to build context, then use the calculators to plug in your own measurements and get a realistic starting estimate.",
       bullets: [
-        "Short-term noise can look more important than longer-term structural changes.",
-        "Readers may mistake reporting on an asset for endorsement of that asset.",
-        "Clear educational framing helps users pause, verify, and think before acting.",
+        "Use the planting calculator to size your garden before buying plants.",
+        "Use the roof cost calculator before getting contractor quotes so you can spot outliers.",
+        "Use the paint calculator to buy the right amount — not too little or too much.",
       ],
     },
   ],

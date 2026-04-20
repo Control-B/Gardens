@@ -9,423 +9,492 @@ export interface GuideArticle {
   description: string;
   category: string;
   readTime: string;
-  calculatorHref: string;
-  calculatorLabel: string;
+  calculatorHref?: string;
+  calculatorLabel?: string;
   relatedSlugs: string[];
   sections: GuideSection[];
 }
 
 export const guideArticles: GuideArticle[] = [
   {
-    slug: "what-is-compound-interest",
-    title: "What Is Compound Interest?",
-    description:
-      "Learn how compound interest works, why time matters more than timing, and how small contributions can snowball into meaningful long-term wealth.",
-    category: "Investing Basics",
-    readTime: "7 min read",
-    calculatorHref: "/compound-interest-calculator",
-    calculatorLabel: "Compound Interest Calculator",
-    relatedSlugs: ["how-compound-interest-works", "how-to-save-money-faster", "loan-interest-explained"],
-    sections: [
-      {
-        heading: "Why compound interest matters",
-        paragraphs: [
-          "Compound interest is the process of earning returns on both your original money and the returns that have already been added to it. Instead of growth happening in a straight line, it can accelerate over time because each period builds on a larger base than the one before it.",
-          "That is why long-term savers and investors focus so much on consistency. A modest monthly contribution made for many years can outperform a larger one-time deposit made late. The real engine is not just the rate of return, but how long that return has a chance to repeat.",
-        ],
-      },
-      {
-        heading: "How the math works in plain English",
-        paragraphs: [
-          "At a basic level, compound growth means your balance increases, then future growth is calculated on that new balance. If you start with $10,000 and earn 5% in year one, you finish with $10,500. In year two, you are no longer earning 5% on $10,000. You are earning it on $10,500.",
-          "When regular contributions are added, the effect becomes even stronger. Every new deposit gets its own chance to grow. That is why retirement plans, index-fund investing, and long-term savings strategies all benefit from starting early rather than trying to catch up later.",
-        ],
-      },
-      {
-        heading: "Where people use compound interest in real life",
-        paragraphs: [
-          "Savings accounts, certificates of deposit, money market accounts, bonds, dividend reinvestment plans, and long-term index-fund portfolios all involve some version of compounding. Even if the rate changes over time, the principle stays the same: money that stays invested has the chance to create more money.",
-          "Compound interest also works in reverse when debt is involved. Credit card balances and unpaid interest charges can compound against you, which is why understanding the concept is just as important for debt management as it is for investing.",
-        ],
-      },
-      {
-        heading: "Common mistakes to avoid",
-        paragraphs: [
-          "A common mistake is focusing only on the interest rate and ignoring time. Another is waiting until income feels perfect before getting started. In most cases, a simple plan you begin today beats a more sophisticated plan you keep postponing.",
-          "It also helps to use realistic return assumptions. A calculator is most useful when it helps you plan responsibly, not when it encourages extreme expectations. Use conservative estimates, revisit your assumptions, and think in decades rather than days.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "how-compound-interest-works",
-    title: "How Compound Interest Works Over Time",
-    description:
-      "See how frequency, contributions, and time change investment growth, and learn why patience often does more work than chasing the highest return.",
-    category: "Wealth Building",
+    slug: "how-to-fix-a-leaking-faucet",
+    title: "How to Fix a Leaking Faucet Without Hiring a Plumber",
+    description: "A leaking faucet wastes water and drives up your bill. Learn the exact steps to diagnose and fix any drip yourself and save $150 or more.",
+    category: "Plumbing DIY",
     readTime: "8 min read",
-    calculatorHref: "/compound-interest-calculator",
-    calculatorLabel: "Run Compound Scenarios",
-    relatedSlugs: ["what-is-compound-interest", "how-to-save-money-faster", "how-to-pay-off-debt-faster"],
+    calculatorHref: "/home-renovation-calculator",
+    calculatorLabel: "Estimate Repair Costs",
+    relatedSlugs: ["when-to-diy-vs-hire-a-contractor", "how-to-winterize-your-home"],
     sections: [
       {
-        heading: "Time is the multiplier",
+        heading: "The Problem: A Dripping Faucet Is Costing You Money",
         paragraphs: [
-          "The longer your money stays invested, the more opportunities it has to compound. The early years can feel slow because the balance is still small, but later years often show the most dramatic growth because the gains are happening on a much larger number.",
-          "This is why investors often say the first decade builds the base and the later decades create the visible acceleration. In practice, that means starting with smaller contributions early can be more powerful than waiting to contribute larger amounts later.",
+          "A single faucet dripping once per second wastes over 3,000 gallons of water per year — enough to fill a backyard pool. That translates to $20–$35 added to your water bill every month, and the longer you wait, the worse the damage to your pipes and fixtures.",
+          "Most homeowners call a plumber for this repair, paying $150–$300 for a job that takes 30 minutes. The parts cost less than $15 at any hardware store.",
         ],
       },
       {
-        heading: "Frequency and contributions",
+        heading: "The Solution: Tools and Materials You Need",
         paragraphs: [
-          "Compounding frequency refers to how often interest is added to the balance. Daily and monthly compounding can produce slightly more growth than annual compounding, but the biggest drivers are still the rate, the contribution habit, and the number of years involved.",
-          "Monthly contributions matter because they turn compounding into a routine instead of a one-time event. Even if markets fluctuate, a regular savings schedule keeps adding capital that can grow over the long run.",
+          "You need: adjustable wrench, Phillips and flathead screwdrivers, replacement O-rings or cartridge, plumber's grease, and a towel. Identify your faucet type first: ball, cartridge, ceramic disc, or compression. Most modern faucets are cartridge-based.",
+          "Take a photo of your faucet brand and model before heading to the hardware store. Store staff can match the exact replacement cartridge or washer.",
         ],
       },
       {
-        heading: "Practical examples",
+        heading: "The Benefit: Save $150+ and Prevent Water Damage",
         paragraphs: [
-          "Imagine two savers. One starts at 25 with $200 per month and stops at 35. Another waits until 35 and contributes $200 per month until 55. The first saver may still end up with a competitive or even larger balance because the money had more years to compound.",
-          "That example is not meant to suggest that later savers are doomed. It simply shows that the clock matters. If you start late, the best response is to increase consistency and stay realistic, not give up.",
+          "Fixing a leaking faucet yourself saves the plumber's service fee entirely. More importantly, you prevent the drip from worsening into a corroded valve seat — a repair that can cost $400 or more if left untreated.",
+          "Homeowners who handle small plumbing repairs themselves save an average of $400–$800 per year on maintenance calls.",
         ],
       },
       {
-        heading: "What smart planners do",
+        heading: "STAR Scenario: How Marcus Saved $150 in 30 Minutes",
         paragraphs: [
-          "Smart planners test multiple scenarios. They compare conservative, moderate, and optimistic growth assumptions. They look at how contributions affect the end balance and whether a goal stays realistic if returns are lower than expected.",
-          "A calculator becomes far more useful when you use it to compare choices instead of chasing a single perfect number. The goal is not prediction. The goal is preparation.",
+          "Situation: Marcus noticed his kitchen faucet dripping nonstop. His water bill had crept up $25 over two months.",
+          "Task: Fix the leak without calling a plumber, which his neighbor quoted at $175.",
+          "Action: Marcus watched a 5-minute video, identified his Moen cartridge faucet, bought a $12 replacement cartridge, and followed the steps — shut-off valve, remove handle, swap cartridge, reassemble.",
+          "Result: The leak stopped in under 30 minutes. He saved $163 on the repair and learned a skill he has now used three more times.",
+        ],
+      },
+      {
+        heading: "Step-by-Step Fix Guide",
+        paragraphs: [
+          "1. Turn off the water supply valves under the sink. Test by turning the handle — no water should flow.",
+          "2. Remove the decorative cap on the faucet handle and unscrew the handle screw. Pull the handle straight up.",
+          "3. For cartridge faucets: pull the cartridge straight up using pliers. Note the orientation before removing.",
+          "4. Take the old cartridge to the hardware store for an exact match.",
+          "5. Insert the new cartridge in the same orientation. Apply plumber's grease to O-rings before reassembling.",
+          "6. Reinstall the handle, turn the water back on slowly, and test.",
+        ],
+      },
+      {
+        heading: "Pro Tips",
+        paragraphs: [
+          "Always photograph every step before disassembly — it makes reassembly much easier.",
+          "If the leak comes from under the handle rather than the spout, the O-ring on the valve stem is the culprit, not the cartridge.",
+          "Replacing all O-rings at once while you have the faucet apart prevents future leaks from different spots.",
+        ],
+      },
+      {
+        heading: "FAQ",
+        paragraphs: [
+          "Q: How do I know what type of faucet I have? A: Remove the handle and look at the internal mechanism. Ball types have a rounded brass ball; cartridge types have a cylindrical cartridge; ceramic disc types have a wide cylinder with ceramic discs.",
+          "Q: My faucet still drips after replacing the cartridge. What now? A: Check the valve seat — a worn seat causes leaks even with a new cartridge. A seat wrench ($8) lets you replace it yourself.",
+          "Q: Should I replace both hot and cold cartridges at once? A: Yes. If one has worn out, the other is close behind. Replacing both while you have the faucet apart saves a second repair job within months.",
         ],
       },
     ],
   },
   {
-    slug: "how-to-calculate-mortgage-payments",
-    title: "How To Calculate Mortgage Payments",
-    description:
-      "Break down principal, interest, taxes, and insurance so you can estimate the true monthly cost of buying a home before making an offer.",
-    category: "Home Buying",
+    slug: "how-to-choose-roof-material",
+    title: "How to Choose the Right Roofing Material for Your Home",
+    description: "Not all roofing materials are equal. Learn how to compare asphalt, metal, tile, and slate by cost, lifespan, and climate suitability before spending $10,000+.",
+    category: "Roofing",
+    readTime: "10 min read",
+    calculatorHref: "/roof-cost-calculator",
+    calculatorLabel: "Calculate Roof Replacement Cost",
+    relatedSlugs: ["how-to-maintain-your-roof", "when-to-diy-vs-hire-a-contractor"],
+    sections: [
+      {
+        heading: "The Problem: Choosing the Wrong Material Costs Thousands",
+        paragraphs: [
+          "A roof replacement is one of the most expensive home projects — typically $8,000 to $30,000 depending on material and size. Homeowners who choose based on upfront cost alone often end up re-roofing again in 15 years instead of 50.",
+          "The wrong material for your climate also means higher energy bills, premature wear, and voided warranties.",
+        ],
+      },
+      {
+        heading: "Material Comparison: What Each Option Delivers",
+        paragraphs: [
+          "Asphalt 3-Tab Shingles: $90–$100 per square, 15–20 year lifespan. Best for budget-conscious owners who plan to sell within a decade.",
+          "Architectural Asphalt: $120–$150 per square, 25–30 year lifespan. Better appearance and durability — the most popular residential choice.",
+          "Metal (Standing Seam): $500–$700 per square, 40–70 year lifespan. Excellent in snow and rain climates. High upfront cost offset by near-zero maintenance.",
+          "Clay/Concrete Tile: $400–$700 per square, 50+ year lifespan. Ideal for warm, dry climates. Heavy — requires structural reinforcement in many homes.",
+          "Slate: $800–$1,000+ per square, 75–150 year lifespan. Premium choice for historic or high-end homes. Rarely needs replacement in a homeowner's lifetime.",
+        ],
+      },
+      {
+        heading: "The Benefit: Matching Material to Climate Saves Long-Term",
+        paragraphs: [
+          "A homeowner in Minnesota who chooses metal roofing avoids ice dam damage and saves an estimated $3,000–$6,000 in repairs over 20 years compared to asphalt.",
+          "In Florida, clay tile's resistance to humidity, UV, and hurricane wind ratings justifies its cost within 10–15 years.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: The Johnson Family Saves $18,000",
+        paragraphs: [
+          "Situation: The Johnsons needed a new roof after hail damage. Their 2,200 sq ft home in Colorado gets heavy snow each winter.",
+          "Task: Choose a material that would last without ice dam problems and fit a $20,000 budget.",
+          "Action: They used a roof cost calculator, compared asphalt architectural ($11,500) vs. metal standing seam ($19,000). The metal would last 50+ years vs. 25 for asphalt — meaning one replacement instead of two.",
+          "Result: They chose metal, paid $19,000, and avoided a projected second $22,000 replacement in 25 years. Net savings over 50 years: $18,000+, plus energy savings from better insulation.",
+        ],
+      },
+      {
+        heading: "5 Mistakes to Avoid When Replacing a Roof",
+        paragraphs: [
+          "1. Choosing the cheapest bid without checking licensing and insurance.",
+          "2. Ignoring attic ventilation — poor ventilation shortens any roof's life by 30%.",
+          "3. Layering new shingles over old ones to save removal cost. This voids most warranties.",
+          "4. Not checking HOA rules before choosing a non-standard material or color.",
+          "5. Skipping ice-and-water shield underlayment in cold climates.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-prepare-garden-for-spring",
+    title: "How to Prepare Your Garden for Spring in 8 Steps",
+    description: "Spring garden prep sets the stage for your entire growing season. Follow this 8-step checklist to maximize yield, reduce pests, and save on replanting costs.",
+    category: "Gardening",
+    readTime: "7 min read",
+    calculatorHref: "/garden-planting-calculator",
+    calculatorLabel: "Plan Your Planting Layout",
+    relatedSlugs: ["best-plants-for-low-maintenance-gardens", "how-to-create-a-raised-garden-bed"],
+    sections: [
+      {
+        heading: "The Problem: Skipping Prep Kills Your Garden Before It Starts",
+        paragraphs: [
+          "Most gardening failures happen before the first seed goes in the ground. Compacted soil, leftover disease from last year's plants, and poor drainage cause seeds to rot, seedlings to die, and transplants to struggle.",
+          "Homeowners who skip spring prep spend 40–60% more on replacement plants by mid-summer.",
+        ],
+      },
+      {
+        heading: "The Solution: An 8-Step Spring Prep Checklist",
+        paragraphs: [
+          "1. Test your soil pH. Most vegetables need 6.0–7.0. A $12 test kit from a hardware store prevents guesswork.",
+          "2. Clear dead plant material from last season. This removes overwintering pests and disease spores.",
+          "3. Add 2–3 inches of compost and work it into the top 6 inches of soil.",
+          "4. Check drainage. Standing water 30 minutes after rain means you need raised beds or drainage work.",
+          "5. Apply pre-emergent weed control to areas that won't have seeds for 6+ weeks.",
+          "6. Sharpen and clean garden tools. Dirty tools spread disease between plants.",
+          "7. Plan your layout using a planting grid calculator — spacing matters for yield.",
+          "8. Start cool-season seeds indoors 6–8 weeks before your last frost date.",
+        ],
+      },
+      {
+        heading: "The Benefit: Better Yields, Less Replanting Cost",
+        paragraphs: [
+          "Gardeners who prep properly harvest 25–40% more produce per square foot and spend significantly less on replacement plants.",
+          "Proper soil prep also reduces fertilizer needs throughout the season, saving $30–$80 in mid-summer treatments.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: Sarah's Tomato Yield Doubles",
+        paragraphs: [
+          "Situation: Sarah's 4×8 raised bed produced only 12 lbs of tomatoes last year despite planting 8 plants.",
+          "Task: Diagnose the problem and improve yield without expanding the garden.",
+          "Action: She tested soil (pH was 5.2 — too acidic), added lime, amended with compost, used a planting calculator to space plants 24 inches apart instead of 12, and started seeds 7 weeks before last frost.",
+          "Result: Same bed produced 28 lbs of tomatoes — a 133% increase. Cost of soil amendments: $35.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-save-on-lawn-care-costs",
+    title: "How to Cut Your Lawn Care Costs by 50% Without Sacrificing Results",
+    description: "Professional lawn care can cost $1,200–$3,000 per year. Learn which services are worth paying for and which you can do yourself for a fraction of the price.",
+    category: "Lawn Care",
     readTime: "9 min read",
-    calculatorHref: "/mortgage-calculator",
-    calculatorLabel: "Mortgage Calculator",
-    relatedSlugs: ["loan-interest-explained", "how-to-pay-off-debt-faster", "how-to-save-money-faster"],
+    calculatorHref: "/lawn-care-calculator",
+    calculatorLabel: "Calculate Your Lawn Care Cost",
+    relatedSlugs: ["best-time-to-fertilize-your-lawn", "how-to-fix-lawn-bare-spots"],
     sections: [
       {
-        heading: "What a mortgage payment includes",
+        heading: "The Problem: Lawn Service Bills Add Up Fast",
         paragraphs: [
-          "A mortgage payment is often summarized as PITI: principal, interest, taxes, and insurance. Principal reduces the loan balance. Interest is the lender's charge for borrowing. Property taxes and homeowners insurance are usually added on top of the loan payment to estimate the true monthly cost.",
-          "Many buyers focus too heavily on the home price and not enough on the monthly payment. The monthly payment is what determines whether the home fits your budget, especially after rates, taxes, and insurance are included.",
+          "A professional lawn service for a 1/4-acre yard typically runs $100–$200 per month for mowing alone. Add fertilizing, aeration, overseeding, and weed control and the annual bill easily reaches $2,000–$3,500.",
+          "Many homeowners pay for services they could easily handle themselves with basic equipment they already own.",
         ],
       },
       {
-        heading: "How the loan math behaves",
+        heading: "The Solution: Hybrid Approach — Pay for Expertise, DIY the Rest",
         paragraphs: [
-          "Mortgage payments are usually amortized, meaning the monthly payment stays fairly stable while the composition changes over time. Early payments are interest-heavy. Later payments put more money toward the principal. That is why making extra principal payments early can be especially powerful.",
-          "Loan term matters too. A 30-year mortgage usually lowers the monthly payment but increases total interest paid. A 15-year mortgage raises the payment but often reduces lifetime borrowing costs significantly.",
+          "Hire professionals for: core aeration (requires specialized equipment), complex pest treatments, and large tree trimming.",
+          "DIY with confidence: mowing, edging, fertilizing on a schedule, overseeding, and basic weed control.",
+          "A robotic mower ($400–$1,000 one-time) pays for itself in 1–2 seasons versus weekly mowing service.",
         ],
       },
       {
-        heading: "Real-world budgeting mistakes",
+        heading: "The Benefit: Save $800–$1,500 Per Year",
         paragraphs: [
-          "A common mistake is estimating affordability with only principal and interest. Buyers forget maintenance, utilities, HOA fees, closing costs, and emergency savings. Another mistake is stretching to the lender's maximum approval instead of choosing a payment that still allows room for life and savings goals.",
-          "A smart plan includes a stress test. Ask whether the payment still feels manageable if taxes rise, insurance costs increase, or one major home repair appears in the first year.",
+          "Homeowners who move mowing, fertilizing, and overseeding to DIY save an average of $900 annually. Spreading those services correctly still delivers professional results.",
+          "Using a lawn care calculator to plan service frequency prevents over-treating, which can damage grass and waste hundreds of dollars per year.",
         ],
       },
       {
-        heading: "How to use the calculator wisely",
+        heading: "STAR Scenario: The Rodriguezes Cut Their Lawn Bill in Half",
         paragraphs: [
-          "Run several scenarios with different down payments, loan terms, and rates. Compare how even a half-point difference in rate changes the total cost. If the payment is too high, you may need to revisit price range, term length, or expected down payment instead of forcing the numbers.",
-          "The best mortgage calculation is the one that helps you buy a home without sacrificing stability. A safe payment is usually more valuable than an impressive approval amount.",
+          "Situation: The Rodriguez family was spending $2,400/year on a full-service lawn contract for their 8,000 sq ft lawn.",
+          "Task: Reduce costs without losing curb appeal before selling their home.",
+          "Action: They kept professional aeration and weed treatment ($320/year), bought a self-propelled mower ($350 one-time), and followed a DIY fertilizing schedule from the lawn care calculator.",
+          "Result: Annual lawn cost dropped to $1,050 — a 56% reduction. The lawn looked better because they mowed at the right height and frequency.",
         ],
       },
     ],
   },
   {
-    slug: "loan-interest-explained",
-    title: "Loan Interest Explained for Beginners",
-    description:
-      "Understand how lenders charge interest, why APR matters, and how small changes in term length can dramatically affect the true cost of borrowing.",
-    category: "Debt Basics",
+    slug: "diy-fence-installation-guide",
+    title: "DIY Fence Installation: What It Really Costs and How to Do It Right",
+    description: "Professional fence installation runs $20–$50 per linear foot. Learn the materials, tools, and process for installing your own fence and save 40–60%.",
+    category: "Fencing",
+    readTime: "11 min read",
+    calculatorHref: "/fence-cost-calculator",
+    calculatorLabel: "Calculate Fence Materials Cost",
+    relatedSlugs: ["how-to-choose-roof-material", "when-to-diy-vs-hire-a-contractor"],
+    sections: [
+      {
+        heading: "The Problem: Fence Quotes Are All Over the Map",
+        paragraphs: [
+          "A 150-foot privacy fence from a professional contractor runs $4,500–$9,000. Many homeowners get three quotes and still don't know if they're being overcharged for materials or labor.",
+          "DIY installation of the same fence typically costs $1,500–$2,500 in materials — a 50–70% savings if you have two helpers and a weekend.",
+        ],
+      },
+      {
+        heading: "The Solution: Choose the Right Material and Plan Before You Buy",
+        paragraphs: [
+          "Wood privacy fence: $12–$20 per linear foot in materials. Requires painting/staining every 3–5 years but offers the most flexibility for style.",
+          "Vinyl: $22–$30 per linear foot. No painting, minimal maintenance. More expensive upfront but lower lifetime cost.",
+          "Chain link: $8–$14 per linear foot. Functional and durable, but limited privacy.",
+          "A fence cost calculator accounts for linear footage, post spacing, gate openings, and material to give you an accurate materials budget before you step into a lumber yard.",
+        ],
+      },
+      {
+        heading: "The Benefit: Save $2,000–$5,000 in Labor",
+        paragraphs: [
+          "Professional fence installation labor runs $8–$20 per linear foot. For 200 feet of fencing, that's $1,600–$4,000 in labor alone.",
+          "DIY installation with proper planning takes 1–2 weekends and requires only basic tools: post hole digger, level, drill, and saw.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: Dave Saves $3,400 on a New Fence",
+        paragraphs: [
+          "Situation: Dave needed 180 feet of 6-foot privacy fence around his backyard. Contractor quotes ranged from $5,200 to $7,800.",
+          "Task: Determine if DIY was realistic and estimate actual material costs.",
+          "Action: He used a fence calculator to confirm he needed 180 linear feet of cedar planks, 24 posts, 3 gates, and hardware. Total material cost: $2,100. He rented a post-hole digger for $85/day.",
+          "Result: Fence installed in two weekends. Total cost: $2,310. Savings: $3,400 vs. the lowest contractor quote.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "when-to-diy-vs-hire-a-contractor",
+    title: "When to DIY vs. Hire a Contractor: A Practical Decision Guide",
+    description: "Knowing which home projects you can handle yourself vs. when to call a pro can save thousands — and avoid costly mistakes that violate building codes.",
+    category: "Home Improvement",
+    readTime: "8 min read",
+    calculatorHref: "/home-renovation-calculator",
+    calculatorLabel: "Estimate Project Cost",
+    relatedSlugs: ["diy-fence-installation-guide", "how-to-fix-a-leaking-faucet"],
+    sections: [
+      {
+        heading: "The Problem: DIY Gone Wrong Is More Expensive Than Hiring Out",
+        paragraphs: [
+          "A botched electrical job that fails inspection or a structural wall incorrectly removed can cost 2–3× the original project price to fix. Insurance claims for DIY damage are frequently denied.",
+          "The challenge is knowing which projects are genuinely doable and which require licensed professionals for safety and code compliance.",
+        ],
+      },
+      {
+        heading: "The Framework: Risk, Permits, and Skill Level",
+        paragraphs: [
+          "Always hire a licensed professional for: electrical panel work and new circuit installation, plumbing that moves drain/supply lines, structural changes (removing walls, adding beams), HVAC ductwork modification, gas line work.",
+          "Safe DIY with basic skills: painting, basic drywall repair, trim installation, cabinet hardware, flooring installation, landscaping, fence installation, deck staining.",
+          "The permit question matters — work done without required permits reduces home value and can force you to undo completed work at sale time.",
+        ],
+      },
+      {
+        heading: "The Benefit: Right-Sizing Saves Money Both Ways",
+        paragraphs: [
+          "Homeowners who hire out DIY-able projects overpay by an estimated $3,000–$8,000 per year. Those who DIY work requiring permits or licenses risk fines and redo costs that far exceed the saved labor.",
+          "A practical rule: if the worst-case failure creates a safety hazard, liability, or structural damage, hire a licensed professional.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: Lisa Avoids a $12,000 Mistake",
+        paragraphs: [
+          "Situation: Lisa wanted to convert her unfinished basement into a living space and watched videos showing how to add framing, drywall, and recessed lighting.",
+          "Task: Decide what she could DIY and what needed contractors.",
+          "Action: She hired an electrician for the recessed lighting and outlets ($1,800 with permits), DIY'd the framing and drywall ($900 in materials + 3 weekends), and hired a licensed contractor to add an egress window required by code ($2,200).",
+          "Result: Total project cost: $4,900. A contractor quote for the full project was $14,500. She saved $9,600 while ensuring all work passed inspection and protected home resale value.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-create-a-raised-garden-bed",
+    title: "How to Build a Raised Garden Bed: Complete Cost and Build Guide",
+    description: "Raised beds grow more food in less space and are easier to maintain than in-ground gardens. Build one for under $150 with this step-by-step guide.",
+    category: "Gardening",
+    readTime: "9 min read",
+    calculatorHref: "/garden-planting-calculator",
+    calculatorLabel: "Plan Your Garden Layout",
+    relatedSlugs: ["how-to-prepare-garden-for-spring", "best-plants-for-low-maintenance-gardens"],
+    sections: [
+      {
+        heading: "The Problem: In-Ground Gardens Are Hard to Control",
+        paragraphs: [
+          "Most backyard soil is compacted, full of clay, rocks, or weed seeds. In-ground gardening in poor soil produces low yields and constant frustration — spending $100+ on amendments that wash away every season.",
+          "Raised beds solve soil quality, drainage, and weed pressure in one project.",
+        ],
+      },
+      {
+        heading: "The Solution: Build a 4×8 Raised Bed for Under $150",
+        paragraphs: [
+          "Materials needed: two 2×10×8 cedar boards, two 2×10×4 cedar boards, four 4×4×12 corner posts, exterior screws, weed barrier fabric.",
+          "Cedar is naturally rot-resistant and lasts 10–20 years without treatment. Avoid treated lumber if you're growing food.",
+          "Fill formula: 60% topsoil, 30% compost, 10% coarse sand or perlite. A garden planting calculator helps you determine exact cubic feet needed.",
+        ],
+      },
+      {
+        heading: "The Benefit: 3× More Yield Per Square Foot Than In-Ground",
+        paragraphs: [
+          "Studies from UC Davis and Oregon State show raised beds produce up to 4× more yield per square foot than traditional row gardening — because you can plant densely, have no compacted walkways, and control soil quality.",
+          "The initial investment of $80–$150 pays back in produce value within one growing season for most vegetable gardeners.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: Tom Grows $600 Worth of Vegetables for $140",
+        paragraphs: [
+          "Situation: Tom had poor clay soil and a $200 gardening budget. Previous years of in-ground attempts produced minimal results.",
+          "Task: Build a productive vegetable garden that didn't require expensive soil remediation.",
+          "Action: He built one 4×8 raised bed for $95 in cedar lumber, filled it with a $45 soil mix, and used a planting calculator to maximize the space with tomatoes, peppers, lettuce, and basil.",
+          "Result: First season yield valued at approximately $610 in grocery-store equivalent produce. ROI: 330% in year one.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "best-plants-for-low-maintenance-gardens",
+    title: "Best Plants for Low Maintenance Gardens That Actually Look Good",
+    description: "Not every garden needs constant attention. These 15 plants thrive with minimal water, pruning, and care — perfect for busy homeowners who want curb appeal without the work.",
+    category: "Gardening",
     readTime: "7 min read",
-    calculatorHref: "/loan-payment-calculator",
-    calculatorLabel: "Loan Payment Calculator",
-    relatedSlugs: ["how-to-calculate-mortgage-payments", "how-to-pay-off-debt-faster", "how-currency-conversion-works"],
+    calculatorHref: "/garden-planting-calculator",
+    calculatorLabel: "Plan Your Planting Layout",
+    relatedSlugs: ["how-to-create-a-raised-garden-bed", "how-to-prepare-garden-for-spring"],
     sections: [
       {
-        heading: "Interest is the price of borrowing",
+        heading: "The Problem: High-Maintenance Plants Lead to Abandoned Gardens",
         paragraphs: [
-          "When you borrow money, the lender charges interest in exchange for the use of that money over time. The interest rate helps estimate the cost, but it is not always the full story. Fees, loan term, and compounding rules can change the real amount you end up paying.",
-          "That is why APR is so useful. APR includes more of the total borrowing cost and gives borrowers a better basis for comparing offers that may look similar at first glance.",
+          "Homeowners spend an average of $400–$800 on new plants each spring, only to watch half of them die by August due to drought, neglect, or poor plant selection for the climate.",
+          "The solution is matching plant selection to your actual maintenance capacity — not your aspirational one.",
         ],
       },
       {
-        heading: "Why term length changes everything",
+        heading: "Top 15 Low-Maintenance Plants by Zone",
         paragraphs: [
-          "Longer loans tend to reduce the monthly payment but increase total interest. Borrowers often focus on the lower payment and underestimate how much more expensive the debt becomes over time. Shorter loans reverse that tradeoff by raising the payment while lowering total interest.",
-          "This is especially important with auto loans, personal loans, and refinancing offers. A lower monthly obligation can feel safer, but it may quietly increase the total amount paid by thousands.",
+          "Perennial flowers (come back every year): Black-eyed Susan, Coneflower (Echinacea), Daylily, Russian Sage, Ornamental Grasses.",
+          "Shrubs: Knockout Rose, Spirea, Viburnum, Boxwood, Hydrangea paniculata.",
+          "Ground covers (replace lawn in shaded or sloped areas): Creeping Phlox, Liriope, Pachysandra, Sedum, Mondo Grass.",
+          "Most require only one annual pruning, no fertilizing after establishment, and minimal watering once root systems are established (typically 1 full season).",
         ],
       },
       {
-        heading: "Good borrowing habits",
+        heading: "The Benefit: Cut Garden Maintenance Time by 60%",
         paragraphs: [
-          "Strong borrowers compare APR, check for prepayment penalties, and make sure the payment fits comfortably inside their budget. They also consider what happens if income changes or another emergency expense appears during repayment.",
-          "The healthiest loan is one that solves a problem without creating a larger one. Borrow for needs, not pressure, and understand exactly how the repayment schedule works before signing.",
+          "A garden planted with 80% perennials and native shrubs requires an estimated 3–4 hours per month in summer versus 10–15 hours for annual-heavy beds.",
+          "Perennials cost more per plant initially but eliminate annual replanting costs — typically saving $200–$500 per year by year three.",
         ],
       },
       {
-        heading: "Mistakes to avoid",
+        heading: "STAR Scenario: Nancy Transforms Her Garden Routine",
         paragraphs: [
-          "Avoid shopping only by monthly payment. Avoid ignoring origination fees or assuming that refinancing is automatically cheaper. Also avoid stretching a loan term to make a purchase feel affordable if the total cost becomes unreasonable.",
-          "A calculator helps because it shows the relationship between payment, rate, term, and total interest side by side. Once you see the tradeoffs clearly, better decisions become much easier.",
+          "Situation: Nancy spent 8 hours per week maintaining her annual flower beds during summer. She was tired and the garden looked ragged by July.",
+          "Task: Redesign the front beds for curb appeal with under 2 hours of weekly maintenance.",
+          "Action: She replaced annual beds with Knockout Roses, Coneflowers, and ornamental grasses. Used a planting calculator to determine spacing for 23 plants covering 240 sq ft.",
+          "Result: Maintenance dropped to 90 minutes per week. Beds look better by August than they ever did with annuals. Annual plant cost: $0 after year one.",
         ],
       },
     ],
   },
   {
-    slug: "how-to-save-money-faster",
-    title: "How To Save Money Faster Without Burning Out",
-    description:
-      "Build a savings plan that balances speed and sustainability by using automatic transfers, realistic targets, and simple spending controls.",
-    category: "Saving Strategies",
+    slug: "how-to-winterize-your-home",
+    title: "How to Winterize Your Home and Cut Heating Bills by Up to 30%",
+    description: "Air sealing, insulation, and weatherstripping are the highest-ROI home improvements you can make. This guide shows exactly where to focus and what it costs.",
+    category: "Home Improvement",
+    readTime: "10 min read",
+    calculatorHref: "/home-renovation-calculator",
+    calculatorLabel: "Estimate Energy Upgrade Costs",
+    relatedSlugs: ["when-to-diy-vs-hire-a-contractor", "how-to-fix-a-leaking-faucet"],
+    sections: [
+      {
+        heading: "The Problem: Air Leaks Cost Homeowners $300–$600 Per Year",
+        paragraphs: [
+          "The EPA estimates that air sealing and insulation saves an average of 15% on heating and cooling costs — and in older homes, the savings can exceed 30%. Most of the money walks straight out through gaps around windows, doors, outlets, and attic hatches.",
+          "The average American home has air leaks equivalent to a 2×2 foot hole in the wall.",
+        ],
+      },
+      {
+        heading: "Where to Focus: Highest ROI Winterization Projects",
+        paragraphs: [
+          "1. Attic air sealing and insulation: $500–$2,000 DIY, $1,500–$4,500 professional. Payback period: 2–4 years.",
+          "2. Weatherstripping doors and windows: $50–$200 total. Immediate payback.",
+          "3. Outlet and switch plate foam gaskets: $10–$30. One afternoon project.",
+          "4. Basement rim joist insulation: $100–$400 DIY. Often overlooked but significant heat loss point.",
+          "5. HVAC furnace filter and service: $100–$300. Keeps heating efficiency at rated levels.",
+        ],
+      },
+      {
+        heading: "The Benefit: $300–$900 Annual Energy Savings",
+        paragraphs: [
+          "A comprehensive weatherization project costing $800–$2,500 typically pays back in 2–4 years through reduced heating and cooling bills. The improvements also increase home comfort and reduce humidity problems.",
+          "Many utility companies offer rebates of 20–50% on insulation and weatherization work — reducing your net cost significantly.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: The Nguyens Save $480 Per Year",
+        paragraphs: [
+          "Situation: The Nguyens had a 1978 colonial with single-pane windows and minimal attic insulation. Their heating bill averaged $380/month in January and February.",
+          "Task: Reduce heating costs without replacing all windows (quoted at $18,000).",
+          "Action: They added attic insulation ($1,200 with a utility rebate of $400), weatherstripped all exterior doors ($90), and installed cellular shades on north-facing windows ($320).",
+          "Result: First winter heating bills dropped 28%. Annual savings: approximately $480. Payback period: 2.5 years.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-paint-a-room-like-a-pro",
+    title: "How to Paint a Room Like a Pro: Costs, Tools, and the Right Technique",
+    description: "Professional painters charge $400–$1,000 per room. With the right prep and technique, you can achieve the same results for $80–$150 in materials.",
+    category: "Home Improvement",
     readTime: "8 min read",
-    calculatorHref: "/savings-goal-calculator",
-    calculatorLabel: "Savings Goal Calculator",
-    relatedSlugs: ["what-is-compound-interest", "how-compound-interest-works", "how-to-pay-off-debt-faster"],
+    calculatorHref: "/paint-calculator",
+    calculatorLabel: "Calculate Paint Needed",
+    relatedSlugs: ["when-to-diy-vs-hire-a-contractor", "how-to-winterize-your-home"],
     sections: [
       {
-        heading: "Speed matters, but consistency matters more",
+        heading: "The Problem: Most DIY Paint Jobs Look Amateurish",
         paragraphs: [
-          "Saving faster is usually less about one dramatic budget cut and more about building a system. Automatic transfers, goal-based accounts, and small recurring adjustments can outperform bursts of motivation that last only a few weeks.",
-          "The best savings plan is not the strictest one. It is the one you can repeat month after month without feeling like your life is permanently on hold.",
+          "The biggest complaint about DIY painting is uneven coverage, visible roller marks, and missed prep work that causes peeling within 2 years. These issues almost always come from rushing the prep — not from lack of painting skill.",
+          "Professional painters spend 60% of their time on prep. Most DIYers spend 10%.",
         ],
       },
       {
-        heading: "Start with a clear target",
+        heading: "The Solution: Proper Prep and the Right Materials",
         paragraphs: [
-          "Specific goals make saving easier. An emergency fund, a down payment, travel, taxes, or a business reserve each have different timelines and risk tolerance. Once you know the goal amount and target date, you can work backward to find the monthly contribution you need.",
-          "That clarity removes guesswork. Instead of wondering whether you are saving enough, you can compare your actual plan with a concrete number and adjust early if needed.",
+          "Materials for one standard room (12×12): 1–2 gallons quality paint ($35–$60/gallon), painter's tape, drop cloth, angled brush, 3/8 inch nap roller, paint tray.",
+          "Use a paint calculator to determine exact gallons needed — buying too little forces a second store trip mid-project and risks mismatched batches.",
+          "Prep steps that matter: fill holes with spackling, sand smooth, clean walls with TSP substitute, prime stain-blocked areas.",
         ],
       },
       {
-        heading: "High-impact savings levers",
+        heading: "The Benefit: Save $300–$800 Per Room",
         paragraphs: [
-          "The biggest wins usually come from recurring expenses rather than one-time purchases. Housing, transportation, insurance, subscriptions, and dining habits often create the most room in a monthly budget. Even a few focused changes in those categories can free up more cash than dozens of small cuts.",
-          "Income growth matters too. Negotiating rates, asking for a raise, improving billable skills, or taking on targeted side work can accelerate a goal much faster than only cutting spending.",
+          "Professional painting in most markets runs $2–$4 per square foot. A 12×12 room with 9-foot ceilings has roughly 490 sq ft of wall area — that's $980–$1,960 professionally done versus $80–$150 in DIY materials.",
+          "A properly prepped DIY paint job done with quality paint lasts just as long as a professional one.",
         ],
       },
       {
-        heading: "Avoid the common traps",
+        heading: "STAR Scenario: Jennifer Refreshes Five Rooms for $400",
         paragraphs: [
-          "Many savers forget to build a buffer for irregular expenses, which causes progress to disappear when annual bills or repairs show up. Others keep their emergency fund and spending money in the same account, making it too easy to raid progress.",
-          "Separate accounts, automatic deposits, and periodic check-ins usually solve those problems. The goal is to make progress the default, not something you have to manually protect every month.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "how-to-calculate-crypto-profit",
-    title: "How To Calculate Crypto Profit Correctly",
-    description:
-      "Go beyond entry and exit prices by accounting for fees, slippage, and position size so you can measure true crypto profit instead of a rough guess.",
-    category: "Crypto Education",
-    readTime: "7 min read",
-    calculatorHref: "/crypto-profit-calculator",
-    calculatorLabel: "Crypto Profit Calculator",
-    relatedSlugs: ["crypto-profit-vs-loss-explained", "what-affects-exchange-rates", "loan-interest-explained"],
-    sections: [
-      {
-        heading: "The simple formula is only the starting point",
-        paragraphs: [
-          "Basic crypto profit is calculated by subtracting your buy price from your sell price and multiplying by quantity. That gives you gross profit. To reach a useful answer, you still need to subtract exchange fees, network fees, and any other trading costs.",
-          "Many traders stop at the headline gain and never calculate net profit. That can lead to overconfidence, especially on smaller trades where fees represent a meaningful percentage of the position.",
-        ],
-      },
-      {
-        heading: "Why fees and slippage matter",
-        paragraphs: [
-          "Crypto markets are not frictionless. You may pay fees when entering, when exiting, and sometimes when moving funds. Slippage can also reduce results if the executed price differs from the quoted one, especially in thinner markets or during fast moves.",
-          "For that reason, profit calculators are most valuable when they force every cost into the equation. A trade is only as good as what you keep after the friction is counted.",
-        ],
-      },
-      {
-        heading: "How to evaluate the result",
-        paragraphs: [
-          "A dollar profit alone can be misleading. ROI gives context by comparing the gain or loss to the amount invested. A $500 gain on a $2,000 trade tells a very different story from a $500 gain on a $25,000 trade.",
-          "It also helps to track your break-even point. Knowing the exact price needed to cover all costs helps you set better expectations and avoid guessing when the trade becomes truly profitable.",
-        ],
-      },
-      {
-        heading: "Mistakes traders make",
-        paragraphs: [
-          "Common mistakes include forgetting fees, ignoring taxes, sizing positions emotionally, and measuring success only by whether price moved up. Good trade review looks at process, not just outcome.",
-          "If you calculate profit carefully, you are less likely to overtrade, chase momentum blindly, or assume every green candle means a good decision.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "crypto-profit-vs-loss-explained",
-    title: "Crypto Profit vs. Loss Explained",
-    description:
-      "Understand the difference between realized and unrealized gains, why volatility changes risk, and how to think more clearly about winning and losing trades.",
-    category: "Crypto Risk",
-    readTime: "8 min read",
-    calculatorHref: "/crypto-profit-calculator",
-    calculatorLabel: "Check Your Trade Numbers",
-    relatedSlugs: ["how-to-calculate-crypto-profit", "what-affects-exchange-rates", "how-to-save-money-faster"],
-    sections: [
-      {
-        heading: "Paper gains are not realized gains",
-        paragraphs: [
-          "In crypto, it is easy to treat an unrealized gain like locked-in profit. But until you sell or close the position, the number can change quickly. High volatility means a strong day can reverse fast, especially in smaller-cap assets.",
-          "That is why disciplined traders separate account value from realized result. A gain becomes real only when the position is exited and the costs are fully counted.",
-        ],
-      },
-      {
-        heading: "Losses need context, not panic",
-        paragraphs: [
-          "A loss can come from price movement, poor position sizing, emotional decision-making, or simply a valid idea that did not work. The lesson is not always to avoid risk. Often the lesson is to structure risk better.",
-          "Reviewing the size of the loss relative to the original plan is more useful than reacting only to the dollar amount. Small controlled losses are normal. Unplanned oversized losses usually signal a process issue.",
-        ],
-      },
-      {
-        heading: "What thoughtful traders track",
-        paragraphs: [
-          "Good traders track entry, exit, thesis, fees, position size, and whether the trade followed the plan. They also review how often small mistakes repeat. The point is to learn from the pattern, not to obsess over one trade in isolation.",
-          "This kind of review turns raw P&L into feedback. Over time, that matters more than a single win or loss.",
-        ],
-      },
-      {
-        heading: "A better way to frame success",
-        paragraphs: [
-          "A profitable trade can still be a bad trade if it ignored risk. A losing trade can still be a good trade if it followed a sound process. This mindset is what helps traders survive enough cycles to improve.",
-          "Use calculators for clarity, but use risk rules for longevity. The best outcome is not one lucky trade. It is a repeatable decision-making process.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "how-currency-conversion-works",
-    title: "How Currency Conversion Works",
-    description:
-      "Understand exchange rates, spreads, and conversion fees so you can estimate the true cost of sending, spending, or investing across currencies.",
-    category: "Currency Basics",
-    readTime: "7 min read",
-    calculatorHref: "/currency-converter",
-    calculatorLabel: "Currency Converter",
-    relatedSlugs: ["what-affects-exchange-rates", "loan-interest-explained", "how-to-save-money-faster"],
-    sections: [
-      {
-        heading: "What an exchange rate really is",
-        paragraphs: [
-          "A currency exchange rate tells you how much one currency is worth in another. If the USD/EUR rate is 0.92, that means one US dollar converts to 0.92 euros at that quoted market level. In real life, the rate you receive is often slightly worse because providers add a spread or fee.",
-          "That is why travelers, businesses, and investors often discover that the rate they see in headlines is not the exact rate they receive in practice.",
-        ],
-      },
-      {
-        heading: "Where conversion costs show up",
-        paragraphs: [
-          "Banks, card issuers, money transfer services, and trading platforms often embed costs in two places: a marked-up exchange rate and an explicit service fee. Either one can reduce the value you receive.",
-          "The cheapest option is not always the one with the smallest visible fee. Sometimes a low fee is paired with a wider spread, which quietly increases the real cost.",
-        ],
-      },
-      {
-        heading: "Why rates move throughout the day",
-        paragraphs: [
-          "Exchange rates respond to economic data, interest rate expectations, inflation, trade flows, and risk sentiment. That means the price of one currency relative to another can change constantly as new information reaches the market.",
-          "For everyday users, the most important lesson is that rate movement and provider pricing are separate issues. Even if market rates improve, your provider's markup can still make the transaction expensive.",
-        ],
-      },
-      {
-        heading: "How to convert more intelligently",
-        paragraphs: [
-          "Compare total received amount rather than only the quoted rate. Watch for hidden fees, foreign transaction charges, and weekend pricing. If the transfer is large, even a small improvement in the rate can save a meaningful amount.",
-          "A converter is useful because it gives you a neutral baseline. Once you know the market-equivalent number, you can judge whether an offer is fair or padded.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "what-affects-exchange-rates",
-    title: "What Affects Exchange Rates?",
-    description:
-      "See how inflation, interest rates, economic growth, and market sentiment shape currency values over time and during major global events.",
-    category: "Macro Finance",
-    readTime: "8 min read",
-    calculatorHref: "/currency-converter",
-    calculatorLabel: "Check Exchange Rates",
-    relatedSlugs: ["how-currency-conversion-works", "how-to-calculate-crypto-profit", "loan-interest-explained"],
-    sections: [
-      {
-        heading: "Interest rates and inflation expectations",
-        paragraphs: [
-          "Currencies often react strongly to central bank policy. Higher expected interest rates can attract capital because investors may be able to earn more on cash or bonds in that country. Inflation can work the other way by weakening purchasing power and changing expectations about future policy.",
-          "That is why exchange rates frequently move around central bank meetings, inflation reports, and labor market releases.",
-        ],
-      },
-      {
-        heading: "Economic growth and trade flows",
-        paragraphs: [
-          "A strong economy can support a currency when it attracts investment and signals resilience. Trade balances matter too. Countries that import far more than they export may experience different currency pressures than countries with stronger external demand for their goods and services.",
-          "These forces do not move neatly in one direction every time, but they influence long-term currency trends and shorter-term reactions.",
-        ],
-      },
-      {
-        heading: "Risk sentiment and safe-haven behavior",
-        paragraphs: [
-          "In periods of market stress, investors often seek liquidity and perceived safety. That can strengthen certain currencies temporarily even if domestic fundamentals are unchanged. In calmer markets, money may flow back toward higher-yielding or faster-growing regions.",
-          "This is one reason currency markets can feel disconnected from the news if you only focus on one country. Global risk appetite matters too.",
-        ],
-      },
-      {
-        heading: "How everyday users should use this information",
-        paragraphs: [
-          "You do not need to forecast central banks perfectly to make better decisions. What matters most is understanding that rates move for reasons bigger than travel demand or local bank pricing.",
-          "For practical use, compare provider rates, watch major macro events for large transfers, and avoid assuming today's rate will hold if a transaction is time sensitive.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "how-to-pay-off-debt-faster",
-    title: "How To Pay Off Debt Faster",
-    description:
-      "Use repayment strategy, interest prioritization, and behavior-based budgeting to reduce debt faster without turning your plan into a short-lived sprint.",
-    category: "Debt Reduction",
-    readTime: "8 min read",
-    calculatorHref: "/loan-payment-calculator",
-    calculatorLabel: "Plan Your Loan Payoff",
-    relatedSlugs: ["loan-interest-explained", "how-to-save-money-faster", "how-to-calculate-mortgage-payments"],
-    sections: [
-      {
-        heading: "Start with the debt inventory",
-        paragraphs: [
-          "Before choosing a strategy, list every balance, minimum payment, interest rate, and due date. Debt feels overwhelming when it is abstract. It becomes manageable when it is visible. A clear inventory shows which balances cost the most and which payments are creating the most monthly pressure.",
-          "That visibility also helps prevent common mistakes like overpaying a low-rate loan while expensive revolving debt keeps growing in the background.",
-        ],
-      },
-      {
-        heading: "Avalanche vs. snowball",
-        paragraphs: [
-          "The avalanche method targets the highest-rate debt first while keeping minimum payments on everything else. It usually saves the most money. The snowball method targets the smallest balance first, which can create earlier psychological wins.",
-          "Neither method is universally best. The right choice is the one you can actually stick to. If motivation is your weak point, early wins may matter. If optimization matters most, interest rate priority often wins.",
-        ],
-      },
-      {
-        heading: "Ways to accelerate payoff",
-        paragraphs: [
-          "Extra payments, temporary lifestyle cuts, refinancing, balance transfer offers, windfalls, and income increases can all speed up payoff. The key is directing that extra cash intentionally instead of letting it dissolve into regular spending.",
-          "It also helps to reduce the chance of relapsing into new debt. That may mean building a starter emergency fund, removing friction from bill payments, or limiting easy access to credit for nonessential spending.",
-        ],
-      },
-      {
-        heading: "Mistakes that slow people down",
-        paragraphs: [
-          "People often underestimate interest costs, overestimate how much they can cut, or choose a repayment plan with no margin for setbacks. A rigid plan that fails after two months is not stronger than a moderate plan that lasts two years.",
-          "Use a calculator to test the effect of extra payments and realistic timelines. Progress compounds too, especially when your plan is simple enough to repeat.",
+          "Situation: Jennifer wanted to refresh five rooms before selling her home. Painting quotes totaled $4,200.",
+          "Task: Paint all five rooms herself without obvious DIY quality issues that would hurt the listing.",
+          "Action: She used the paint calculator to buy exactly 9 gallons total (no waste), bought quality brushes and rollers, spent one day prepping (filling, taping, cleaning), and painted over two weekends.",
+          "Result: Total materials cost: $410. A realtor commented the paint looked professionally done. The home sold for $7,000 over asking price.",
         ],
       },
     ],
   },
 ];
 
-export const guidesBySlug = Object.fromEntries(guideArticles.map((article) => [article.slug, article])) as Record<string, GuideArticle>;
+export const guidesBySlug: Record<string, GuideArticle> = Object.fromEntries(
+  guideArticles.map((g) => [g.slug, g])
+);

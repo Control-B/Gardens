@@ -1,6 +1,6 @@
 {
-  "name": "freetawn",
-  "short_name": "freetawn",
+  "name": "Gardens — Home & Garden Tools",
+  "short_name": "Gardens",
   "icons": [
     {
       "src": "/favicon-32x32.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#0f172a",
+  "theme_color": "#14532d",
   "background_color": "#0f172a",
   "display": "standalone"
 }

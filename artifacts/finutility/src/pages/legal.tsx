@@ -6,29 +6,29 @@ import { legalTrustContent } from "@/lib/trustContent";
 
 const pageContent = {
   "/about": {
-    title: "About Freetawn",
+    title: "About Gardens",
     intro:
-      "Freetawn is a financial education and calculator platform built to help everyday users understand money decisions with more confidence.",
+      "Gardens is a home and garden education platform built to help homeowners plan better projects, avoid costly mistakes, and make confident decisions before spending money.",
     sections: [
       {
-        heading: "What the site does",
+        heading: "What Gardens does",
         paragraphs: [
-          "Freetawn combines practical calculators with plain-English financial guides. The goal is to help users estimate outcomes, understand the assumptions behind those numbers, and make more informed decisions about saving, debt, home buying, and crypto-related calculations.",
-          "The platform is designed for people who want quick tools without sacrificing clarity. Instead of treating finance like a black box, Freetawn aims to show the calculation and the concept side by side.",
+          "Gardens combines free cost calculators with practical, real-world guides covering home improvement, gardening, and exterior projects. The goal is to give homeowners realistic cost benchmarks and step-by-step guidance before they commit to any project or contractor.",
+          "Every guide is structured around a real problem, a practical solution, and a demonstrated benefit — with a STAR scenario showing how real homeowners saved money using the same approach.",
         ],
       },
       {
         heading: "Who the site is for",
         paragraphs: [
-          "The site is for everyday users, first-time borrowers, savers, side-hustlers, and anyone comparing real-world financial tradeoffs. It is especially useful for people who want to model scenarios quickly before speaking with a lender, advisor, or tax professional.",
-          "Freetawn is educational by design. It is not a bank, lender, brokerage, or registered investment advisor.",
+          "Gardens is for homeowners, renters, and DIY enthusiasts who want honest cost information and practical guidance without having to sift through vague advice or aggressive upselling.",
+          "It's especially useful before calling contractors — when you need a realistic benchmark to evaluate quotes and ask the right questions.",
         ],
       },
       {
         heading: "Our approach to trust",
         paragraphs: [
-          "We favor practical explanations, privacy-first calculator behavior, and transparent disclaimers. Calculations are performed in the browser whenever possible, and the content is written to support understanding rather than hype.",
-          "Questions, corrections, and partnership inquiries can be sent to support@omniweb.ai.",
+          "We provide plain-English guidance, privacy-first calculator behavior (all calculations run in your browser), and transparent disclaimers about where estimates may vary by region.",
+          "Questions, corrections, and partnership inquiries can be sent to support@gardens.ai.",
         ],
       },
     ],
@@ -36,19 +36,19 @@ const pageContent = {
   "/privacy-policy": {
     title: "Privacy Policy",
     intro:
-      "This Privacy Policy explains what information Freetawn may collect, how it is used, and how the site is designed to limit unnecessary collection of personal financial data.",
+      "This Privacy Policy explains what information Gardens may collect, how it is used, and how the site is designed to minimize unnecessary data collection.",
     sections: [
       {
         heading: "Calculator inputs",
         paragraphs: [
-          "Freetawn is built to keep calculator usage privacy-first. Financial inputs entered into calculators are processed locally in your browser unless a feature clearly states otherwise. We do not ask users to create accounts in order to access core tools.",
+          "Gardens is built to keep calculator usage privacy-first. Financial inputs entered into calculators are processed locally in your browser unless a feature clearly states otherwise. We do not ask users to create accounts in order to access core tools.",
           "Because the tools are browser-based, users should still avoid entering sensitive personal identifiers such as account numbers, social security numbers, or full legal documents into any field on the site.",
         ],
       },
       {
         heading: "Analytics, cookies, and advertising",
         paragraphs: [
-          "Like many websites, Freetawn may use basic analytics, log data, and cookies to understand page performance, improve usability, and support advertising or measurement tools. These may include page visits, browser type, device information, and referral data.",
+          "Like many websites, Gardens may use basic analytics, log data, and cookies to understand page performance, improve usability, and support advertising or measurement tools. These may include page visits, browser type, device information, and referral data.",
           "If advertising services such as Google AdSense are used, third-party vendors may use cookies to serve ads based on prior visits to this and other sites, subject to their own policies and controls.",
         ],
       },
@@ -64,19 +64,19 @@ const pageContent = {
   "/terms-of-use": {
     title: "Terms of Use",
     intro:
-      "By accessing Freetawn, you agree to use the site in a lawful manner and understand that the calculators and guides are provided for educational and informational purposes only.",
+      "By accessing Gardens, you agree to use the site in a lawful manner and understand that the calculators and guides are provided for educational and informational purposes only.",
     sections: [
       {
         heading: "Permitted use",
         paragraphs: [
-          "You may use Freetawn for personal, educational, and general informational purposes. You may not misuse the site by attempting to disrupt service, scrape protected content at scale, or use the platform for fraudulent or unlawful activity.",
+          "You may use Gardens for personal, educational, and general informational purposes. You may not misuse the site by attempting to disrupt service, scrape protected content at scale, or use the platform for fraudulent or unlawful activity.",
           "We reserve the right to limit access or modify site functionality at any time in order to protect service stability, content quality, or compliance obligations.",
         ],
       },
       {
         heading: "No professional relationship",
         paragraphs: [
-          "Use of Freetawn does not create a financial-advisor, tax-advisor, legal-advisor, fiduciary, lender, or client relationship. The site does not provide individualized recommendations.",
+          "Use of Gardens does not create a financial-advisor, tax-advisor, legal-advisor, fiduciary, lender, or client relationship. The site does not provide individualized recommendations.",
           "Users remain responsible for evaluating whether any calculation or article is appropriate for their own circumstances.",
         ],
       },
@@ -84,7 +84,7 @@ const pageContent = {
         heading: "Content and limitation of liability",
         paragraphs: [
           "We strive to keep tools and articles useful, but we do not guarantee that every figure, assumption, feed, or example will always be complete, current, or error-free. Financial conditions and provider terms change over time.",
-          "To the fullest extent permitted by law, Freetawn is not liable for losses or decisions made in reliance on site content, calculator outputs, or third-party information displayed on the platform.",
+          "To the fullest extent permitted by law, Gardens is not liable for losses or decisions made in reliance on site content, calculator outputs, or third-party information displayed on the platform.",
         ],
       },
     ],
@@ -92,27 +92,27 @@ const pageContent = {
   "/disclaimer": {
     title: "Disclaimer",
     intro:
-      "The calculators, guides, and market-related content on Freetawn are for educational and informational purposes only and should not be treated as financial, legal, tax, or investment advice.",
+      "The calculators, guides, and project cost estimates on Gardens are for educational and informational purposes only. They are not professional contractor assessments, engineering evaluations, or legal or financial advice.",
     sections: [
       {
         heading: "Educational use only",
         paragraphs: [
-          "Calculator outputs are based on the data entered by the user and the assumptions built into each tool. They are intended to illustrate possible outcomes, not to guarantee future performance or provide personalized recommendations.",
-          "Articles and guides are written to improve general financial literacy. They are not a substitute for advice from a qualified professional familiar with your specific circumstances.",
+          "Calculator outputs are based on national average cost data and the dimensions entered by the user. They are intended to provide a realistic planning benchmark — not a guaranteed project cost or professional quote.",
+          "Guides and articles are written to improve home improvement and gardening knowledge. They are not a substitute for on-site assessment by a qualified contractor, engineer, or licensed professional.",
+        ],
+      },
+      {
+        heading: "Cost estimates vary by location",
+        paragraphs: [
+          "Material prices and labor rates vary significantly by region, season, and market conditions. Our estimates are based on national averages and may not reflect current prices in your area.",
+          "Always obtain multiple professional quotes before committing to any project over $1,000. Verify current material costs at local suppliers.",
         ],
       },
       {
         heading: "No guarantee of outcomes",
         paragraphs: [
-          "Actual borrowing costs, investment returns, taxes, savings rates, exchange rates, and market outcomes can differ significantly from examples shown on the site. Even small changes in assumptions can change the result.",
-          "Users should independently verify important terms, rates, and financial obligations before acting on any estimate.",
-        ],
-      },
-      {
-        heading: "Third-party content and feeds",
-        paragraphs: [
-          "Some areas of the site may reference or display third-party data, feeds, or external content. Freetawn does not produce or control all third-party material and cannot guarantee its completeness or accuracy.",
-          "Always consult a qualified financial professional, lender, tax advisor, or attorney before making major financial decisions.",
+          "Actual project costs, timelines, and results depend on factors not captured in our calculators — including site conditions, hidden structural issues, permit requirements, and contractor availability.",
+          "Gardens is not liable for any project costs, damages, or decisions made in reliance on our calculator estimates or guide content.",
         ],
       },
     ],
@@ -143,7 +143,7 @@ export default function LegalPage() {
               </section>
             ))}
             <p>
-              Questions about these policies can be sent to <a href="mailto:support@omniweb.ai">support@omniweb.ai</a>.
+              Questions about these policies can be sent to <a href="mailto:support@gardens.ai">support@gardens.ai</a>.
             </p>
           </div>
         </div>

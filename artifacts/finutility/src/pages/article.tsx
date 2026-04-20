@@ -84,15 +84,17 @@ export default function ArticlePage() {
             ))}
           </div>
 
-          <div className="my-12 rounded-3xl border border-border bg-muted/20 p-8 text-center">
-            <h2 className="text-2xl font-black text-foreground">Apply this guide to your own numbers</h2>
-            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
-              The guide gives you the framework. The calculator helps you test the scenario with your own inputs, assumptions, and timeline.
+          <div className="my-12 rounded-3xl border border-emerald-200 bg-emerald-50 p-8 text-center">
+            <h2 className="text-2xl font-black text-slate-900">Apply this guide to your own numbers</h2>
+            <p className="mt-3 text-slate-600 max-w-2xl mx-auto">
+              The guide gives you the framework. The calculator helps you test the scenario with your own measurements and get a real estimate.
             </p>
             <div className="mt-6 flex items-center justify-center gap-4 flex-wrap">
-              <Button asChild size="lg">
-                <a href={article.calculatorHref}>{article.calculatorLabel}</a>
-              </Button>
+              {article.calculatorHref && (
+                <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                  <a href={article.calculatorHref}>{article.calculatorLabel ?? "Open Calculator"}</a>
+                </Button>
+              )}
               <Button variant="outline" size="lg" asChild>
                 <Link href="/guides">Browse all guides</Link>
               </Button>

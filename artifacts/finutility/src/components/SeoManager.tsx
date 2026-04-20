@@ -10,76 +10,71 @@ interface MetaEntry {
 
 const metaByPath: Record<string, MetaEntry> = {
   "/": {
-    title: "Freetawn — Free Financial Calculators, Guides, and Insights",
-    description: "Use free financial calculators for mortgages, compound interest, loans, savings goals, and crypto profit. Explore practical guides built for everyday money decisions.",
+    title: "Gardens — Free Home & Garden Calculators, Cost Guides & Expert Advice",
+    description: "Free home and garden cost calculators for roofing, painting, lawn care, fencing, and renovation. Expert guides with real-world cost ranges to help you plan smarter projects.",
   },
-  "/finance": {
-    title: "Finance Tools and Guides | Freetawn",
-    description: "Explore finance calculators and explainers for compound interest, savings, currency conversion, and everyday money planning.",
+  "/home-improvement": {
+    title: "Home Improvement Tools & Guides | Gardens",
+    description: "Home improvement calculators and guides covering renovation costs, painting, faucet repair, winterization, and DIY vs. contractor decisions.",
   },
-  "/crypto": {
-    title: "Crypto Tools and Guides | Freetawn",
-    description: "Calculate crypto profit, ROI, and break-even prices, then learn the fundamentals with beginner-friendly crypto guides.",
+  "/garden": {
+    title: "Gardening Tools & Guides | Gardens",
+    description: "Garden planning calculators and expert guides for raised beds, planting layouts, spring prep, and choosing the right plants for your climate.",
   },
-  "/loans": {
-    title: "Loan and Mortgage Calculators | Freetawn",
-    description: "Estimate mortgage payments, loan interest, and repayment costs with free tools and supporting financial guides.",
-  },
-  "/news": {
-    title: "Market News Desk | Freetawn",
-    description: "Browse financial headlines, market snapshots, and category-based news coverage across markets, crypto, and personal finance.",
-    robots: "noindex,follow",
+  "/exterior": {
+    title: "Exterior & Curb Appeal Tools | Gardens",
+    description: "Exterior cost calculators and guides for roofing, fencing, and landscaping projects. Compare materials, get cost benchmarks, and avoid common mistakes.",
   },
   "/guides": {
-    title: "Financial Guides and Education Hub | Freetawn",
-    description: "Read practical personal finance guides on mortgages, debt, savings, investing, crypto profit, and exchange rates.",
+    title: "Home & Garden Guides | Gardens",
+    description: "Practical home improvement and gardening guides using the Problem → Solution → Benefit framework with real-world STAR scenarios and cost estimates.",
   },
-  "/compound-interest-calculator": {
-    title: "Compound Interest Calculator | Freetawn",
-    description: "Calculate future value, contributions, and total interest earned with a free compound interest calculator and plain-English guide.",
+  "/roof-cost-calculator": {
+    title: "Roof Cost Calculator — Estimate Roof Replacement Cost | Gardens",
+    description: "Free roof cost calculator. Compare asphalt, metal, tile, and slate roofing costs by sq ft before getting contractor quotes. Includes labor, materials, and removal.",
   },
-  "/mortgage-calculator": {
-    title: "Mortgage Calculator | Freetawn",
-    description: "Estimate monthly mortgage payments, taxes, insurance, and total costs using a free mortgage calculator.",
+  "/paint-calculator": {
+    title: "Paint Calculator — How Much Paint Do I Need? | Gardens",
+    description: "Calculate exactly how many gallons of paint you need for any room or exterior project. Accounts for wall area, coats, coverage rate, and waste factor.",
   },
-  "/loan-payment-calculator": {
-    title: "Loan Payment Calculator | Freetawn",
-    description: "Calculate monthly loan payments, amortization, and total interest for personal, auto, or student loans.",
+  "/lawn-care-calculator": {
+    title: "Lawn Care Cost Calculator | Gardens",
+    description: "Estimate annual lawn care costs by lawn size and services. Compare DIY vs. professional lawn care and find where you can save the most.",
   },
-  "/currency-converter": {
-    title: "Currency Converter | Freetawn",
-    description: "Convert global currencies and learn how exchange rates and fees affect the real cost of a transfer.",
+  "/fence-cost-calculator": {
+    title: "Fence Cost Calculator — Estimate Fence Installation Cost | Gardens",
+    description: "Free fence cost calculator for wood, vinyl, chain link, and aluminum fencing. Includes materials, labor, gates, and posts.",
   },
-  "/crypto-profit-calculator": {
-    title: "Crypto Profit Calculator | Freetawn",
-    description: "Calculate crypto profit, ROI, and break-even levels after fees with a free crypto profit calculator.",
+  "/garden-planting-calculator": {
+    title: "Garden Planting Calculator — Plants, Soil & Spacing | Gardens",
+    description: "Plan your garden bed layout. Calculate how many plants fit your bed, how much soil you need, and the total setup cost.",
   },
-  "/savings-goal-calculator": {
-    title: "Savings Goal Calculator | Freetawn",
-    description: "Plan how much to save each month to reach your goal faster with a practical savings goal calculator.",
+  "/home-renovation-calculator": {
+    title: "Home Renovation Cost Calculator | Gardens",
+    description: "Estimate home renovation costs by room type and scope. Includes kitchen, bathroom, basement, deck, and whole-house renovation cost ranges with contingency.",
   },
   "/privacy-policy": {
-    title: "Privacy Policy | Freetawn",
-    description: "Read how Freetawn handles calculator inputs, analytics, cookies, and privacy-first financial tools.",
+    title: "Privacy Policy | Gardens",
+    description: "How Gardens handles calculator data, analytics, and cookies.",
     robots: "noindex,follow",
   },
   "/terms-of-use": {
-    title: "Terms of Use | Freetawn",
-    description: "Review the terms that govern use of Freetawn calculators, guides, and educational financial content.",
+    title: "Terms of Use | Gardens",
+    description: "Terms governing use of Gardens calculators, guides, and educational content.",
     robots: "noindex,follow",
   },
   "/disclaimer": {
-    title: "Disclaimer | Freetawn",
-    description: "Important educational-use and not-financial-advice disclaimer for Freetawn calculators and content.",
+    title: "Disclaimer | Gardens",
+    description: "Educational-use and not-professional-advice disclaimer for Gardens calculators and content.",
     robots: "noindex,follow",
   },
   "/about": {
-    title: "About Freetawn",
-    description: "Learn what Freetawn is, who it is for, and why the site focuses on private, practical financial tools and guides.",
+    title: "About Gardens",
+    description: "Learn what Gardens is, who it's for, and why we focus on practical home and garden tools and guides.",
   },
   "/contact": {
-    title: "Contact Freetawn",
-    description: "Get in touch with Freetawn for support, feedback, partnerships, or general questions.",
+    title: "Contact Gardens",
+    description: "Get in touch with Gardens for support, feedback, or general questions.",
     robots: "noindex,follow",
   },
 };
@@ -102,12 +97,12 @@ export function SeoManager() {
     const guide = guidesBySlug[guideSlug];
     const entry = guide
       ? {
-          title: `${guide.title} | Freetawn`,
+          title: `${guide.title} | Gardens`,
           description: guide.description,
         }
       : metaByPath[pathname] ?? {
-          title: "Freetawn",
-          description: "Free financial calculators and practical personal finance guides.",
+          title: "Gardens — Home & Garden Tools and Guides",
+          description: "Free home improvement and gardening calculators, cost guides, and expert advice.",
         };
 
     document.title = entry.title;

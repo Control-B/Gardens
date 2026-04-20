@@ -5,85 +5,102 @@ export interface ParsedIntent {
 
 export function parseNaturalLanguage(input: string): ParsedIntent | null {
   const lowerInput = input.toLowerCase();
-  
-  // Compound Interest: "compound interest on 10000 at 5% for 10 years"
-  if (lowerInput.includes("compound interest") || lowerInput.includes("compound")) {
-    const amountMatch = lowerInput.match(/on\s+\$?([\d,]+)/) || lowerInput.match(/\$?([\d,]+)\s+at/);
-    const rateMatch = lowerInput.match(/at\s+([\d.]+)\s*%/);
-    const yearsMatch = lowerInput.match(/for\s+([\d.]+)\s*years/);
-    
+
+  // Roof cost: "roof cost for 2000 sq ft house" or "replace roof 1500 sqft"
+  if (lowerInput.includes("roof") && (lowerInput.includes("cost") || lowerInput.includes("replace") || lowerInput.includes("install"))) {
+    const areaMatch = lowerInput.match(/([\d,]+)\s*(?:sq\.?\s*ft|square\s*feet)/);
+    const materialMatch = lowerInput.includes("metal") ? "metal_standing_seam"
+      : lowerInput.includes("tile") ? "tile_concrete"
+      : lowerInput.includes("slate") ? "slate"
+      : lowerInput.includes("wood") ? "wood_shake"
+      : "asphalt_architectural";
+
     return {
-      calculator: "/compound-interest-calculator",
+      calculator: "/roof-cost-calculator",
       params: {
-        principal: amountMatch ? amountMatch[1].replace(/,/g, '') : "",
-        rate: rateMatch ? rateMatch[1] : "",
-        years: yearsMatch ? yearsMatch[1] : "",
-      }
+        area: areaMatch ? areaMatch[1].replace(/,/g, "") : "",
+        material: materialMatch,
+      },
     };
   }
 
-  // Mortgage: "mortgage on 500000 with 20% down at 6.5%"
-  if (lowerInput.includes("mortgage")) {
-    const amountMatch = lowerInput.match(/on\s+\$?([\d,]+)/) || lowerInput.match(/\$?([\d,]+)/);
-    const downMatch = lowerInput.match(/with\s+([\d.]+)\s*%\s*down/) || lowerInput.match(/([\d.]+)\s*%\s*down/);
-    const rateMatch = lowerInput.match(/at\s+([\d.]+)\s*%/);
-    
+  // Paint: "how much paint for 400 sq ft" or "paint 3 rooms"
+  if (lowerInput.includes("paint") && (lowerInput.includes("gallon") || lowerInput.includes("sq") || lowerInput.includes("room") || lowerInput.includes("how much"))) {
+    const areaMatch = lowerInput.match(/([\d,]+)\s*(?:sq\.?\s*ft|square\s*feet)/);
+    const roomMatch = lowerInput.match(/([\d]+)\s*rooms?/);
+
     return {
-      calculator: "/mortgage-calculator",
+      calculator: "/paint-calculator",
       params: {
-        homePrice: amountMatch ? amountMatch[1].replace(/,/g, '') : "",
-        downPaymentPercent: downMatch ? downMatch[1] : "",
-        rate: rateMatch ? rateMatch[1] : "",
-      }
+        area: areaMatch ? areaMatch[1].replace(/,/g, "") : "",
+        rooms: roomMatch ? roomMatch[1] : "",
+      },
     };
   }
 
-  // Crypto: "bought 2 btc at 40000 sold at 60000"
-  if (lowerInput.includes("bought") && lowerInput.includes("at")) {
-    const qtyMatch = lowerInput.match(/bought\s+([\d.]+)\s+([a-z]+)/);
-    const buyMatch = lowerInput.match(/at\s+\$?([\d,]+)/);
-    const sellMatch = lowerInput.match(/(?:sold|now)\s+at\s+\$?([\d,]+)/) || lowerInput.match(/and\s+sold\s+for\s+\$?([\d,]+)/);
-    
+  // Lawn care: "lawn care cost for 5000 sq ft" or "mowing service 1/4 acre"
+  if (lowerInput.includes("lawn") && (lowerInput.includes("cost") || lowerInput.includes("care") || lowerInput.includes("mow") || lowerInput.includes("service"))) {
+    const areaMatch = lowerInput.match(/([\d,]+)\s*(?:sq\.?\s*ft|square\s*feet)/)
+      || lowerInput.match(/([\d.]+)\s*acre/);
+
     return {
-      calculator: "/crypto-profit-calculator",
+      calculator: "/lawn-care-calculator",
       params: {
-        qty: qtyMatch ? qtyMatch[1] : "",
-        coin: qtyMatch ? qtyMatch[2].toUpperCase() : "",
-        buyPrice: buyMatch ? buyMatch[1].replace(/,/g, '') : "",
-        sellPrice: sellMatch ? sellMatch[1].replace(/,/g, '') : "",
-      }
+        area: areaMatch ? String(parseFloat(areaMatch[1].replace(/,/g, "")) * (lowerInput.includes("acre") ? 43560 : 1)) : "",
+      },
     };
   }
 
-  // Loan: "loan of 20000 at 5% for 60 months"
-  if (lowerInput.includes("loan") || lowerInput.includes("car payment") || lowerInput.includes("auto payment")) {
-    const amountMatch = lowerInput.match(/(?:of|on)\s+\$?([\d,]+)/) || lowerInput.match(/\$?([\d,]+)/);
-    const rateMatch = lowerInput.match(/at\s+([\d.]+)\s*%/);
-    const monthsMatch = lowerInput.match(/for\s+([\d.]+)\s*months/);
-    
+  // Fence: "fence cost for 150 linear feet" or "install wood fence 200 ft"
+  if (lowerInput.includes("fence") && (lowerInput.includes("cost") || lowerInput.includes("install") || lowerInput.includes("linear") || lowerInput.includes("feet") || lowerInput.includes("ft"))) {
+    const lengthMatch = lowerInput.match(/([\d,]+)\s*(?:linear\s*)?(?:feet|ft)/);
+    const materialMatch = lowerInput.includes("vinyl") ? "vinyl"
+      : lowerInput.includes("chain") ? "chain_link"
+      : lowerInput.includes("metal") ? "aluminum"
+      : lowerInput.includes("iron") ? "wrought_iron"
+      : "wood_privacy";
+
     return {
-      calculator: "/loan-payment-calculator",
+      calculator: "/fence-cost-calculator",
       params: {
-        loanAmount: amountMatch ? amountMatch[1].replace(/,/g, '') : "",
-        rate: rateMatch ? rateMatch[1] : "",
-        termMonths: monthsMatch ? monthsMatch[1] : "",
-      }
+        linearFeet: lengthMatch ? lengthMatch[1].replace(/,/g, "") : "",
+        material: materialMatch,
+      },
     };
   }
 
-  // Currency: "convert 100 usd to eur"
-  if (lowerInput.includes("convert") || lowerInput.includes("exchange")) {
-    const amountMatch = lowerInput.match(/(?:convert|exchange)\s+([\d,.]+)/);
-    const fromMatch = lowerInput.match(/([\d,.]+)\s+([a-z]{3})/);
-    const toMatch = lowerInput.match(/to\s+([a-z]{3})/);
-    
+  // Garden / planting: "garden bed 4x8" or "plant tomatoes in 10x5 bed"
+  if ((lowerInput.includes("garden") || lowerInput.includes("plant") || lowerInput.includes("bed")) &&
+    (lowerInput.includes("x") || lowerInput.includes("by") || lowerInput.includes("sqft") || lowerInput.includes("sq ft"))) {
+    const dimMatch = lowerInput.match(/([\d.]+)\s*[x×by]\s*([\d.]+)/);
+
     return {
-      calculator: "/currency-converter",
+      calculator: "/garden-planting-calculator",
       params: {
-        amount: amountMatch ? amountMatch[1].replace(/,/g, '') : "",
-        from: fromMatch ? fromMatch[2].toUpperCase() : "",
-        to: toMatch ? toMatch[1].toUpperCase() : "",
-      }
+        length: dimMatch ? dimMatch[1] : "",
+        width: dimMatch ? dimMatch[2] : "",
+        plant: lowerInput.includes("tomato") ? "tomatoes"
+          : lowerInput.includes("lettuce") ? "lettuce"
+          : lowerInput.includes("pepper") ? "peppers"
+          : lowerInput.includes("carrot") ? "carrots"
+          : lowerInput.includes("herb") ? "herbs"
+          : "",
+      },
+    };
+  }
+
+  // Renovation: "renovate kitchen" or "bathroom remodel cost"
+  if ((lowerInput.includes("renovate") || lowerInput.includes("remodel") || lowerInput.includes("renovation")) &&
+    (lowerInput.includes("kitchen") || lowerInput.includes("bathroom") || lowerInput.includes("bedroom") || lowerInput.includes("basement") || lowerInput.includes("house"))) {
+    const roomMatch = lowerInput.includes("kitchen") ? "kitchen"
+      : lowerInput.includes("bathroom") ? "bathroom"
+      : lowerInput.includes("basement") ? "basement"
+      : lowerInput.includes("bedroom") ? "bedroom"
+      : "whole_house";
+
+    return {
+      calculator: "/home-renovation-calculator",
+      params: { room: roomMatch },
     };
   }
 

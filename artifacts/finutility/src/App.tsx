@@ -6,20 +6,19 @@ import { SeoManager } from "@/components/SeoManager";
 import NotFound from "@/pages/not-found";
 
 import HomePage from "@/pages/home";
-import FinanceCategory from "@/pages/finance";
-import CryptoCategory from "@/pages/crypto";
-import LoansCategory from "@/pages/loans";
+import HomeImprovementCategory from "@/pages/home-improvement";
+import GardenCategory from "@/pages/garden";
+import ExteriorCategory from "@/pages/exterior";
 
-import CompoundInterestCalculator from "@/pages/compound-interest";
-import MortgageCalculator from "@/pages/mortgage";
-import LoanPaymentCalculator from "@/pages/loan-payment";
-import CurrencyConverter from "@/pages/currency-converter";
-import CryptoProfitCalculator from "@/pages/crypto-profit";
-import SavingsGoalCalculator from "@/pages/savings-goal";
+import RoofCostCalculator from "@/pages/roof-cost";
+import PaintCalculator from "@/pages/paint";
+import LawnCareCalculator from "@/pages/lawn-care";
+import FenceCostCalculator from "@/pages/fence-cost";
+import GardenPlantingCalculator from "@/pages/garden-planting";
+import HomeRenovationCalculator from "@/pages/home-renovation";
 
-import NewsPage from "@/pages/news";
-import ArticlePage from "@/pages/article";
 import GuidesPage from "@/pages/guides";
+import ArticlePage from "@/pages/article";
 import LegalPage from "@/pages/legal";
 import ContactPage from "@/pages/contact";
 
@@ -30,32 +29,30 @@ function Router() {
     <Switch>
       {/* Main Pages */}
       <Route path="/" component={HomePage} />
-      <Route path="/finance" component={FinanceCategory} />
-      <Route path="/crypto" component={CryptoCategory} />
-      <Route path="/loans" component={LoansCategory} />
-      
-      {/* Calculators */}
-      <Route path="/compound-interest-calculator" component={CompoundInterestCalculator} />
-      <Route path="/mortgage-calculator" component={MortgageCalculator} />
-      <Route path="/loan-payment-calculator" component={LoanPaymentCalculator} />
-      <Route path="/currency-converter" component={CurrencyConverter} />
-      <Route path="/crypto-profit-calculator" component={CryptoProfitCalculator} />
-      <Route path="/savings-goal-calculator" component={SavingsGoalCalculator} />
-      
-      <Route path="/news" component={NewsPage} />
-      <Route path="/guides" component={GuidesPage} />
+      <Route path="/home-improvement" component={HomeImprovementCategory} />
+      <Route path="/garden" component={GardenCategory} />
+      <Route path="/exterior" component={ExteriorCategory} />
 
-      {/* Educational Articles (reusing a generic article template for MVP) */}
-      <Route path="/what-is-compound-interest" component={ArticlePage} />
-      <Route path="/how-compound-interest-works" component={ArticlePage} />
-      <Route path="/how-to-calculate-mortgage-payments" component={ArticlePage} />
-      <Route path="/loan-interest-explained" component={ArticlePage} />
-      <Route path="/how-to-save-money-faster" component={ArticlePage} />
-      <Route path="/how-to-calculate-crypto-profit" component={ArticlePage} />
-      <Route path="/crypto-profit-vs-loss-explained" component={ArticlePage} />
-      <Route path="/how-currency-conversion-works" component={ArticlePage} />
-      <Route path="/what-affects-exchange-rates" component={ArticlePage} />
-      <Route path="/how-to-pay-off-debt-faster" component={ArticlePage} />
+      {/* Calculators */}
+      <Route path="/roof-cost-calculator" component={RoofCostCalculator} />
+      <Route path="/paint-calculator" component={PaintCalculator} />
+      <Route path="/lawn-care-calculator" component={LawnCareCalculator} />
+      <Route path="/fence-cost-calculator" component={FenceCostCalculator} />
+      <Route path="/garden-planting-calculator" component={GardenPlantingCalculator} />
+      <Route path="/home-renovation-calculator" component={HomeRenovationCalculator} />
+
+      {/* Guides & Articles */}
+      <Route path="/guides" component={GuidesPage} />
+      <Route path="/how-to-fix-a-leaking-faucet" component={ArticlePage} />
+      <Route path="/how-to-choose-roof-material" component={ArticlePage} />
+      <Route path="/how-to-prepare-garden-for-spring" component={ArticlePage} />
+      <Route path="/how-to-save-on-lawn-care-costs" component={ArticlePage} />
+      <Route path="/diy-fence-installation-guide" component={ArticlePage} />
+      <Route path="/when-to-diy-vs-hire-a-contractor" component={ArticlePage} />
+      <Route path="/how-to-create-a-raised-garden-bed" component={ArticlePage} />
+      <Route path="/best-plants-for-low-maintenance-gardens" component={ArticlePage} />
+      <Route path="/how-to-winterize-your-home" component={ArticlePage} />
+      <Route path="/how-to-paint-a-room-like-a-pro" component={ArticlePage} />
 
       {/* Legal & Info */}
       <Route path="/privacy-policy" component={LegalPage} />
