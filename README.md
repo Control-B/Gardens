@@ -67,22 +67,27 @@ The screenshot error from DigitalOcean usually means the app was configured as a
 
 Use this when you only need the frontend.
 
-- **Recommended source directory**: `artifacts/finutility`
-- **Build command**: `pnpm build:do:static`
-- **Output directory**: `dist/public`
-- **Run command**: none
-
-If DigitalOcean builds from the repo root instead, use:
-
+- **Recommended source directory**: repository root (`/`)
 - **Build command**: `pnpm build:do:static`
 - **Output directory**: `dist`
+- **Run command**: none
+
+This is the safest setup for DigitalOcean because the project uses a **pnpm workspace** with a shared `pnpm-lock.yaml`, `pnpm-workspace.yaml`, and `workspace:*` / `catalog:` dependencies.
+
+If you point DigitalOcean at `artifacts/finutility`, dependency installation may fail unless the platform still resolves the workspace from the repo root.
+
+If you explicitly want a frontend-only source directory, use:
+
+- **Source directory**: `artifacts/finutility`
+- **Build command**: `pnpm build:do:static`
+- **Output directory**: `dist/public`
 
 The repo supports both layouts now:
 
 - `artifacts/finutility/package.json` has `build:do:static` for a frontend-only source directory
 - root `package.json` has `build:do:static` for a repo-root static deploy
 
-There is also a checked-in app spec at `.do/app.yaml` that targets `artifacts/finutility` directly.
+There is also a checked-in app spec at `.do/app.yaml` that targets the **repo root** to avoid workspace install issues.
 
 ### Option B — Web Service
 
