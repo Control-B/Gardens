@@ -13,9 +13,15 @@ import {
   type NewsCategory,
 } from "@/lib/newsService";
 import heroBg from "@assets/Landing42.jpeg";
-import fallbackMarkets from "@assets/Landing39.jpeg";
-import fallbackCrypto from "@assets/Crypto3.jpeg";
-import fallbackPersonalFinance from "@assets/Landing41.jpeg";
+import fallbackMarkets1 from "@assets/Landing39.jpeg";
+import fallbackMarkets2 from "@assets/Landing42.jpeg";
+import fallbackMarkets3 from "@assets/Landing48.jpeg";
+import fallbackCrypto1 from "@assets/Crypto3.jpeg";
+import fallbackCrypto2 from "@assets/Landing49.jpeg";
+import fallbackCrypto3 from "@assets/Landing14.jpeg";
+import fallbackPersonalFinance1 from "@assets/Landing41.jpeg";
+import fallbackPersonalFinance2 from "@assets/Landing47.jpeg";
+import fallbackPersonalFinance3 from "@assets/Landing62.jpeg";
 
 /* ─── helpers ─────────────────────────────────────────────────────────────── */
 
@@ -58,11 +64,23 @@ const categoryMeta: Record<
   },
 };
 
-const categoryFallback: Record<NewsCategory, string> = {
-  markets: fallbackMarkets,
-  crypto: fallbackCrypto,
-  "personal-finance": fallbackPersonalFinance,
+const categoryFallbacks: Record<NewsCategory, string[]> = {
+  markets: [fallbackMarkets1, fallbackMarkets2, fallbackMarkets3],
+  crypto: [fallbackCrypto1, fallbackCrypto2, fallbackCrypto3],
+  "personal-finance": [fallbackPersonalFinance1, fallbackPersonalFinance2, fallbackPersonalFinance3],
 };
+
+function pickFallbackImage(item: NewsItem, index: number): string {
+  const images = categoryFallbacks[item.category];
+  const seed = `${item.source}:${item.title}:${index}`;
+  let hash = 0;
+
+  for (let currentIndex = 0; currentIndex < seed.length; currentIndex += 1) {
+    hash = (hash * 31 + seed.charCodeAt(currentIndex)) >>> 0;
+  }
+
+  return images[hash % images.length];
+}
 
 const sourceBadgeColors: Record<string, string> = {
   "BBC Business": "bg-red-500/20 text-red-300 border-red-500/30",
@@ -92,6 +110,7 @@ function SkeletonCard() {
 /* ─── news card ────────────────────────────────────────────────────────────── */
 function NewsCard({ item, index }: { item: NewsItem; index: number }) {
   const meta = categoryMeta[item.category];
+  const fallbackImage = pickFallbackImage(item, index);
   const badgeClass =
     sourceBadgeColors[item.source] ??
     "bg-slate-600/40 text-slate-300 border-slate-500/30";
@@ -109,11 +128,11 @@ function NewsCard({ item, index }: { item: NewsItem; index: number }) {
       {/* Thumbnail — always shows an image; falls back to a category asset */}
       <div className="relative h-44 overflow-hidden bg-slate-700 shrink-0">
         <img
-          src={item.thumbnail || categoryFallback[item.category]}
+          src={item.thumbnail || fallbackImage}
           alt={item.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           onError={(e) => {
-            (e.target as HTMLImageElement).src = categoryFallback[item.category];
+            (e.target as HTMLImageElement).src = fallbackImage;
           }}
         />
         <div className="absolute inset-0 bg-linear-to-t from-slate-800/80 to-transparent" />
