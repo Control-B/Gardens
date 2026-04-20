@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useLocation } from "wouter";
-import { Search, Home, Briefcase, Bitcoin, PiggyBank, DollarSign, TrendingUp, CheckCircle2, ArrowRight } from "lucide-react";
+import { Search, Home, Briefcase, Bitcoin, PiggyBank, DollarSign, TrendingUp, CheckCircle2, ArrowRight, Landmark, ChartNoAxesCombined, CarFront } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Navbar } from "@/components/Navbar";
@@ -105,6 +105,24 @@ export default function HomePage() {
     },
   };
 
+  const tryExamples = [
+    {
+      label: "Mortgage",
+      query: "mortgage on 500000 with 20% down at 6.5%",
+      icon: <Landmark className="h-4 w-4 text-cyan-200" />,
+    },
+    {
+      label: "Compound Interest",
+      query: "compound interest on 10000 at 5% for 10 years",
+      icon: <ChartNoAxesCombined className="h-4 w-4 text-cyan-200" />,
+    },
+    {
+      label: "Auto Loan",
+      query: "loan of 25000 at 7% for 60 months",
+      icon: <CarFront className="h-4 w-4 text-cyan-200" />,
+    },
+  ];
+
   return (
     <div className="min-h-screen flex flex-col bg-background selection:bg-primary/20">
       <Navbar />
@@ -163,15 +181,18 @@ export default function HomePage() {
 
                 <div className="flex flex-wrap items-center gap-3 text-sm text-slate-400">
                   <span className="font-medium">Try:</span>
-                  <button onClick={() => setExampleQuery("mortgage on 500000 with 20% down at 6.5%")} className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                    🏠 Mortgage
-                  </button>
-                  <button onClick={() => setExampleQuery("compound interest on 10000 at 5% for 10 years")} className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                    📈 Compound Interest
-                  </button>
-                  <button onClick={() => setExampleQuery("loan of 25000 at 7% for 60 months")} className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                    🚗 Auto Loan
-                  </button>
+                  {tryExamples.map((example) => (
+                    <button
+                      key={example.label}
+                      onClick={() => setExampleQuery(example.query)}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/6 border border-white/12 hover:bg-white/12 text-white/90 shadow-sm shadow-black/10 transition-colors"
+                    >
+                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/10">
+                        {example.icon}
+                      </span>
+                      <span>{example.label}</span>
+                    </button>
+                  ))}
                 </div>
               </motion.div>
 

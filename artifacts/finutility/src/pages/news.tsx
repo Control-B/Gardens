@@ -16,12 +16,17 @@ import heroBg from "@assets/Landing42.jpeg";
 import fallbackMarkets1 from "@assets/Landing39.jpeg";
 import fallbackMarkets2 from "@assets/Landing42.jpeg";
 import fallbackMarkets3 from "@assets/Landing48.jpeg";
+import fallbackMarkets4 from "@assets/Landing37.jpeg";
+import fallbackMarkets5 from "@assets/Landing67.jpeg";
 import fallbackCrypto1 from "@assets/Crypto3.jpeg";
 import fallbackCrypto2 from "@assets/Landing49.jpeg";
 import fallbackCrypto3 from "@assets/Landing14.jpeg";
+import fallbackCrypto4 from "@assets/Landing22.jpeg";
 import fallbackPersonalFinance1 from "@assets/Landing41.jpeg";
 import fallbackPersonalFinance2 from "@assets/Landing47.jpeg";
 import fallbackPersonalFinance3 from "@assets/Landing62.jpeg";
+import fallbackPersonalFinance4 from "@assets/Landing66.jpeg";
+import fallbackPersonalFinance5 from "@assets/Landing65.jpeg";
 
 /* ─── helpers ─────────────────────────────────────────────────────────────── */
 
@@ -64,14 +69,92 @@ const categoryMeta: Record<
   },
 };
 
-const categoryFallbacks: Record<NewsCategory, string[]> = {
-  markets: [fallbackMarkets1, fallbackMarkets2, fallbackMarkets3],
-  crypto: [fallbackCrypto1, fallbackCrypto2, fallbackCrypto3],
-  "personal-finance": [fallbackPersonalFinance1, fallbackPersonalFinance2, fallbackPersonalFinance3],
+const sourceFallbacks: Partial<Record<string, string[]>> = {
+  "BBC Business": [fallbackMarkets2, fallbackMarkets4, fallbackMarkets1],
+  "The Guardian": [fallbackMarkets1, fallbackMarkets3, fallbackMarkets4],
+  MarketWatch: [fallbackMarkets4, fallbackMarkets1, fallbackMarkets3],
+  CNBC: [fallbackMarkets3, fallbackMarkets2, fallbackMarkets4],
+  CoinDesk: [fallbackCrypto1, fallbackCrypto2, fallbackCrypto4],
+  CoinTelegraph: [fallbackCrypto2, fallbackCrypto3, fallbackCrypto1],
+  Decrypt: [fallbackCrypto4, fallbackCrypto1, fallbackCrypto3],
+  NerdWallet: [fallbackPersonalFinance1, fallbackPersonalFinance4, fallbackPersonalFinance2],
+  "CNBC Personal Finance": [fallbackPersonalFinance4, fallbackPersonalFinance3, fallbackPersonalFinance1],
 };
 
+const categoryFallbacks: Record<NewsCategory, string[]> = {
+  markets: [fallbackMarkets1, fallbackMarkets2, fallbackMarkets3, fallbackMarkets4, fallbackMarkets5],
+  crypto: [fallbackCrypto1, fallbackCrypto2, fallbackCrypto3, fallbackCrypto4],
+  "personal-finance": [fallbackPersonalFinance1, fallbackPersonalFinance2, fallbackPersonalFinance3, fallbackPersonalFinance4, fallbackPersonalFinance5],
+};
+
+type FallbackTopic =
+  | "interest-rates"
+  | "retirement"
+  | "housing"
+  | "markets-outlook"
+  | "consumer-money"
+  | "crypto-markets"
+  | "crypto-policy";
+
+const topicKeywordMap: Array<{ topic: FallbackTopic; keywords: string[] }> = [
+  {
+    topic: "interest-rates",
+    keywords: ["rate", "rates", "fed", "inflation", "yield", "treasury", "bond", "apr", "apy"],
+  },
+  {
+    topic: "retirement",
+    keywords: ["retire", "retirement", "401k", "ira", "pension", "nest egg", "social security"],
+  },
+  {
+    topic: "housing",
+    keywords: ["mortgage", "housing", "home", "house", "property", "real estate", "rent"],
+  },
+  {
+    topic: "markets-outlook",
+    keywords: ["stocks", "market", "earnings", "invest", "investor", "portfolio", "wall street", "economy"],
+  },
+  {
+    topic: "consumer-money",
+    keywords: ["budget", "saving", "savings", "spending", "debt", "credit", "cash", "millionaire"],
+  },
+  {
+    topic: "crypto-markets",
+    keywords: ["bitcoin", "crypto", "ethereum", "token", "blockchain", "solana", "etf"],
+  },
+  {
+    topic: "crypto-policy",
+    keywords: ["sec", "regulation", "regulator", "policy", "lawsuit", "compliance", "approval"],
+  },
+];
+
+const topicFallbacks: Record<FallbackTopic, string[]> = {
+  "interest-rates": [fallbackMarkets5, fallbackMarkets3, fallbackMarkets2],
+  retirement: [fallbackPersonalFinance3, fallbackPersonalFinance5, fallbackPersonalFinance2],
+  housing: [fallbackMarkets4, fallbackPersonalFinance4, fallbackPersonalFinance1],
+  "markets-outlook": [fallbackMarkets1, fallbackMarkets2, fallbackMarkets5],
+  "consumer-money": [fallbackPersonalFinance1, fallbackPersonalFinance4, fallbackPersonalFinance5],
+  "crypto-markets": [fallbackCrypto1, fallbackCrypto2, fallbackCrypto4],
+  "crypto-policy": [fallbackCrypto3, fallbackCrypto4, fallbackCrypto2],
+};
+
+function detectFallbackTopic(item: NewsItem): FallbackTopic | null {
+  const haystack = `${item.title} ${item.description}`.toLowerCase();
+
+  for (const { topic, keywords } of topicKeywordMap) {
+    if (keywords.some((keyword) => haystack.includes(keyword))) {
+      return topic;
+    }
+  }
+
+  return null;
+}
+
 function pickFallbackImage(item: NewsItem, index: number): string {
-  const images = categoryFallbacks[item.category];
+  const topic = detectFallbackTopic(item);
+  const images =
+    sourceFallbacks[item.source] ??
+    (topic ? topicFallbacks[topic] : undefined) ??
+    categoryFallbacks[item.category];
   const seed = `${item.source}:${item.title}:${index}`;
   let hash = 0;
 
