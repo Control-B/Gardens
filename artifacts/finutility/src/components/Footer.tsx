@@ -11,7 +11,7 @@ export function Footer() {
               <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground font-bold text-sm">
                 <TrendingUp className="h-4 w-4" />
               </div>
-              <span className="text-xl font-bold text-white">Freetawn <span className="text-primary text-sm font-semibold">AI</span></span>
+              <span className="text-xl font-bold text-white">freetawn.com</span>
             </Link>
             <p className="text-sm text-slate-400 mb-6 leading-relaxed pr-4">
               Your smart financial hub. We provide free, fast, and secure tools to help you calculate your future, manage debt, and analyze investments with data-driven financial insights.
@@ -57,10 +57,10 @@ export function Footer() {
 
         <div className="mt-16 pt-8 border-t border-slate-800 flex flex-col items-center justify-center text-center">
           <p className="text-sm text-slate-400 mb-4">
-            © {new Date().getFullYear()} Freetawn AI. All rights reserved.
+            © {new Date().getFullYear()} freetawn.com. All rights reserved.
           </p>
           <p className="text-xs text-slate-500 max-w-4xl mx-auto leading-relaxed">
-            Disclaimer: The calculators and information provided on Freetawn AI are for educational and informational purposes only. They do not constitute financial, legal, or tax advice. Freetawn AI is not responsible for any financial decisions made based on these calculations. Always consult with a qualified professional before making significant financial commitments.
+            Disclaimer: The calculators and information provided on freetawn.com are for educational and informational purposes only. They do not constitute financial, legal, or tax advice. freetawn.com is not responsible for any financial decisions made based on these calculations. Always consult with a qualified professional before making significant financial commitments.
           </p>
         </div>
       </div>

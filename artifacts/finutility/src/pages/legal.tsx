@@ -15,10 +15,10 @@ export default function LegalPage() {
             
             <h2 className="text-foreground">Disclaimer</h2>
             <p>
-              The information and calculators provided on Freetawn AI are for educational and informational purposes only. They do not constitute financial, legal, tax, or investment advice. 
+              The information and calculators provided on freetawn.com are for educational and informational purposes only. They do not constitute financial, legal, tax, or investment advice. 
             </p>
             <p>
-              While we strive to ensure the accuracy of our mathematical models, Freetawn AI makes no guarantees regarding the accuracy, completeness, or applicability of any calculations to your specific situation. The financial insights provided are generated based on your calculator inputs and publicly available market data, and should not be interpreted as personalized financial advice.
+              While we strive to ensure the accuracy of our mathematical models, freetawn.com makes no guarantees regarding the accuracy, completeness, or applicability of any calculations to your specific situation. The financial insights provided are generated based on your calculator inputs and publicly available market data, and should not be interpreted as personalized financial advice.
             </p>
             <p>
               Always consult with a qualified financial professional, CPA, or registered investment advisor before making significant financial decisions.
@@ -26,7 +26,7 @@ export default function LegalPage() {
 
             <h2 className="text-foreground">Privacy Policy</h2>
             <p>
-              Freetawn AI is designed to be privacy-first. <strong>All calculations are performed locally in your web browser.</strong> We do not collect, store, transmit, or share the financial data you enter into our calculators.
+              freetawn.com is designed to be privacy-first. <strong>All calculations are performed locally in your web browser.</strong> We do not collect, store, transmit, or share the financial data you enter into our calculators.
             </p>
             <p>
               We may collect standard, anonymized website analytics (such as page views and browser types) to improve our service. We may also use third-party advertising networks which may use cookies to serve relevant ads.
@@ -34,7 +34,7 @@ export default function LegalPage() {
 
             <h2 className="text-foreground">Terms of Use</h2>
             <p>
-              By using Freetawn AI, you agree to use the site for personal, non-commercial purposes. You may not scrape, copy, or reverse-engineer our proprietary calculators or insight logic without explicit permission.
+              By using freetawn.com, you agree to use the site for personal, non-commercial purposes. You may not scrape, copy, or reverse-engineer our proprietary calculators or insight logic without explicit permission.
             </p>
             <p>
               Questions about these policies can be sent to <a href="mailto:support@omniweb.ai">support@omniweb.ai</a>.

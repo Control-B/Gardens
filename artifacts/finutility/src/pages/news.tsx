@@ -417,7 +417,7 @@ export default function NewsPage() {
         <div className="container mx-auto px-4 md:px-8">
           <p className="text-[11px] text-slate-600 text-center italic">
             News content is sourced from third-party RSS feeds and updated once
-            daily. Freetawn AI does not produce, verify, or endorse any
+            daily. freetawn.com does not produce, verify, or endorse any
             articles. This is not financial advice.
           </p>
         </div>
