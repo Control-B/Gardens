@@ -1,3 +1,6 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { existsSync } from "node:fs";
 import express, { type Express } from "express";
 import cors from "cors";
 import pinoHttp from "pino-http";
@@ -5,6 +8,16 @@ import router from "./routes";
 import { logger } from "./lib/logger";
 
 const app: Express = express();
+const currentDir = path.dirname(fileURLToPath(import.meta.url));
+const frontendDistDir = path.resolve(
+  currentDir,
+  "..",
+  "..",
+  "finutility",
+  "dist",
+  "public",
+);
+const frontendIndexFile = path.join(frontendDistDir, "index.html");
 
 app.use(
   pinoHttp({
@@ -30,5 +43,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", router);
+
+if (existsSync(frontendIndexFile)) {
+  app.use(express.static(frontendDistDir));
+  app.get(/^(?!\/api(?:\/|$)).*/, (_req, res) => {
+    res.sendFile(frontendIndexFile);
+  });
+} else {
+  logger.warn(
+    { frontendDistDir },
+    "Frontend build output not found; only API routes will be available.",
+  );
+}
 
 export default app;

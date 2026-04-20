@@ -6,8 +6,12 @@
   "scripts": {
     "dev": "vite --config vite.config.ts --host 0.0.0.0",
     "build": "sh -c 'rm -rf node_modules/.vite-temp && PORT=\"${PORT:-5173}\" BASE_PATH=\"${BASE_PATH:-/}\" vite build --config vite.config.ts && cp dist/public/index.html dist/public/404.html'",
+    "build:do:static": "pnpm build",
     "serve": "vite preview --config vite.config.ts --host 0.0.0.0",
     "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=20 <25"
   },
   "devDependencies": {
     "@hookform/resolvers": "^3.10.0",

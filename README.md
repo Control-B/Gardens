@@ -54,7 +54,54 @@ From the **root directory**:
 |---|---|
 | `pnpm dev` | Start dev server at `localhost:3000` |
 | `pnpm build` | Type-check and build all packages |
+| `pnpm start` | Serve the production build on `$PORT` via the Express server |
 | `pnpm typecheck` | Run TypeScript checks across the workspace |
+
+---
+
+## DigitalOcean
+
+The screenshot error from DigitalOcean usually means the app was configured as a **Static Site**, but the generated frontend assets were not being copied to a root-level directory like `dist/`.
+
+### Option A — Static Site
+
+Use this when you only need the frontend.
+
+- **Recommended source directory**: `artifacts/finutility`
+- **Build command**: `pnpm build:do:static`
+- **Output directory**: `dist/public`
+- **Run command**: none
+
+If DigitalOcean builds from the repo root instead, use:
+
+- **Build command**: `pnpm build:do:static`
+- **Output directory**: `dist`
+
+The repo supports both layouts now:
+
+- `artifacts/finutility/package.json` has `build:do:static` for a frontend-only source directory
+- root `package.json` has `build:do:static` for a repo-root static deploy
+
+There is also a checked-in app spec at `.do/app.yaml` that targets `artifacts/finutility` directly.
+
+### Option B — Web Service
+
+Use this when you want the Express server too.
+
+- **Build command**: `pnpm build`
+- **Run command**: `pnpm start`
+- **HTTP port**: use the platform-provided `PORT` environment variable
+
+In this mode:
+
+1. `artifacts/finutility` builds the static frontend into `dist/public`
+2. `artifacts/api-server` starts an Express server
+3. Express serves `/api/*` routes and the frontend SPA from the same process
+
+### Notes
+
+- The Vite **large chunk size** message is a warning, not the deployment blocker shown in your screenshot.
+- If you stay with a **Static Site** on DigitalOcean, prefer **Option A** above.
 
 ---
 
