@@ -68,13 +68,13 @@ The screenshot error from DigitalOcean usually means the app was configured as a
 Use this when you only need the frontend.
 
 - **Recommended source directory**: `artifacts/finutility`
-- **Build command**: `pnpm build:do:static`
+- **Build command**: `npm run build:do:static`
 - **Output directory**: `dist/public`
 - **Run command**: none
 
 `artifacts/finutility/package.json` is now self-contained for deployment: it no longer relies on pnpm `catalog:` aliases or `workspace:*` dependencies for the static-site build.
 
-There is also a checked-in app spec at `.do/app.yaml` that targets `artifacts/finutility` directly.
+There is also a checked-in app spec at `.do/app.yaml` that targets `artifacts/finutility` directly and uses `npm` for the build step.
 
 Use the path exactly as `artifacts/finutility` in DigitalOcean — not `/artifacts/finutility`.
 
