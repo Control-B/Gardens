@@ -8,6 +8,7 @@ import { Link } from "wouter";
 import { gardenEducationContent } from "@/lib/educationContent";
 import { gardenTrustContent } from "@/lib/trustContent";
 import { guideArticles } from "@/lib/guides";
+import { getGuideMetadata } from "@/lib/contentHub";
 import { TreeDeciduous, Leaf, Sprout, ChevronRight, Clock, BookOpen } from "lucide-react";
 
 const CALCULATORS = [
@@ -23,7 +24,7 @@ const SEASONAL_TIPS = [
 ];
 
 export default function GardenCategory() {
-  const gardenGuides = guideArticles.filter((g) => g.category === "Gardening");
+  const gardenGuides = guideArticles.filter((g) => getGuideMetadata(g).pillar === "Garden & Outdoor");
 
   return (
     <div className="min-h-screen flex flex-col bg-background">

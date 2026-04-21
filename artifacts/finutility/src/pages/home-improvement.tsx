@@ -8,6 +8,7 @@ import { Link } from "wouter";
 import { homeImprovementEducationContent } from "@/lib/educationContent";
 import { homeImprovementTrustContent } from "@/lib/trustContent";
 import { guideArticles } from "@/lib/guides";
+import { getGuideMetadata } from "@/lib/contentHub";
 import { Hammer, Paintbrush, Home, ChevronRight, Wrench, Clock, BookOpen } from "lucide-react";
 
 const CALCULATORS = [
@@ -24,9 +25,7 @@ const DIY_TIPS = [
 ];
 
 export default function HomeImprovementCategory() {
-  const homeGuides = guideArticles.filter((g) =>
-    ["Plumbing DIY", "Home Improvement", "Roofing"].includes(g.category)
-  );
+  const homeGuides = guideArticles.filter((g) => getGuideMetadata(g).pillar === "Home Improvement");
 
   return (
     <div className="min-h-screen flex flex-col bg-background">

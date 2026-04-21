@@ -6,6 +6,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Clock3 } from "lucide-react";
 import { guideArticles, guidesBySlug } from "@/lib/guides";
+import { getGuideMetadata } from "@/lib/contentHub";
 import { articleTrustContent } from "@/lib/trustContent";
 
 export default function ArticlePage() {
@@ -42,6 +43,7 @@ export default function ArticlePage() {
     .map((relatedSlug) => guidesBySlug[relatedSlug])
     .filter(Boolean)
     .slice(0, 3);
+  const meta = getGuideMetadata(article);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -55,7 +57,13 @@ export default function ArticlePage() {
             <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 font-semibold text-primary">
                 <BookOpen className="h-4 w-4" />
-                {article.category}
+                {meta.pillar}
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 font-semibold text-slate-700">
+                {meta.contentType}
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 font-semibold text-slate-700">
+                {meta.cluster}
               </span>
               <span className="inline-flex items-center gap-1"><Clock3 className="h-4 w-4" />{article.readTime}</span>
             </div>

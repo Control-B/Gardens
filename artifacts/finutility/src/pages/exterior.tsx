@@ -8,6 +8,7 @@ import { Link } from "wouter";
 import { exteriorEducationContent } from "@/lib/educationContent";
 import { exteriorTrustContent } from "@/lib/trustContent";
 import { guideArticles } from "@/lib/guides";
+import { getGuideMetadata } from "@/lib/contentHub";
 import { Home, Fence, Paintbrush, ChevronRight, Clock, BookOpen, TrendingUp } from "lucide-react";
 
 const CALCULATORS = [
@@ -26,9 +27,7 @@ const ROI_DATA = [
 ];
 
 export default function ExteriorCategory() {
-  const exteriorGuides = guideArticles.filter((g) =>
-    ["Roofing", "Fencing"].includes(g.category)
-  );
+  const exteriorGuides = guideArticles.filter((g) => getGuideMetadata(g).pillar === "Exterior & Curb Appeal");
 
   return (
     <div className="min-h-screen flex flex-col bg-background">

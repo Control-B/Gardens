@@ -93,7 +93,7 @@ export const guideArticles: GuideArticle[] = [
     readTime: "10 min read",
     calculatorHref: "/roof-cost-calculator",
     calculatorLabel: "Calculate Roof Replacement Cost",
-    relatedSlugs: ["how-to-maintain-your-roof", "when-to-diy-vs-hire-a-contractor"],
+    relatedSlugs: ["best-home-upgrades-that-add-value", "when-to-diy-vs-hire-a-contractor"],
     sections: [
       {
         heading: "The Problem: Choosing the Wrong Material Costs Thousands",
@@ -196,7 +196,7 @@ export const guideArticles: GuideArticle[] = [
     readTime: "9 min read",
     calculatorHref: "/lawn-care-calculator",
     calculatorLabel: "Calculate Your Lawn Care Cost",
-    relatedSlugs: ["best-time-to-fertilize-your-lawn", "how-to-fix-lawn-bare-spots"],
+    relatedSlugs: ["summer-lawn-care-calendar", "best-plants-for-low-maintenance-gardens"],
     sections: [
       {
         heading: "The Problem: Lawn Service Bills Add Up Fast",
@@ -458,7 +458,7 @@ export const guideArticles: GuideArticle[] = [
     readTime: "8 min read",
     calculatorHref: "/paint-calculator",
     calculatorLabel: "Calculate Paint Needed",
-    relatedSlugs: ["when-to-diy-vs-hire-a-contractor", "how-to-winterize-your-home"],
+    relatedSlugs: ["how-to-patch-drywall-holes", "when-to-diy-vs-hire-a-contractor"],
     sections: [
       {
         heading: "The Problem: Most DIY Paint Jobs Look Amateurish",
@@ -489,6 +489,342 @@ export const guideArticles: GuideArticle[] = [
           "Task: Paint all five rooms herself without obvious DIY quality issues that would hurt the listing.",
           "Action: She used the paint calculator to buy exactly 9 gallons total (no waste), bought quality brushes and rollers, spent one day prepping (filling, taping, cleaning), and painted over two weekends.",
           "Result: Total materials cost: $410. A realtor commented the paint looked professionally done. The home sold for $7,000 over asking price.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-patch-drywall-holes",
+    title: "How to Patch Drywall Holes Without Making the Wall Look Worse",
+    description: "Small drywall damage turns into expensive repainting when it's rushed. Learn the right patch method for dents, nail pops, and larger holes so the repair blends in cleanly.",
+    category: "Repairs & Fixes",
+    readTime: "8 min read",
+    calculatorHref: "/paint-calculator",
+    calculatorLabel: "Estimate Patch and Paint Materials",
+    relatedSlugs: ["how-to-paint-a-room-like-a-pro", "when-to-diy-vs-hire-a-contractor"],
+    sections: [
+      {
+        heading: "The Problem: Rushed Drywall Repairs Stay Visible",
+        paragraphs: [
+          "Drywall repairs often fail because the patch method does not match the size of the damage. Overfilled compound creates a hump, weak backing causes cracks, and poor priming makes the patch flash through the final coat of paint.",
+          "Hiring a pro for minor wall repairs often costs far more than the materials, especially when the job only needs a patch, sanding, primer, and touch-up paint.",
+        ],
+      },
+      {
+        heading: "The Solution: Match the Patch to the Hole",
+        paragraphs: [
+          "Use lightweight spackle for dents and nail pops, self-adhesive mesh for smaller holes, and a backer-supported drywall patch for larger openings. Work in thin coats, sand between coats, and always prime before painting.",
+          "A basic repair kit only needs a utility knife, putty knife, sanding sponge, patch material, joint compound, primer, and paint.",
+        ],
+      },
+      {
+        heading: "The Benefit: A Clean Repair Protects the Whole Room Finish",
+        paragraphs: [
+          "A proper patch prevents a small wall blemish from turning into a full repaint or a visible defect during a home showing, inspection, or move-out walk-through.",
+          "It also gives homeowners a fast, repeatable skill for handling everyday wear without paying a handyman each time.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: Priya Fixed a Wall for Under $25",
+        paragraphs: [
+          "Situation: Priya had a 3-inch hole in a bedroom wall after a door handle hit the drywall.",
+          "Task: Repair it before listing photos were taken, without paying a $225 handyman quote.",
+          "Action: She cut the damaged area clean, installed a small backer, applied three thin coats of compound, sanded, primed, and repainted.",
+          "Result: The finished wall looked smooth in natural light and the total material cost stayed under $25.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "kitchen-remodel-cost-guide",
+    title: "Kitchen Remodel Cost Guide: What a Realistic Budget Looks Like",
+    description: "Kitchen remodel budgets get wrecked by vague scope and hidden labor. Learn what drives cost before you request contractor bids or commit to a design.",
+    category: "Cost & Budgeting",
+    readTime: "10 min read",
+    calculatorHref: "/home-renovation-calculator",
+    calculatorLabel: "Build a Kitchen Budget",
+    relatedSlugs: ["bathroom-renovation-cost-guide", "when-to-diy-vs-hire-a-contractor"],
+    sections: [
+      {
+        heading: "The Problem: Kitchen Costs Balloon When Scope Is Undefined",
+        paragraphs: [
+          "Cabinets and countertops get most of the attention, but budgets are often blown by electrical upgrades, layout changes, flooring transitions, plumbing moves, appliance installation, and change orders.",
+          "A project that starts as a cosmetic kitchen refresh can quickly turn into a much larger remodel once walls, lighting, or appliance locations change.",
+        ],
+      },
+      {
+        heading: "The Solution: Budget by System and Scope",
+        paragraphs: [
+          "Light kitchen refreshes often fall in the $8,000 to $18,000 range, mid-range remodels commonly land between $25,000 and $55,000, and higher-end projects with custom work climb fast beyond that.",
+          "Break the budget into cabinets, counters, labor, flooring, appliances, electrical, plumbing, permits, and a 15% contingency so you can compare quotes clearly.",
+        ],
+      },
+      {
+        heading: "The Benefit: Better Budgeting Creates Better Contractor Conversations",
+        paragraphs: [
+          "When you already understand the big cost buckets, it becomes much easier to spot missing allowances, suspiciously low bids, and upgrades that add expense without improving daily use.",
+          "That clarity also helps you decide what is worth keeping, moving, or simplifying before demo starts.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: The Parkers Avoided a Low-Bid Trap",
+        paragraphs: [
+          "Situation: The Parkers were drawn to a low kitchen quote that seemed to save them thousands.",
+          "Task: Verify whether the number was realistic before signing.",
+          "Action: They used a renovation calculator and discovered the quote excluded electrical work, backsplash labor, and demolition haul-away.",
+          "Result: They chose a fuller proposal that fit their real budget and avoided expensive surprises mid-project.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "bathroom-renovation-cost-guide",
+    title: "Bathroom Renovation Cost Guide: Where the Money Goes and Where You Can Save",
+    description: "Bathrooms are compact but expensive because tile labor, waterproofing, and plumbing details add up fast. Use this guide to set a realistic budget before demo begins.",
+    category: "Cost & Budgeting",
+    readTime: "9 min read",
+    calculatorHref: "/home-renovation-calculator",
+    calculatorLabel: "Estimate Bathroom Renovation Cost",
+    relatedSlugs: ["kitchen-remodel-cost-guide", "when-to-diy-vs-hire-a-contractor"],
+    sections: [
+      {
+        heading: "The Problem: Small Rooms Hide Expensive Complexity",
+        paragraphs: [
+          "Bathrooms look simple on paper, but labor-heavy tile work, ventilation, waterproofing, plumbing rough-ins, and electrical code requirements make them one of the easiest spaces to underestimate.",
+          "Hidden subfloor damage and old plumbing are also common once the walls or tub surround are opened up.",
+        ],
+      },
+      {
+        heading: "The Solution: Protect Layout and Prioritize Waterproofing",
+        paragraphs: [
+          "Cosmetic bathroom refreshes often start around $6,000 to $15,000, while full gut renovations with shower rebuilds, layout changes, and tile work can move well beyond that range.",
+          "One of the simplest ways to control budget is to keep the toilet, tub, and vanity in the same place whenever possible.",
+        ],
+      },
+      {
+        heading: "The Benefit: You Save Money Without Cutting the Wrong Corners",
+        paragraphs: [
+          "It is usually smarter to simplify finishes than to underfund waterproofing, ventilation, or plumbing repairs. Those are the parts that protect the room long after the design trends change.",
+          "A structured budget helps you save where changes are easy and spend where failure is expensive.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: Elena Saved $7,000 by Keeping the Layout Intact",
+        paragraphs: [
+          "Situation: Elena wanted a brighter bathroom but was overwhelmed by quotes ranging from affordable to extreme.",
+          "Task: Lower cost without ending up with a fragile remodel.",
+          "Action: She kept plumbing locations fixed, simplified glass selections, and used large-format tile to reduce labor time.",
+          "Result: The project stayed within budget while preserving the upgrades that mattered most for durability.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-lower-your-electric-bill-at-home",
+    title: "How to Lower Your Electric Bill at Home Without a Full Remodel",
+    description: "Most utility savings come from fixing recurring waste, not chasing the flashiest upgrade first. Start with the changes that reduce energy use fastest and cheapest.",
+    category: "Energy & Efficiency",
+    readTime: "8 min read",
+    calculatorHref: "/home-renovation-calculator",
+    calculatorLabel: "Estimate Upgrade Costs",
+    relatedSlugs: ["how-to-winterize-your-home", "best-home-upgrades-that-add-value"],
+    sections: [
+      {
+        heading: "The Problem: Energy Bills Usually Rise for the Same Few Reasons",
+        paragraphs: [
+          "Leaky air sealing, poor insulation, inefficient lighting, neglected HVAC maintenance, and peak-hour habits are behind many high electric bills. The problem is often cumulative rather than dramatic.",
+          "Homeowners often jump to major upgrades before tightening the basic systems that waste money every month.",
+        ],
+      },
+      {
+        heading: "The Solution: Cut Load Before Buying Bigger Equipment",
+        paragraphs: [
+          "Start with air sealing, insulation improvements, thermostat programming, LED swaps, maintenance, and duct sealing. Then evaluate larger upgrades like appliances, heat pumps, or solar with better baseline data.",
+          "Looking at a full year of bills helps you tell the difference between a seasonal comfort issue and a year-round efficiency issue.",
+        ],
+      },
+      {
+        heading: "The Benefit: Small Fixes Stack Into Predictable Savings",
+        paragraphs: [
+          "A set of modest efficiency improvements can reduce monthly bills meaningfully without the financing or disruption of a full remodel.",
+          "They also improve comfort, which makes the payoff easier to feel than a line item on a utility bill alone.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: Devin Cut Summer Bills by 22%",
+        paragraphs: [
+          "Situation: Devin's cooling bills climbed every summer in a house with attic leaks and inconsistent thermostat settings.",
+          "Task: Reduce monthly costs without replacing the HVAC system.",
+          "Action: He sealed gaps, added weatherstripping, installed a smart thermostat, cleaned equipment, and swapped the most-used bulbs to LED.",
+          "Result: Summer bills dropped noticeably and the hottest rooms felt more stable during heat waves.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "spring-garden-checklist",
+    title: "Spring Garden Checklist: What to Do First for a Strong Growing Season",
+    description: "Spring success comes from preparation, not impulse buying. Use this checklist to prep beds, improve soil, and avoid wasting money on plants that are not set up to thrive.",
+    category: "Seasonal Gardening",
+    readTime: "7 min read",
+    calculatorHref: "/garden-planting-calculator",
+    calculatorLabel: "Plan Spring Planting",
+    relatedSlugs: ["how-to-prepare-garden-for-spring", "how-to-create-a-raised-garden-bed"],
+    sections: [
+      {
+        heading: "The Problem: Spring Excitement Can Outrun Bed Readiness",
+        paragraphs: [
+          "Many gardeners shop before checking frost timing, soil temperature, drainage, or available sun. That leads to weak starts, disappointing yields, and unnecessary replacement costs.",
+          "The first nice weekend of the year is not always the right planting weekend.",
+        ],
+      },
+      {
+        heading: "The Solution: Prep the Site Before Buying Plants",
+        paragraphs: [
+          "Clear debris, test the soil, add compost, inspect irrigation, sharpen tools, and map spacing before you purchase seeds or transplants. Then choose plants that fit your zone and the current part of the season.",
+          "A simple checklist keeps you focused on prep tasks that are easy to skip but expensive to ignore.",
+        ],
+      },
+      {
+        heading: "The Benefit: Stronger Establishment and Fewer Replacement Trips",
+        paragraphs: [
+          "Beds that start with healthier soil and better spacing settle in faster and need less correction by early summer.",
+          "That saves money, but it also makes the season feel easier and more predictable.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: Prep Saved the Wilsons Most of Their Plant Budget",
+        paragraphs: [
+          "Situation: The Wilsons usually bought spring plants twice because the first round struggled.",
+          "Task: Improve outcomes without spending more.",
+          "Action: They delayed planting until conditions were right, improved soil, and planned bed spacing before visiting the garden center.",
+          "Result: Replacement spending dropped and the beds filled in more evenly by summer.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "summer-lawn-care-calendar",
+    title: "Summer Lawn Care Calendar: What Your Lawn Actually Needs Each Month",
+    description: "Most summer lawn damage comes from timing mistakes. Follow a simple month-by-month routine instead of mowing too short, watering too often, or forcing growth in peak heat.",
+    category: "Seasonal Gardening",
+    readTime: "8 min read",
+    calculatorHref: "/lawn-care-calculator",
+    calculatorLabel: "Estimate Lawn Care Costs",
+    relatedSlugs: ["how-to-save-on-lawn-care-costs", "best-plants-for-low-maintenance-gardens"],
+    sections: [
+      {
+        heading: "The Problem: Heat Stress Makes Every Lawn Mistake More Visible",
+        paragraphs: [
+          "Short mowing, shallow watering, dull blades, and over-fertilizing all hit harder in summer. Symptoms show up quickly, but the wrong response often makes them worse.",
+          "That is why lawn care in hot weather needs a calendar, not guesswork.",
+        ],
+      },
+      {
+        heading: "The Solution: Use a Month-by-Month Summer Routine",
+        paragraphs: [
+          "Raise mowing height at the start of summer, water deeply before sunrise, avoid aggressive fertilizing in peak heat, and save major recovery work for late summer into fall.",
+          "A simple seasonal routine helps you spend less on products while giving the grass what it actually needs.",
+        ],
+      },
+      {
+        heading: "The Benefit: Healthier Turf With Less Water and Waste",
+        paragraphs: [
+          "Following the right schedule improves root depth, reduces stress, and lowers the urge to throw more fertilizer or weed treatment at every patch of discoloration.",
+          "That usually means better turf quality and lower summer maintenance costs.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: One Routine Change Helped a Stressed Lawn Recover",
+        paragraphs: [
+          "Situation: A family kept watering every evening and mowing low to keep the lawn neat.",
+          "Task: Stop brown patches from spreading without paying for a full treatment plan.",
+          "Action: They switched to deeper morning watering, raised mowing height, and stopped pushing fertilizer in hot weather.",
+          "Result: The lawn stayed more stable through summer and needed fewer corrective treatments later.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "mulch-vs-gravel-for-landscaping",
+    title: "Mulch vs. Gravel for Landscaping: Which One Saves More Work and Money?",
+    description: "Mulch and gravel are both useful, but they solve different problems. Use this comparison to choose the right material for planting beds, paths, drainage areas, and low-maintenance yards.",
+    category: "Landscaping & Design",
+    readTime: "8 min read",
+    calculatorHref: "/garden-planting-calculator",
+    calculatorLabel: "Plan Bed Coverage",
+    relatedSlugs: ["best-plants-for-low-maintenance-gardens", "best-home-upgrades-that-add-value"],
+    sections: [
+      {
+        heading: "The Problem: The Wrong Ground Cover Creates More Maintenance",
+        paragraphs: [
+          "Mulch can wash away or need refreshing, while gravel can migrate, trap debris, and make planting adjustments harder. Choosing only by looks usually creates extra work later.",
+          "Different parts of a yard need different surface materials if you want the result to stay practical.",
+        ],
+      },
+      {
+        heading: "The Solution: Match the Material to the Use Case",
+        paragraphs: [
+          "Organic mulch is usually the better choice for planting beds because it improves soil and helps regulate moisture. Gravel works better in drainage zones, paths, xeriscape areas, and places where decomposition is not helpful.",
+          "The best landscapes often use both materials, just in different places and for different reasons.",
+        ],
+      },
+      {
+        heading: "The Benefit: Better Choices Mean Less Rework and Cleaner Curb Appeal",
+        paragraphs: [
+          "Choosing the right surface helps reduce weeds, protect moisture, and keep maintenance predictable rather than annoying.",
+          "It also improves the visual consistency of the yard, which matters if resale or curb appeal is part of the goal.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: A Mixed-Material Plan Solved Two Problems at Once",
+        paragraphs: [
+          "Situation: A homeowner wanted cleaner planting beds and a side-yard path that stopped getting muddy.",
+          "Task: Reduce maintenance without making the planted areas harder to manage.",
+          "Action: They used mulch in shrub beds and gravel only along the drainage-prone side path with edging.",
+          "Result: The beds stayed healthier, the path drained better, and upkeep became easier instead of more complicated.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "best-home-upgrades-that-add-value",
+    title: "Best Home Upgrades That Add Value Without Over-Improving the House",
+    description: "The most valuable upgrades improve how a house functions, feels, and shows to buyers. Focus on the improvements that support comfort, efficiency, and curb appeal before luxury extras.",
+    category: "Home Value & ROI",
+    readTime: "9 min read",
+    calculatorHref: "/home-renovation-calculator",
+    calculatorLabel: "Estimate Upgrade Budgets",
+    relatedSlugs: ["kitchen-remodel-cost-guide", "how-to-choose-roof-material"],
+    sections: [
+      {
+        heading: "The Problem: Expensive Does Not Automatically Mean Valuable",
+        paragraphs: [
+          "Homeowners often assume the biggest remodel creates the biggest return, but practical improvements like roofing, paint, insulation, lighting, flooring updates, and landscaping often do more for both daily life and resale confidence.",
+          "Over-improving for the neighborhood can make a project harder to recover financially.",
+        ],
+      },
+      {
+        heading: "The Solution: Prioritize Function, Condition, and Buyer Confidence",
+        paragraphs: [
+          "Start with maintenance and curb appeal, then layer in energy savings and layout improvements that make the home easier to live in. Kitchens and baths matter, but only when the scope fits the market and the rest of the house is not being ignored.",
+          "A value-first plan usually works from the outside in rather than starting with the flashiest room.",
+        ],
+      },
+      {
+        heading: "The Benefit: Smarter Upgrades Pay Off Now and Later",
+        paragraphs: [
+          "When upgrades solve real problems, the house becomes more comfortable immediately and easier to sell later. That dual return is why value-focused improvements outperform trend-driven spending.",
+          "It also protects you from sinking money into finishes while bigger condition issues remain visible.",
+        ],
+      },
+      {
+        heading: "STAR Scenario: Practical Upgrades Beat a Flashy Remodel",
+        paragraphs: [
+          "Situation: A couple had a fixed budget and were tempted by one dramatic remodel.",
+          "Task: Improve resale appeal without overspending for their area.",
+          "Action: They repaired exterior issues, repainted key spaces, improved lighting, refreshed landscaping, and added insulation instead of choosing a luxury kitchen package.",
+          "Result: The home showed better, operated more efficiently, and used the budget more effectively across the whole property.",
         ],
       },
     ],

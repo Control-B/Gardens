@@ -43,16 +43,6 @@ function Router() {
 
       {/* Guides & Articles */}
       <Route path="/guides" component={GuidesPage} />
-      <Route path="/how-to-fix-a-leaking-faucet" component={ArticlePage} />
-      <Route path="/how-to-choose-roof-material" component={ArticlePage} />
-      <Route path="/how-to-prepare-garden-for-spring" component={ArticlePage} />
-      <Route path="/how-to-save-on-lawn-care-costs" component={ArticlePage} />
-      <Route path="/diy-fence-installation-guide" component={ArticlePage} />
-      <Route path="/when-to-diy-vs-hire-a-contractor" component={ArticlePage} />
-      <Route path="/how-to-create-a-raised-garden-bed" component={ArticlePage} />
-      <Route path="/best-plants-for-low-maintenance-gardens" component={ArticlePage} />
-      <Route path="/how-to-winterize-your-home" component={ArticlePage} />
-      <Route path="/how-to-paint-a-room-like-a-pro" component={ArticlePage} />
 
       {/* Legal & Info */}
       <Route path="/privacy-policy" component={LegalPage} />
@@ -60,6 +50,7 @@ function Router() {
       <Route path="/disclaimer" component={LegalPage} />
       <Route path="/about" component={LegalPage} />
       <Route path="/contact" component={ContactPage} />
+      <Route path="/:slug" component={ArticlePage} />
 
       <Route component={NotFound} />
     </Switch>

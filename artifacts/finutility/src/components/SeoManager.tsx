@@ -10,8 +10,8 @@ interface MetaEntry {
 
 const metaByPath: Record<string, MetaEntry> = {
   "/": {
-    title: "Gardens — Free Home & Garden Calculators, Cost Guides & Expert Advice",
-    description: "Free home and garden cost calculators for roofing, painting, lawn care, fencing, and renovation. Expert guides with real-world cost ranges to help you plan smarter projects.",
+    title: "Gardens — Home & Garden Authority Platform, Calculators & Guides",
+    description: "Explore home improvement and garden topic clusters with free calculators, seasonal guides, cost pages, comparisons, and educational content built for smarter project decisions.",
   },
   "/home-improvement": {
     title: "Home Improvement Tools & Guides | Gardens",
@@ -26,8 +26,8 @@ const metaByPath: Record<string, MetaEntry> = {
     description: "Exterior cost calculators and guides for roofing, fencing, and landscaping projects. Compare materials, get cost benchmarks, and avoid common mistakes.",
   },
   "/guides": {
-    title: "Home & Garden Guides | Gardens",
-    description: "Practical home improvement and gardening guides using the Problem → Solution → Benefit framework with real-world STAR scenarios and cost estimates.",
+    title: "Home & Garden Guides by Topic Cluster | Gardens",
+    description: "Browse home improvement, garden, and exterior guides organized by pillar, cluster, and content type, including how-to, cost, comparison, value, and seasonal pages.",
   },
   "/roof-cost-calculator": {
     title: "Roof Cost Calculator — Estimate Roof Replacement Cost | Gardens",
