@@ -82,7 +82,8 @@ export function Navbar() {
 
           {[
             { label: "Guides", href: "/guides" },
-            { label: "Calculators", href: "/roof-cost-calculator" },
+            { label: "Calculators", href: "/calculators" },
+            { label: "Seasonal", href: "/seasonal-guides" },
           ].map((link) => (
             <Link
               key={link.href}
@@ -140,15 +141,26 @@ export function Navbar() {
             </Link>
           ))}
           <div className="border-t border-stone-100 mt-2 pt-3 flex flex-col gap-1">
+            {[
+              { label: "All Guides", href: "/guides" },
+              { label: "Calculators", href: "/calculators" },
+              { label: "Seasonal Guides", href: "/seasonal-guides" },
+              { label: "Budget Projects", href: "/budget-projects" },
+              { label: "Plant Care Library", href: "/plant-care" },
+              { label: "Small Space Solutions", href: "/small-space-solutions" },
+              { label: "Start Here", href: "/start-here" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="px-3 py-2 text-sm font-semibold text-stone-600 hover:text-green-700 rounded-lg hover:bg-stone-50"
+              >
+                {link.label}
+              </Link>
+            ))}
             <Link
-              href="/guides"
-              onClick={() => setIsOpen(false)}
-              className="px-3 py-2 text-sm font-semibold text-stone-600 hover:text-green-700 rounded-lg hover:bg-stone-50"
-            >
-              Guides
-            </Link>
-            <Link
-              href="/roof-cost-calculator"
+              href="/calculators"
               onClick={() => setIsOpen(false)}
               className="mt-2 text-center font-bold px-4 py-2.5 rounded-full bg-green-700 text-white hover:bg-green-800 transition-colors"
             >

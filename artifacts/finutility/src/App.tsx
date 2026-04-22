@@ -19,11 +19,17 @@ import LawnCareCalculator from "@/pages/lawn-care";
 import FenceCostCalculator from "@/pages/fence-cost";
 import GardenPlantingCalculator from "@/pages/garden-planting";
 import HomeRenovationCalculator from "@/pages/home-renovation";
+import CalculatorsPage from "@/pages/calculators";
 
 import GuidesPage from "@/pages/guides";
 import ArticlePage from "@/pages/article";
 import LegalPage from "@/pages/legal";
 import ContactPage from "@/pages/contact";
+import SeasonalGuidesPage from "@/pages/seasonal-guides";
+import StartHerePage from "@/pages/start-here";
+import BudgetProjectsPage from "@/pages/budget-projects";
+import SmallSpaceSolutionsPage from "@/pages/small-space-solutions";
+import PlantCarePage from "@/pages/plant-care";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +46,7 @@ function Router() {
       <Route path="/outdoor-living" component={OutdoorLivingPage} />
 
       {/* Calculators */}
+      <Route path="/calculators" component={CalculatorsPage} />
       <Route path="/roof-cost-calculator" component={RoofCostCalculator} />
       <Route path="/paint-calculator" component={PaintCalculator} />
       <Route path="/lawn-care-calculator" component={LawnCareCalculator} />
@@ -49,6 +56,11 @@ function Router() {
 
       {/* Guides & Articles */}
       <Route path="/guides" component={GuidesPage} />
+      <Route path="/seasonal-guides" component={SeasonalGuidesPage} />
+      <Route path="/start-here" component={StartHerePage} />
+      <Route path="/budget-projects" component={BudgetProjectsPage} />
+      <Route path="/small-space-solutions" component={SmallSpaceSolutionsPage} />
+      <Route path="/plant-care" component={PlantCarePage} />
 
       {/* Legal & Info */}
       <Route path="/privacy-policy" component={LegalPage} />
@@ -56,6 +68,8 @@ function Router() {
       <Route path="/disclaimer" component={LegalPage} />
       <Route path="/about" component={LegalPage} />
       <Route path="/contact" component={ContactPage} />
+
+      {/* Article wildcard — must be last before NotFound */}
       <Route path="/:slug" component={ArticlePage} />
 
       <Route component={NotFound} />
