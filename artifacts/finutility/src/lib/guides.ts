@@ -829,6 +829,690 @@ export const guideArticles: GuideArticle[] = [
       },
     ],
   },
+
+  // ── Cleaning & Home Care ─────────────────────────────────────────────────
+  {
+    slug: "room-by-room-cleaning-schedule",
+    title: "How to Build a Cleaning Schedule That Actually Sticks",
+    description: "A realistic room-by-room cleaning routine that takes 20 minutes a day and keeps your home consistently clean — without overwhelming weekends.",
+    category: "Cleaning",
+    readTime: "6 min read",
+    relatedSlugs: ["natural-cleaning-solutions-guide", "declutter-your-home-guide"],
+    sections: [
+      {
+        heading: "The Problem: Cleaning Feels Overwhelming Because There's No System",
+        paragraphs: [
+          "Most people clean reactively — when guests are coming or the mess becomes unavoidable. This creates the exhausting 'whole-house cleaning day' that takes 4–6 hours and still gets skipped when life gets busy.",
+          "The solution isn't more motivation. It's a simple, repeatable system that divides the work across the week so no single day is ever overwhelming.",
+        ],
+      },
+      {
+        heading: "The Daily 20-Minute Routine",
+        paragraphs: [
+          "Morning (5 min): Make beds, wipe bathroom counter, start a load of laundry.",
+          "After meals (10 min): Wash dishes, wipe stove and counters, sweep kitchen floor.",
+          "Evening (5 min): Pick up items left on surfaces, take out trash if needed, quick bathroom wipe-down.",
+          "This daily routine prevents the avalanche of mess that makes weekly cleaning feel impossible.",
+        ],
+      },
+      {
+        heading: "The Weekly Room-by-Room Plan",
+        paragraphs: [
+          "Monday — Kitchen: Scrub sink, degrease stovetop, wipe appliance fronts, mop floor.",
+          "Tuesday — Bathrooms: Scrub toilets, clean mirror, disinfect sink, scrub shower/tub.",
+          "Wednesday — Bedrooms: Change sheets, dust surfaces, vacuum or mop floors.",
+          "Thursday — Living Areas: Dust shelves and electronics, vacuum upholstery, clean windows.",
+          "Friday — Floors: Vacuum entire home, mop hard floors.",
+          "Weekend: Tackle one deeper task per week (oven, fridge, baseboards, windows).",
+        ],
+      },
+      {
+        heading: "The Benefit: A Clean Home With Half the Effort",
+        paragraphs: [
+          "Homeowners who follow a daily routine spend an average of 2–3 hours per week on cleaning versus 6+ hours for reactive cleaners. More importantly, the home stays consistently presentable — not just clean once a week.",
+          "A clean home also reduces allergens, improves sleep quality, and significantly reduces stress levels according to multiple studies.",
+        ],
+      },
+      {
+        heading: "Pro Tips for Staying Consistent",
+        paragraphs: [
+          "Use a timer. 20 minutes feels manageable; cleaning 'until it's done' doesn't.",
+          "Pair cleaning tasks with habits you already do: clean the bathroom while your coffee brews.",
+          "Keep supplies in each room. If you have to go get the cleaner, you'll skip the task.",
+          "Lower your standard on light-clean days. A quick wipe beats skipping entirely.",
+        ],
+      },
+      {
+        heading: "FAQ",
+        paragraphs: [
+          "Q: What if I miss a day? A: Just pick up the next day. Skipping Tuesday doesn't mean the whole week fails. The power is in the system, not perfection.",
+          "Q: How do I get my family involved? A: Assign specific daily tasks to each family member. Even children can make beds, clear their dishes, and tidy their rooms.",
+          "Q: What cleaning products do I actually need? A: You can clean your entire home with dish soap, white vinegar, baking soda, a microfiber cloth, and a good all-purpose spray.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "natural-cleaning-solutions-guide",
+    title: "Natural Cleaning Solutions That Actually Work (With Recipes)",
+    description: "Skip the harsh chemicals. These DIY natural cleaning solutions are safe, cheap, and more effective than many store-bought products for everyday home cleaning.",
+    category: "Cleaning",
+    readTime: "7 min read",
+    relatedSlugs: ["room-by-room-cleaning-schedule", "remove-odors-from-home"],
+    sections: [
+      {
+        heading: "The Problem: Most Cleaners Are Expensive and Unnecessary",
+        paragraphs: [
+          "The average American household spends $600–$800 per year on cleaning products. The marketing suggests you need a different spray for every surface — kitchen cleaner, bathroom cleaner, glass cleaner, floor cleaner, and more.",
+          "In reality, most home cleaning can be done with 4–5 simple, inexpensive ingredients that are safer for your family, pets, and the environment.",
+        ],
+      },
+      {
+        heading: "The 5 Ingredients That Replace 20 Products",
+        paragraphs: [
+          "White distilled vinegar ($3/gallon): Disinfects, cuts grease, removes mineral deposits. Use on glass, counters, appliances, and floors.",
+          "Baking soda ($1/box): Deodorizes, gently abrades, and lifts stains. Use on sinks, tubs, ovens, and carpets.",
+          "Dish soap ($4): Cuts grease on any surface. The base of many DIY cleaners.",
+          "Rubbing alcohol ($3): Disinfects and cuts through hard residue. Use on electronics screens (diluted), mirrors, and sticky surfaces.",
+          "Hydrogen peroxide ($2): Kills bacteria, mold, and mildew. Use on cutting boards, grout, and bathroom surfaces.",
+        ],
+      },
+      {
+        heading: "5 DIY Cleaning Recipes",
+        paragraphs: [
+          "All-Purpose Cleaner: Mix 1 cup water, 1 cup white vinegar, and 10 drops tea tree oil in a spray bottle. Safe on most surfaces.",
+          "Glass & Mirror Cleaner: Mix 1 cup water, 1 cup rubbing alcohol, and 1 tablespoon white vinegar. Streak-free on glass.",
+          "Bathroom Scrub: Mix ½ cup baking soda with enough dish soap to form a paste. Scrub sinks and tubs.",
+          "Grout Cleaner: Apply hydrogen peroxide to grout lines, wait 10 minutes, scrub with an old toothbrush.",
+          "Oven Cleaner: Sprinkle baking soda inside, spray with vinegar until it fizzes. Let sit 2 hours, then wipe clean.",
+        ],
+      },
+      {
+        heading: "The Benefit: Save $400+ Per Year With Better Results",
+        paragraphs: [
+          "Switching to DIY natural cleaners costs approximately $20–$40 per year compared to $600+ for commercial products. For families with young children or pets, eliminating harsh chemical exposure is an additional benefit that's hard to price.",
+          "Many natural solutions outperform commercial alternatives — hydrogen peroxide kills more bacteria on cutting boards than most kitchen sprays, for example.",
+        ],
+      },
+      {
+        heading: "What NOT to Mix",
+        paragraphs: [
+          "Never mix bleach with vinegar — this creates toxic chlorine gas.",
+          "Never mix bleach with ammonia (found in many glass cleaners) — another dangerous gas.",
+          "Don't mix hydrogen peroxide and vinegar in the same container — they react to form peracetic acid.",
+          "Apply them separately on surfaces if you want both effects.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "deep-clean-bathroom-step-by-step",
+    title: "The Complete Bathroom Deep-Clean Checklist (Top to Bottom)",
+    description: "A systematic top-to-bottom bathroom deep-clean guide that tackles every surface, fixture, and hidden area — leaving your bathroom genuinely clean, not just looking clean.",
+    category: "Cleaning",
+    readTime: "8 min read",
+    relatedSlugs: ["natural-cleaning-solutions-guide", "room-by-room-cleaning-schedule"],
+    sections: [
+      {
+        heading: "The Problem: Bathrooms Get Surface-Cleaned, Not Deep-Cleaned",
+        paragraphs: [
+          "Weekly bathroom cleaning typically covers the obvious — toilet, mirror, floor. But the places that matter most for hygiene and appearance are regularly skipped: grout lines, exhaust fan, showerhead, caulk, and under-sink storage.",
+          "A true deep-clean should happen every 1–3 months to prevent mold growth, mineral buildup, and the gradual dinginess that makes even clean bathrooms look old.",
+        ],
+      },
+      {
+        heading: "Step 1: Prep and Ventilate",
+        paragraphs: [
+          "Remove everything from counters, the shower ledge, and under the sink. Run the exhaust fan or open a window before using any cleaning products.",
+          "Start at the ceiling and work downward — this prevents re-cleaning surfaces that get spattered by higher work.",
+        ],
+      },
+      {
+        heading: "Step 2: Exhaust Fan, Ceiling, and Walls",
+        paragraphs: [
+          "Exhaust fan: Remove the cover and wash it in soapy water. Use a compressed air can or vacuum attachment to clean the inside of the fan housing. A clogged fan contributes directly to mold growth.",
+          "Ceiling: Wipe any mold spots with diluted hydrogen peroxide. This is especially important in shower corners and above the tub.",
+          "Walls: Spray tile walls with an all-purpose cleaner and wipe down. For grout, apply hydrogen peroxide and let sit 10 minutes before scrubbing.",
+        ],
+      },
+      {
+        heading: "Step 3: Shower and Tub Deep Clean",
+        paragraphs: [
+          "Showerhead: Fill a plastic bag with white vinegar and rubber-band it around the showerhead overnight. This dissolves mineral deposits and improves water pressure and spray coverage.",
+          "Grout: Scrub with a baking soda paste and an old toothbrush. Seal grout lines annually to prevent future staining.",
+          "Caulk: Inspect caulk around the tub edge. Black or peeling caulk harbors mold — remove with a utility knife and re-caulk. A $6 tube of tub caulk prevents water damage behind the wall.",
+          "Shower curtain/liner: Wash fabric curtains in the washing machine. Replace plastic liners if they have significant mold (they're $3–$8 to replace).",
+        ],
+      },
+      {
+        heading: "Step 4: Toilet, Sink, and Vanity",
+        paragraphs: [
+          "Toilet: Apply cleaner under the rim and let sit. Wipe the exterior with disinfectant spray — including the base, hinges, and the area between the tank and wall. Scrub the bowl last.",
+          "Sink: Scrub the basin, run a thin brush around the drain opening, and clean the faucet handles and aerator (unscrew and rinse if water pressure is low).",
+          "Vanity/mirror: Clean the mirror with glass cleaner and polish the faucet with a dry cloth to remove water spots.",
+        ],
+      },
+      {
+        heading: "Step 5: Under Sink, Floor, and Final Polish",
+        paragraphs: [
+          "Under sink: Remove everything. Wipe down the interior of the cabinet. Check pipes for drips or moisture — a small slow leak can cause significant hidden damage over months.",
+          "Floor: Mop grout lines with a stiff brush and a diluted vinegar solution. Wipe behind and under the toilet — one of the most neglected surfaces in any bathroom.",
+          "Final: Replace items neatly. Refill soap dispensers. Fold fresh towels. This last step is what makes a deep-cleaned bathroom feel truly fresh.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "declutter-your-home-guide",
+    title: "How to Declutter Your Entire Home in a Weekend (Room by Room)",
+    description: "A practical, guilt-free system for clearing clutter from every room in your home — without endless decision-making or filling the space right back up.",
+    category: "Organizing",
+    readTime: "9 min read",
+    relatedSlugs: ["small-bedroom-storage-ideas", "pantry-organization-guide"],
+    sections: [
+      {
+        heading: "The Problem: Clutter Has Real Costs — and Not Just Visual Ones",
+        paragraphs: [
+          "The average American home contains over 300,000 items. Studies show that visual clutter elevates cortisol levels, disrupts sleep, reduces focus, and makes everyday tasks take longer than they should.",
+          "Beyond the stress impact, clutter creates practical costs: you buy duplicates of items you can't find, spend more time cleaning around things, and lose hours each week searching for objects buried under others.",
+        ],
+      },
+      {
+        heading: "Before You Start: The 4-Box Method",
+        paragraphs: [
+          "Prepare four boxes or bins before touching a single item: Keep, Donate, Trash, and Relocate. Moving items between rooms during decluttering is what causes sessions to stall — if it belongs in another room, put it in the Relocate box and deal with all relocations at the end.",
+          "Set a timer for each room. Constraints prevent overthinking. 45 minutes per room is enough.",
+        ],
+      },
+      {
+        heading: "Room-by-Room Declutter Guide",
+        paragraphs: [
+          "Kitchen: Start with one drawer. Toss duplicates, broken tools, and anything you haven't used in a year. Clear countertops — only leave what you use daily. Check pantry for expired food.",
+          "Bedroom: Clear the floor first. Then tackle the closet: if you haven't worn something in 12 months and it doesn't fit your current life, it goes. Clear nightstands to just essentials.",
+          "Bathroom: Throw away expired medications and cosmetics. Keep one of each product category at a time.",
+          "Living Room: Books, games, and media collect fast. Keep what you actually engage with. Toss broken remotes, tangled cables, and decorative items you don't actually love.",
+          "Garage/Storage: The hardest room. Break it into zones (tools, seasonal, sports). Only keep what you use at least once a year.",
+        ],
+      },
+      {
+        heading: "The One-In, One-Out Rule",
+        paragraphs: [
+          "Decluttering is only half the equation. The reason homes fill back up is that items enter without any exiting. After your declutter session, adopt the one-in, one-out rule: every time something new comes in, one equivalent item leaves.",
+          "This single habit prevents the drift back toward clutter and makes maintenance effortless over time.",
+        ],
+      },
+      {
+        heading: "The Benefit: Less Stuff, More Time and Clarity",
+        paragraphs: [
+          "A decluttered home typically takes 40% less time to clean. Families report finding lost items, spending less on duplicate purchases, and feeling significantly less stressed at home after a thorough declutter session.",
+          "Research from the Princeton Neuroscience Institute found that physical clutter competes for your attention and impairs your ability to focus — which means decluttering literally makes you more productive.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "remove-odors-from-home",
+    title: "How to Find and Remove Odors From Any Room in Your Home",
+    description: "Persistent household odors are almost always caused by a specific hidden source. This guide helps you locate and permanently eliminate odors — not just mask them.",
+    category: "Cleaning",
+    readTime: "7 min read",
+    relatedSlugs: ["natural-cleaning-solutions-guide", "deep-clean-bathroom-step-by-step"],
+    sections: [
+      {
+        heading: "The Problem: Air Fresheners Mask Odors — They Don't Remove Them",
+        paragraphs: [
+          "Air fresheners, candles, and sprays are billion-dollar industries built on the fact that most people cover odors rather than find their source. The smell always comes back because the cause remains.",
+          "Most persistent household odors have a specific physical source that can be identified and eliminated. This guide walks through the most common culprits by room and smell type.",
+        ],
+      },
+      {
+        heading: "Kitchen Odors",
+        paragraphs: [
+          "Drain smell: Pour ½ cup baking soda down the drain, follow with ½ cup white vinegar. Let fizz for 15 minutes, then flush with hot water. Do this monthly.",
+          "Garbage disposal: Run ice cubes through it monthly to clean the blades. Grind citrus peels to freshen the smell.",
+          "Refrigerator: An open box of baking soda absorbs refrigerator odors. Replace it every 3 months. Check for forgotten produce in the back of drawers.",
+          "Trash can: Wash the inside of the bin with dish soap, dry completely, and place a dryer sheet in the bottom between bag changes.",
+        ],
+      },
+      {
+        heading: "Bathroom Odors",
+        paragraphs: [
+          "Sewage smell from drains: This is usually a dry P-trap. Run water in any sink, tub, or floor drain you don't use regularly — the water seal in the P-trap prevents sewer gas from rising. Running the tap for 30 seconds fixes it.",
+          "Musty smell: Check for a clogged or broken exhaust fan — mold behind walls is the usual cause. Inspect caulk around the tub and toilet base for cracks that allow moisture in.",
+          "Toilet base odor: Urine seeping under the toilet base is common. Clean under and around the base with a disinfectant. If the wax ring is failing, the toilet needs reseating.",
+        ],
+      },
+      {
+        heading: "Bedroom and Living Area Odors",
+        paragraphs: [
+          "Pet odors in carpet: Sprinkle baking soda generously, let sit 30 minutes, then vacuum. For deep stains, use an enzyme-based cleaner — regular cleaners don't break down the proteins that cause pet odor.",
+          "Musty smell in closets: Install a battery-powered desiccant or charcoal odor absorber. Ensure clothes are fully dry before storing — damp fabric is the main cause of closet mildew.",
+          "Cigarette smoke: This requires ozone treatment or professional remediation for serious cases. For mild smoke odor: wipe walls with a white vinegar solution, wash all soft furnishings, and replace HVAC filters.",
+        ],
+      },
+      {
+        heading: "HVAC and Whole-Home Odors",
+        paragraphs: [
+          "Musty smell from vents: Replace HVAC filters first — most should be changed every 90 days, but many homeowners go 12+ months. If the smell persists, check for standing water in the drip pan below the air handler.",
+          "Burning smell: If you smell burning from vents when heat first turns on, it's usually dust burning off the heat exchanger. This is normal once per season. If it persists, call an HVAC technician.",
+          "Chemical or gas smell: This requires immediate action. If you smell gas, leave the home, don't use electrical switches, and call your gas company from outside.",
+        ],
+      },
+    ],
+  },
+
+  // ── Decor & Organization ─────────────────────────────────────────────────
+  {
+    slug: "small-bedroom-storage-ideas",
+    title: "10 Smart Storage Solutions for Small Bedrooms That Actually Work",
+    description: "Small bedroom storage doesn't require expensive built-ins. These 10 practical solutions maximize every inch — under the bed, behind doors, and above your head.",
+    category: "Organization",
+    readTime: "7 min read",
+    relatedSlugs: ["declutter-your-home-guide", "pantry-organization-guide"],
+    sections: [
+      {
+        heading: "The Problem: Small Bedrooms Feel Cluttered No Matter What You Do",
+        paragraphs: [
+          "In a small bedroom, every visible object competes for attention. The room never feels calm because there's nowhere for things to go. Most small bedrooms don't have a storage problem — they have a storage strategy problem.",
+          "Unused vertical space, wasted under-bed space, and single-purpose furniture are the biggest opportunities. The average small bedroom has 40–60 square feet of unused storage capacity already in the room.",
+        ],
+      },
+      {
+        heading: "Under-Bed Storage (The Most Underused Space in Any Bedroom)",
+        paragraphs: [
+          "1. Bed risers ($20–$30): Raise your existing bed frame 4–6 inches to fit storage bins underneath. Use vacuum storage bags for seasonal clothes — they compress down to ¼ their original size.",
+          "2. Platform beds with built-in drawers: If you're buying a new bed, choose one with integrated drawer storage. This replaces a dresser entirely in rooms smaller than 120 sq ft.",
+          "3. Bed skirt with shallow bins: Flat, wheeled bins on low-profile frames hold shoes, off-season items, and extra linens out of sight.",
+        ],
+      },
+      {
+        heading: "Vertical Space (Most Rooms Only Use the Bottom 5 Feet)",
+        paragraphs: [
+          "4. Floating shelves above the headboard: Install two or three shelves above the bed for books, plants, and alarm clock. This takes items off the nightstand and creates visual interest.",
+          "5. Floor-to-ceiling wardrobe towers: IKEA PAX or similar modular systems can be configured to fit any alcove or wall. They store 3× more than a typical dresser.",
+          "6. Over-door organizers: The back of every closet door can hold shoes, accessories, small items, or a mirror. Each door adds approximately 8 square feet of usable storage.",
+        ],
+      },
+      {
+        heading: "Multi-Function Furniture",
+        paragraphs: [
+          "7. Storage ottomans: Replace the bench at the foot of your bed with a storage ottoman. It holds extra bedding, seasonal items, or anything you reach for less than weekly.",
+          "8. Nightstands with drawers: A nightstand with two drawers replaces a floating table and adds organized storage for books, chargers, and medications.",
+          "9. Pegboard wall panels: A pegboard section on one wall (often in closets) holds jewelry, belts, hats, and accessories with full visibility — no more pile-digging.",
+        ],
+      },
+      {
+        heading: "Closet Optimization",
+        paragraphs: [
+          "10. Double hang rod: Most closets have one hanging rod but enough vertical clearance for two when used for shirts, blazers, and folded pants. A simple tension rod or basic shelf kit doubles your hanging space in 30 minutes.",
+          "Bonus: Clear drawer dividers and labeled bins inside closets and drawers eliminate the 'I can't find anything' problem that causes people to constantly re-buy items they already own.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "pantry-organization-guide",
+    title: "How to Organize Your Pantry Once — and Keep It That Way",
+    description: "A step-by-step pantry organization system that reduces food waste, speeds up meal prep, and keeps the chaos from creeping back — even in small pantries.",
+    category: "Organization",
+    readTime: "8 min read",
+    relatedSlugs: ["declutter-your-home-guide", "small-bedroom-storage-ideas"],
+    sections: [
+      {
+        heading: "The Problem: Disorganized Pantries Cost Money",
+        paragraphs: [
+          "The average American household throws away $1,500–$2,000 worth of food each year — much of it forgotten at the back of a pantry or fridge. A disorganized pantry also means duplicate purchases ('I thought we were out of that'), slow meal prep, and the low-grade anxiety of opening the pantry and seeing chaos.",
+          "The solution isn't more bins or labels — it's a logical system that matches how you actually cook and shop.",
+        ],
+      },
+      {
+        heading: "Step 1: Empty and Audit",
+        paragraphs: [
+          "Pull everything out and group items into categories: canned goods, grains and pasta, breakfast, snacks, baking, spices, oils, and drinks.",
+          "As you sort, check expiration dates ruthlessly. Toss anything expired. Donate unexpired food you won't actually use. The goal is a pantry containing only food your household will eat.",
+          "The emptying step usually reveals 20–30% of the pantry is items that shouldn't be there: broken packaging, forgotten duplicates, or food your family stopped eating years ago.",
+        ],
+      },
+      {
+        heading: "Step 2: Zone Your Shelves",
+        paragraphs: [
+          "Eye-level shelves (most-used zone): Everyday items — cereal, snacks, oils, frequently used cans.",
+          "Below eye-level: Heavy items like flour, sugar, large containers, and canned goods.",
+          "Top shelves (least-reached zone): Rarely used appliances, party supplies, extra paper goods.",
+          "Door and side racks: Small items, spice packets, foil, and plastic wrap.",
+          "Group by meal: Instead of grouping by food type, some households organize by meal (breakfast shelf, pasta shelf, snack shelf) which makes meal planning faster.",
+        ],
+      },
+      {
+        heading: "Step 3: Containerize Strategically (Not Obsessively)",
+        paragraphs: [
+          "You don't need matching glass jars for everything — that's a design choice, not an organizational one. What you do need is to decant foods that come in floppy, hard-to-store packaging: pasta, rice, flour, oats, and cereals all benefit from airtight containers.",
+          "Use bins for grouping related items: one bin for 'pasta & sauces', one for 'baking supplies', one for 'oils & vinegars'. This way, pulling out the bin gives you everything for a category without searching.",
+          "Clear containers and bins are mandatory. If you can't see it, you won't use it.",
+        ],
+      },
+      {
+        heading: "The Benefit: Save $800+ Per Year and 10 Minutes Per Meal",
+        paragraphs: [
+          "An organized pantry reduces food waste, eliminates duplicate purchases, and makes meal planning faster. Households that implement a pantry system report cutting their grocery bill by 15–20% simply by knowing what they already have.",
+          "The time savings matter too. Spending 5 minutes less per meal on searching and prep adds up to 30+ hours saved per year.",
+        ],
+      },
+      {
+        heading: "Keeping It Organized Long-Term",
+        paragraphs: [
+          "First-in, first-out (FIFO): When you unpack groceries, put new items behind old ones. Older items get used first, preventing expiration.",
+          "One shelf per grocery trip: Don't fully unload and re-sort every week. Just place items in their zones and spend 5 minutes once a month resetting any drift.",
+          "Label the zones, not just the containers: A label that says 'SNACKS' on a shelf prevents family members from putting chips in the wrong zone.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "living-room-refresh-guide",
+    title: "Budget Living Room Refresh Ideas Under $500 (That Look Like $5,000)",
+    description: "You don't need to remodel to transform a living room. These high-impact, low-cost changes deliver dramatic results without touching the walls or changing the furniture.",
+    category: "Decor",
+    readTime: "8 min read",
+    relatedSlugs: ["apartment-decor-upgrades", "small-bedroom-storage-ideas"],
+    sections: [
+      {
+        heading: "The Problem: Living Rooms Become Invisible — Until They're Embarrassing",
+        paragraphs: [
+          "Most people stop really seeing their living rooms after a few months. The furniture arrangement becomes fixed, the decor stops registering, and the room just exists. Until a guest comes over, or a photo makes you see it with fresh eyes, and you realize it's dated, cluttered, or just tired.",
+          "A living room refresh doesn't require new furniture or a paint job. The highest-impact changes are usually the cheapest and fastest.",
+        ],
+      },
+      {
+        heading: "Start Here: Rearrange the Furniture (Free)",
+        paragraphs: [
+          "The single highest-impact change you can make to any living room costs nothing: move the furniture. Most rooms default to 'all against the walls' or the previous tenant's arrangement. Float the sofa 12–18 inches from the wall, create a conversation-focused grouping, and watch the room feel entirely different.",
+          "The goal is to create a functional 'zone' — a rug defines the zone, with seating facing inward around a coffee table or focal point.",
+        ],
+      },
+      {
+        heading: "The Rug (Under $150 — Maximum Impact)",
+        paragraphs: [
+          "A new area rug is the single best budget investment in any living room. The right rug anchors the seating, adds warmth and texture, defines the zone, and often eliminates the need to paint or buy new furniture.",
+          "Size matters most: err larger. The most common rug mistake is going too small. In most living rooms, the correct rug size is 8×10 or 9×12 feet — front legs of all seating pieces should sit on the rug.",
+          "Good sources for under $150: Ruggable (washable), IKEA, Amazon, and Tuesday Morning for in-store finds.",
+        ],
+      },
+      {
+        heading: "Lighting (Under $100 — Often Overlooked)",
+        paragraphs: [
+          "Most living rooms rely entirely on overhead lighting, which is the least flattering light source in any room. Adding a floor lamp, table lamp, or string lights creates warmth and dimension.",
+          "Swap overhead bulbs to warm LED (2700K). This alone dramatically changes the room's feel — cooler light (5000K) makes spaces feel clinical and uncomfortable.",
+          "A dimmer switch installed on your existing overhead fixture ($15 part, 20 minutes to install) transforms the versatility of the room from a single fixed mood to full control.",
+        ],
+      },
+      {
+        heading: "Pillows, Throws, and Plants (Under $150)",
+        paragraphs: [
+          "Throw pillows: Replace them every 2–3 years. Pillows compress and fade, making sofas look dated even when they're in good condition. Choose 2–3 in one cohesive color family — mixing too many patterns creates visual noise.",
+          "A throw blanket draped over one arm of the sofa adds warmth, texture, and the kind of casually styled look that decorating magazines achieve.",
+          "One large plant: A single large plant (fiddle-leaf fig, snake plant, or monstera) adds life to any corner for $30–$80. Plants make rooms feel more finished than almost any other addition.",
+        ],
+      },
+      {
+        heading: "Gallery Wall or One Statement Piece (Under $100)",
+        paragraphs: [
+          "Blank walls are the most common living room problem. You don't need original art — framed prints from Society6, Desenio, or even your own photography create personality and visual interest.",
+          "Gallery wall tip: Arrange frames on the floor first. Photograph the arrangement and use it as a reference when hanging. Use a level on at least the top row.",
+          "One large-scale piece is often more effective than many small ones. A 24×36 poster or print, framed simply, makes more impact than six small frames scattered across the same wall.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "apartment-decor-upgrades",
+    title: "Renter-Friendly Decor Upgrades That Won't Cost You Your Deposit",
+    description: "Transform your apartment without drilling, painting, or permanent changes. These fully reversible upgrades create a home that feels truly yours — while protecting your deposit.",
+    category: "Decor",
+    readTime: "7 min read",
+    relatedSlugs: ["living-room-refresh-guide", "small-bedroom-storage-ideas"],
+    sections: [
+      {
+        heading: "The Problem: Renters Live In Spaces That Don't Feel Like Home",
+        paragraphs: [
+          "White walls, builder-grade fixtures, and the feeling that you can't change anything are the defining frustrations of rented living. Many renters give up on personalizing their space entirely — resulting in years spent in a home that feels temporary.",
+          "The reality is that you can make dramatic, fully reversible improvements to any rental. The secret is knowing which tools and products allow you to install, style, and later remove without leaving a trace.",
+        ],
+      },
+      {
+        heading: "Removable Wallpaper and Peel-and-Stick Tiles",
+        paragraphs: [
+          "Removable wallpaper (also called peel-and-stick or temporary wallpaper) has become transformational for renters. Brands like Spoonflower, Tempaper, and Chasing Paper offer designer prints that install without glue, peel off cleanly, and look identical to real wallpaper.",
+          "Use it on a single accent wall behind your bed or sofa. A 50 sq ft panel runs $80–$200 and takes 90 minutes to apply.",
+          "Peel-and-stick backsplash tiles can transform a dated kitchen or bathroom in an afternoon. They remove cleanly, making them genuinely renter-safe.",
+        ],
+      },
+      {
+        heading: "Command Strips and Damage-Free Hanging",
+        paragraphs: [
+          "Command strips, hooks, and picture-hanging strips have become remarkably strong. Current generations hold up to 16 lbs per strip pair — enough for most artwork, mirrors, and shelving.",
+          "Command large picture-hanging strips ($12–$18 per pack) can hang gallery walls, mirrors, and floating shelves without a single nail hole.",
+          "For heavier items or shelves that need to bear weight, look for removable adhesive mounting systems like Monkey Hook or Hercules Hooks, which use the drywall's own structure without requiring studs.",
+        ],
+      },
+      {
+        heading: "Lighting Transformations",
+        paragraphs: [
+          "Replace the renter's constant — harsh overhead ceiling fixtures — with plug-in pendant lights. These hang from the ceiling hook (already there), plug into a wall outlet, and come in stylish designs that completely change the room's character.",
+          "Swap out builder-grade light switch plates for decorative ones ($3–$8 each). Keep your originals and reinstall them when you move out.",
+          "LED light strips behind furniture, under kitchen cabinets, or above shelving add ambiance without any electrical work. Many are now operated via app and cost under $30.",
+        ],
+      },
+      {
+        heading: "Window Treatments and Rugs",
+        paragraphs: [
+          "Renters often live with whatever curtain rods are there — or none at all. Tension rods fit inside window frames without drilling and support lightweight curtain panels, dramatically transforming the feel of any window.",
+          "For windows that need real blackout or thermal curtains (heavier weight), a spring-loaded curtain rod fits most windows up to 48 inches wide without any hardware.",
+          "Area rugs over existing flooring (even over ugly carpet) define zones, add personality, and make spaces feel deliberately designed rather than temporary.",
+        ],
+      },
+    ],
+  },
+
+  // ── Outdoor Living ─────────────────────────────────────────────────────
+  {
+    slug: "patio-upgrade-ideas-budget",
+    title: "12 Budget Patio Upgrades That Transform Your Outdoor Space",
+    description: "A tired patio can become your favorite room in the house with the right improvements. These 12 upgrades range from $20 to $500 and deliver outsized results.",
+    category: "Outdoor Living",
+    readTime: "8 min read",
+    relatedSlugs: ["backyard-privacy-ideas", "outdoor-lighting-guide"],
+    sections: [
+      {
+        heading: "The Problem: Most Patios Are Underused Because They're Uncomfortable",
+        paragraphs: [
+          "The average American spends less than 10 minutes per day outdoors despite owning a patio, deck, or yard. The reason is almost always one of three problems: no shade, no privacy, or uncomfortable furniture. The patio exists but doesn't feel like a place you want to be.",
+          "The good news is that outdoor spaces respond dramatically to relatively small investments. A $300 patio transformation often delivers more visible impact than a $3,000 interior renovation.",
+        ],
+      },
+      {
+        heading: "Under $50: The Free and Cheap Wins",
+        paragraphs: [
+          "1. Power wash the concrete or pavers ($0 if you own one, $50 to rent): Removes years of dirt, algae, and staining. Often makes a patio look new without any other changes.",
+          "2. Rearrange and declutter: Move furniture into a conversation-focused arrangement. Remove unused items. Visual clarity is the foundation of any inviting outdoor space.",
+          "3. Add potted plants ($20–$40): One or two large pots with colorful annuals or ornamental grasses immediately add life. Use pots you already own.",
+          "4. Solar path lights along the edge ($15–$30): Even one string of solar stake lights along a border dramatically improves the evening feel.",
+        ],
+      },
+      {
+        heading: "Under $200: The Game-Changers",
+        paragraphs: [
+          "5. Outdoor rug ($80–$150): The single best budget upgrade for any patio. Anchors the seating area, adds color, and makes hard concrete feel like an intentional room. Choose polypropylene — it's weather-resistant and easy to hose clean.",
+          "6. String lights ($25–$60): Hung between poles, the fence, or the house, string lights make a patio feel magical at night. Choose warm white (2200–2700K) for the coziest effect.",
+          "7. Outdoor throw pillows ($40–$80): Weatherproof pillows transform basic patio chairs. Look for Sunbrella fabric — it's fade and mildew resistant.",
+          "8. Shade sail ($60–$120): A triangular shade sail blocks 90%+ of UV and creates immediate comfort on sunny patios. Attach to fence posts, the house, and a freestanding post.",
+        ],
+      },
+      {
+        heading: "Under $500: The Room-Makers",
+        paragraphs: [
+          "9. Pergola kit ($150–$400): A simple freestanding pergola defines the patio space and provides structure for hanging lights, shade cloth, and climbing plants.",
+          "10. Privacy screen panels ($100–$300): Lattice, wood slat panels, or bamboo screen fencing creates visual privacy without a permanent fence installation.",
+          "11. Outdoor curtains ($80–$150): Hang sheer outdoor curtains on a tension wire or simple rod between posts. They provide shade, privacy, and a resort-like feel.",
+          "12. Concrete stain or paint ($30–$80): Transform plain gray concrete with a semi-transparent concrete stain. Application takes a day; results last 3–5 years.",
+        ],
+      },
+      {
+        heading: "The Benefit: An Outdoor Room Adds Livable Space Without Square Footage",
+        paragraphs: [
+          "A well-designed patio functions as an additional room for 6–9 months of the year in most US climates. Studies show that usable outdoor living space increases perceived home value by 8–10% and dramatically improves quality of life for occupants.",
+          "Most importantly, it's the room you'll actually use — and one that encourages time outside, meals together, and the kind of informal socializing that makes a house feel like a home.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "backyard-privacy-ideas",
+    title: "How to Create a Private Backyard Without Installing a Full Fence",
+    description: "Full privacy fences cost $3,000–$10,000+. These alternatives create the privacy you want at a fraction of the cost — and many look better than a solid wood fence.",
+    category: "Outdoor Living",
+    readTime: "7 min read",
+    relatedSlugs: ["patio-upgrade-ideas-budget", "outdoor-lighting-guide"],
+    sections: [
+      {
+        heading: "The Problem: No Privacy Means You Never Really Relax Outside",
+        paragraphs: [
+          "The most common reason people don't use their own backyards is feeling exposed. Visible neighbors, street traffic, or adjacent properties create a sense of being watched that makes outdoor relaxing feel uncomfortable.",
+          "A full privacy fence solves this completely but costs $3,000–$12,000 and often requires permits. In many neighborhoods, HOAs restrict fence height or style. The good news is that strategic privacy can be created for under $500 with the right approach.",
+        ],
+      },
+      {
+        heading: "Fast Options: Results in Hours",
+        paragraphs: [
+          "Privacy screen panels: Freestanding panels (bamboo, wood slat, metal) can be moved, arranged, and repositioned. A series of 6-foot panels creates an enclosed feel without any permits or permanent installation.",
+          "Outdoor curtains between posts: Two freestanding posts connected by a wire support outdoor curtain panels. They define the space and block sightlines from above without fully enclosing the yard.",
+          "Pergola with shade cloth: A shade sail or lattice overhead structure creates privacy from second-floor windows of neighboring homes — often the most invasive viewpoint.",
+        ],
+      },
+      {
+        heading: "The Plant Solution: Privacy That Looks Better Every Year",
+        paragraphs: [
+          "Arborvitae (Thuja Green Giant): The most popular privacy screen plant in the US. Grows 3–5 feet per year, reaches 30+ feet, requires almost no maintenance, and provides year-round privacy. Spacing: plant 5–6 feet apart for a solid screen.",
+          "Bamboo (clumping varieties): Phyllostachys and Fargesia species create a dense tropical-looking screen. Use clumping, not running bamboo — running bamboo spreads aggressively. Grows 3–5 feet per year.",
+          "Ornamental grasses: Karl Foerster or Miscanthus grasses grow 4–6 feet tall and create flowing, soft privacy with seasonal interest. They die back in winter but return each spring.",
+          "Climbing vines on a simple trellis: A $20 trellis panel with fast-growing vines like Clematis, Jasmine, or Wisteria creates a living wall privacy screen within one growing season.",
+        ],
+      },
+      {
+        heading: "The $300 Privacy Solution That Works for Most Yards",
+        paragraphs: [
+          "Combine: 3–4 arborvitae trees (15–20 gallon size, $40–60 each) planted along the property line + two 6-foot bamboo panel screens for immediate coverage while trees grow + one shade sail overhead to block the elevated neighbor view.",
+          "Total cost: $200–$350. Timeline to full privacy: 2–3 growing seasons for the trees, immediate from the panels.",
+          "This hybrid approach gives you instant visual privacy from the panels while the living plants grow to create a permanent, beautiful, low-maintenance solution.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "outdoor-lighting-guide",
+    title: "How to Light Your Outdoor Space for Atmosphere, Safety, and Beauty",
+    description: "Outdoor lighting transforms how you experience your home after dark. This guide covers every lighting type, placement strategy, and budget option for patios, gardens, and entry areas.",
+    category: "Outdoor Living",
+    readTime: "9 min read",
+    relatedSlugs: ["patio-upgrade-ideas-budget", "backyard-privacy-ideas"],
+    sections: [
+      {
+        heading: "The Problem: Most Homes Have Either No Outdoor Lighting — or the Wrong Kind",
+        paragraphs: [
+          "Most homes have one type of outdoor lighting: the security floodlight. It's bright, harsh, and turns your yard into a parking lot after dark. It provides security but zero ambiance — and as a result, outdoor spaces go unused after sunset.",
+          "Great outdoor lighting does three things simultaneously: it creates safety and visibility, defines pathways and spaces, and generates atmosphere that invites you to stay outside.",
+        ],
+      },
+      {
+        heading: "Layer 1: Ambient Lighting (The Mood Setter)",
+        paragraphs: [
+          "String lights: The most versatile outdoor ambient light source. Warm white (2200K) Edison-style strings hung between posts or across a pergola create an immediate restaurant-patio feel. Use weatherproof globe lights on 25-foot strands, spaced 12 inches apart.",
+          "Post lights: Lantern-style post lights along a pathway or at a gate make a home feel welcoming before a guest reaches the door. Solar-powered versions require no wiring.",
+          "Wall-mounted fixtures: Replace outdated porch sconces with modern fixtures. This single swap dramatically upgrades a home's front elevation and costs $40–$150 for the fixture plus an hour to install.",
+        ],
+      },
+      {
+        heading: "Layer 2: Task and Pathway Lighting (Safety and Navigation)",
+        paragraphs: [
+          "Path lights: Solar stake lights along garden borders, walkways, and driveway edges provide navigation and safety with zero wiring. Install them in groups — single lights look random, not designed.",
+          "Step lights: Low-voltage step lights built into risers or mounted on the sides of deck steps prevent trips and create a professional, finished look. Most are 12V and can be connected to an existing low-voltage transformer.",
+          "Under-cabinet or deck lighting: LED strips under deck railings or along deck skirting create a floating, dramatic effect and illuminate the ground for safety without glaring into eyes.",
+        ],
+      },
+      {
+        heading: "Layer 3: Accent Lighting (Drama and Character)",
+        paragraphs: [
+          "Uplighting trees and plants: A single spike spotlight ($15–$30) aimed upward at a large tree or architectural plant creates dramatic shadows and scale. This technique is what makes luxury landscaping look expensive.",
+          "Spotlighting architectural features: A directional spotlight aimed at a beautiful front door, stone facade, or pergola creates focal points that make the home look intentional and polished.",
+          "Moonlighting: A technique where soft lights are placed high in trees pointing downward. The effect mimics natural moonlight filtering through leaves — remarkably beautiful and calming.",
+        ],
+      },
+      {
+        heading: "Wired vs. Solar vs. Smart",
+        paragraphs: [
+          "Solar: Best for path lights and accent lights in areas with good sun exposure. No wiring required. Modern solar lights are reliable and bright. Cons: they dim in winter and don't work in heavily shaded areas.",
+          "Low-voltage wired: Best for permanent, reliable installations. 12V systems are DIY-safe — no electrician required. One transformer plugs into any outlet and powers a full yard lighting system.",
+          "Smart lighting: Philips Hue Outdoor, Ring, and similar systems allow app control, schedules, and color options. Premium cost, but exceptional convenience for adjusting ambiance.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "family-friendly-backyard-setup",
+    title: "How to Create a Family-Friendly Backyard From Scratch",
+    description: "A practical blueprint for designing a backyard that works for kids, adults, and gatherings — with zones for play, dining, relaxation, and gardening on almost any budget.",
+    category: "Outdoor Living",
+    readTime: "9 min read",
+    relatedSlugs: ["patio-upgrade-ideas-budget", "backyard-privacy-ideas"],
+    sections: [
+      {
+        heading: "The Problem: Backyards Don't Serve Anyone Well Without a Plan",
+        paragraphs: [
+          "Without a zone plan, backyards become catch-all spaces — a trampoline on one side, overgrown grass on the other, a patio with furniture that doesn't get used, and kids playing where they shouldn't. Everyone is in each other's space and no part of the yard works well.",
+          "Defining zones is the foundational step of any backyard design. Even small yards (under 500 sq ft) can have 3–4 functional zones when planned intentionally.",
+        ],
+      },
+      {
+        heading: "Zone 1: The Dining and Entertaining Area",
+        paragraphs: [
+          "This is the adult anchor of the backyard — where you host, grill, and eat outdoors. It should be adjacent to the back door and on a hard surface (patio, deck, or pavers) for furniture stability.",
+          "Minimum functional size: 10×12 feet. This fits a 6-person table and chairs with walking room. A 10×10 patio feels cramped; anything larger gives you flexibility.",
+          "Essential features: Shade (umbrella, pergola, or shade sail), weatherproof lighting, and a clear sightline to wherever children will be playing.",
+        ],
+      },
+      {
+        heading: "Zone 2: The Play Area",
+        paragraphs: [
+          "Children need a dedicated, clearly defined space — otherwise they play everywhere, including in the entertaining zone and the garden. A play area should have soft ground cover (wood chips, rubber mulch, or pea gravel under equipment) and clear visual access from the dining zone.",
+          "Budget option ($100–$300): A simple sandbox, swing set, and an area of wood chip ground cover gives young children hours of outdoor play.",
+          "Growing option: As children age, the play zone can evolve — remove the sandbox, add a basketball hoop or cornhole court for older kids and adults.",
+        ],
+      },
+      {
+        heading: "Zone 3: The Garden or Natural Area",
+        paragraphs: [
+          "Even a small planting zone — a raised bed, a border garden, or a collection of container planters — adds life, seasonal interest, and teaching opportunities for children.",
+          "A 4×8 raised bed gives the family fresh vegetables and herbs with minimal maintenance. Position it in the sunniest part of the yard (6+ hours of direct sun for vegetables).",
+          "Edible landscaping: Blend function and beauty by choosing edible plants for borders — strawberries, herbs, blueberry shrubs, and dwarf fruit trees provide food and visual interest.",
+        ],
+      },
+      {
+        heading: "Zone 4: The Relaxation Corner",
+        paragraphs: [
+          "Every backyard needs at least one spot for sitting quietly — a bench under a tree, a hammock, or a reading chair in a corner. This zone is often skipped in family planning but becomes the most used spot once it exists.",
+          "A hammock between two trees ($40–$80) creates a relaxation zone instantly. Alternatively, a simple garden bench beneath a large shrub or tree creates a shaded retreat.",
+        ],
+      },
+      {
+        heading: "Budget Tiers for the Full Setup",
+        paragraphs: [
+          "Under $500: Outdoor rug + string lights + sandbox + two planters + solar path lights. Focuses on the patio zone and adds a simple play element.",
+          "$500–$2,000: Pergola kit + patio furniture + raised garden bed + play set + privacy plants.",
+          "$2,000–$5,000: Poured concrete or paver patio + full pergola + quality patio furniture + irrigation + mature privacy plantings + full outdoor lighting system.",
+        ],
+      },
+    ],
+  },
 ];
 
 export const guidesBySlug: Record<string, GuideArticle> = Object.fromEntries(

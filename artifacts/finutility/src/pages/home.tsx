@@ -26,6 +26,9 @@ import {
   Sprout,
   Star,
   TreeDeciduous,
+  Sofa,
+  Sun,
+  Sparkles,
 } from "lucide-react";
 
 const CALCULATORS = [
@@ -113,6 +116,33 @@ const HUBS = [
     color: "from-amber-900/70 to-amber-950/80",
     icon: <Home className="h-6 w-6" />,
   },
+  {
+    title: "Cleaning",
+    description: "Room-by-room cleaning schedules, natural DIY cleaners, and deep-clean guides.",
+    href: "/cleaning",
+    tag: "Home Care",
+    image: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=900&q=85&auto=format&fit=crop",
+    color: "from-sky-900/70 to-sky-950/80",
+    icon: <Sparkles className="h-6 w-6" />,
+  },
+  {
+    title: "Decor & Organization",
+    description: "Room refresh ideas, smart storage solutions, and renter-friendly styling.",
+    href: "/decor",
+    tag: "Style & Space",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&q=85&auto=format&fit=crop",
+    color: "from-violet-900/70 to-violet-950/80",
+    icon: <Sofa className="h-6 w-6" />,
+  },
+  {
+    title: "Outdoor Living",
+    description: "Patio upgrades, privacy solutions, backyard lighting, and family-friendly design.",
+    href: "/outdoor-living",
+    tag: "Backyard & Patio",
+    image: "https://images.unsplash.com/photo-1605276373954-0240a31ba65f?w=900&q=85&auto=format&fit=crop",
+    color: "from-orange-900/70 to-orange-950/80",
+    icon: <Sun className="h-6 w-6" />,
+  },
 ];
 
 const SEASONAL_IMAGES: Record<string, string> = {
@@ -138,10 +168,24 @@ const GUIDE_IMAGES: string[] = [
   "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80&auto=format&fit=crop",
 ];
 
+const START_WITH_PROBLEM = [
+  { problem: "My kitchen has no storage space", href: "/small-bedroom-storage-ideas", emoji: "🍳", tag: "Organization" },
+  { problem: "I need a low-cost garden this year", href: "/how-to-create-a-raised-garden-bed", emoji: "🌱", tag: "Garden" },
+  { problem: "My bathroom feels dark and dated", href: "/bathroom-renovation-cost-guide", emoji: "🚿", tag: "Home Improvement" },
+  { problem: "I want a patio I actually want to use", href: "/patio-upgrade-ideas-budget", emoji: "☀️", tag: "Outdoor Living" },
+  { problem: "My home smells no matter what I do", href: "/remove-odors-from-home", emoji: "🪟", tag: "Cleaning" },
+  { problem: "My living room looks bland and cluttered", href: "/living-room-refresh-guide", emoji: "🛋️", tag: "Decor" },
+  { problem: "I need a weekend DIY project under $200", href: "/how-to-paint-a-room-like-a-pro", emoji: "🔨", tag: "DIY" },
+  { problem: "I want backyard privacy without a full fence", href: "/backyard-privacy-ideas", emoji: "🌳", tag: "Outdoor Living" },
+];
+
 const PILLAR_COLORS: Record<string, string> = {
   "Garden & Outdoor": "bg-lime-100 text-lime-800",
   "Exterior & Curb Appeal": "bg-amber-100 text-amber-800",
   "Home Improvement": "bg-emerald-100 text-emerald-800",
+  "Cleaning & Home Care": "bg-sky-100 text-sky-800",
+  "Decor & Organization": "bg-violet-100 text-violet-800",
+  "Outdoor Living": "bg-orange-100 text-orange-800",
 };
 
 function pillarPill(pillar: string) {
@@ -282,17 +326,17 @@ export default function HomePage() {
                 <h2 className="text-3xl md:text-4xl font-extrabold text-stone-900">Start With What You Love</h2>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {HUBS.map((hub) => (
                 <Link key={hub.href} href={hub.href}>
-                  <div className="group relative overflow-hidden rounded-2xl cursor-pointer h-72 md:h-80 shadow-md hover:shadow-xl transition-shadow">
+                  <div className="group relative overflow-hidden rounded-2xl cursor-pointer h-64 md:h-72 shadow-md hover:shadow-xl transition-shadow">
                     <img
                       src={hub.image}
                       alt={hub.title}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className={`absolute inset-0 bg-gradient-to-t ${hub.color}`} />
-                    <div className="absolute inset-0 p-7 flex flex-col justify-end">
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
                       <div className="flex items-center gap-2 mb-2 text-white/75 text-xs font-semibold uppercase tracking-widest">
                         {hub.icon}
                         {hub.tag}
@@ -345,6 +389,31 @@ export default function HomePage() {
                     </h3>
                     <div className="mt-3 flex items-center gap-1 text-green-700 text-sm font-semibold">
                       Read more <ChevronRight className="h-4 w-4" />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* ── Start With the Problem ───────────────────── */}
+          <section className="my-14">
+            <div className="text-center mb-8">
+              <p className="text-xs font-bold uppercase tracking-widest text-green-700 mb-2">Practical Problem-Solving</p>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-stone-900 mb-2">Start With Your Problem</h2>
+              <p className="text-stone-500 max-w-xl mx-auto">Tell us what's frustrating you. We'll point you to the guide that solves it.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {START_WITH_PROBLEM.map((item) => (
+                <Link key={item.href} href={item.href}>
+                  <div className="group bg-white border border-stone-100 rounded-2xl p-5 hover:shadow-md hover:border-green-200 transition-all cursor-pointer h-full flex flex-col gap-3">
+                    <div className="text-2xl">{item.emoji}</div>
+                    <p className="font-semibold text-stone-800 text-sm leading-snug group-hover:text-green-700 transition-colors flex-1">
+                      "{item.problem}"
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">{item.tag}</span>
+                      <ChevronRight className="h-4 w-4 text-green-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
                   </div>
                 </Link>
@@ -539,6 +608,27 @@ export default function HomePage() {
                 ]}
               />
             </div>
+          </section>
+
+          {/* ── Newsletter ────────────────────────────────── */}
+          <section className="my-14 bg-green-900 text-white rounded-3xl px-8 md:px-14 py-12 text-center">
+            <div className="text-3xl mb-3">📬</div>
+            <p className="text-xs font-bold uppercase tracking-widest text-green-300 mb-3">Stay In the Know</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-3">Seasonal Guides, Free — Every Month</h2>
+            <p className="text-white/70 text-sm max-w-md mx-auto mb-8 leading-relaxed">
+              Get our best practical home and garden guides delivered monthly. No spam, no fluff — just the advice you actually need right now.
+            </p>
+            <div className="flex gap-3 max-w-sm mx-auto">
+              <input
+                type="email"
+                placeholder="your@email.com"
+                className="flex-1 h-12 px-5 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 text-sm focus:outline-none focus:border-green-400"
+              />
+              <button className="h-12 px-7 rounded-full bg-green-500 hover:bg-green-400 font-bold text-sm transition-colors shrink-0">
+                Subscribe
+              </button>
+            </div>
+            <p className="text-xs text-white/40 mt-4">Free. Unsubscribe anytime.</p>
           </section>
 
           <AdPlaceholder />

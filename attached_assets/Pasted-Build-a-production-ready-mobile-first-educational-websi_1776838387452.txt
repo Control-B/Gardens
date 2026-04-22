@@ -1,0 +1,420 @@
+Build a production-ready, mobile-first educational website in modern HTML, CSS, and JavaScript (or React if easier to structure cleanly) for a content-rich home and garden platform inspired by the usefulness and editorial structure of Better Homes & Gardens and The Spruce.
+
+PROJECT GOAL
+Create a beautiful, highly engaging, SEO-friendly, Google Ads-ready educational website that solves real household problems. The site must not feel like a generic blog. It must feel like a practical home resource hub that helps users make decisions, complete tasks, calculate costs, plan projects, and improve their homes and gardens.
+
+CORE STRATEGY
+Guide the design and content architecture using this framework for every section and page:
+1. The Problem
+2. The Educational Website Experience
+3. The Usefulness / Benefit
+
+The website should be built to answer practical questions such as:
+- How do I organize a small kitchen?
+- How much mulch do I need?
+- How often should I water this plant?
+- What is the cheapest way to refresh a bathroom?
+- Which cleaning method is safest for this material?
+- What home upgrades add the best value?
+- How do I start a garden in a small yard or patio?
+- What should I do first in a room makeover?
+
+BRAND POSITIONING
+The site should feel:
+- Trustworthy
+- Clean
+- Modern
+- Warm
+- Highly readable
+- Practical
+- Helpful, not overly salesy
+- Designed for repeat visits
+
+DESIGN DIRECTION
+Take cues from high-quality lifestyle publishers:
+- magazine-style homepage
+- clean editorial cards
+- strong category navigation
+- attractive photography placeholders
+- soft, premium home/lifestyle color palette
+- lots of white space
+- easy scanning
+- elegant typography
+- ad-friendly layout without looking spammy
+
+Do not copy those websites. Instead, create an original design inspired by:
+- editorial homepage structure
+- practical problem-solving articles
+- category-based browsing
+- strong internal linking
+- seasonal content modules
+- expert-tip style callouts
+- calculators and checklists for utility
+
+SITE NAME
+Use a polished placeholder brand name such as:
+“HomeEase Guide”
+or another tasteful home-and-garden educational brand.
+
+PAGES TO BUILD
+Create a complete website, not just one landing page.
+
+Required pages:
+1. Home
+2. Gardening
+3. Cleaning
+4. Home Improvement
+5. Decor & Organization
+6. Outdoor Living
+7. Seasonal Guides
+8. Tools & Calculators
+9. Article Template Page
+10. Category Template Page
+11. About
+12. Contact
+13. Privacy Policy
+14. Terms
+
+OPTIONAL BONUS PAGES
+15. Start Here
+16. Best of the Month
+17. Budget Projects
+18. Small Space Solutions
+19. Plant Care Library
+20. Room-by-Room Guides
+
+HOMEPAGE REQUIREMENTS
+The homepage should include:
+
+1. Hero section
+- strong headline focused on solving real home problems
+- short supporting text
+- search bar for “What do you need help with?”
+- CTA buttons like:
+  - Explore Guides
+  - Use Calculators
+  - Start With Your Home Problem
+
+2. Featured problem-solving categories
+Cards for:
+- Gardening
+- Cleaning
+- Home Improvement
+- Decor & Organization
+- Outdoor Living
+- Seasonal
+
+Each category card should include:
+- common problem
+- what users will learn
+- why it helps
+
+3. “Start with the problem” section
+Examples:
+- Small kitchen with no storage
+- Need a low-cost garden plan
+- Bathroom feels outdated
+- Yard needs easy landscaping
+- Need safer natural cleaning options
+- Need a weekend DIY project
+
+4. Featured educational content grid
+A mix of:
+- how-to guides
+- checklists
+- “best first steps”
+- beginner guides
+- maintenance schedules
+- room makeover ideas
+- plant care articles
+- cost-saving content
+
+5. Utility tools / calculators section
+This must be prominent and visually engaging.
+Include interactive tools such as:
+- mulch calculator
+- soil calculator
+- paint estimator
+- room area calculator
+- wallpaper estimator
+- plant watering schedule helper
+- fertilizer usage calculator
+- decluttering checklist tool
+- moving checklist tool
+- renovation budget estimator
+- storage planning helper
+
+6. Seasonal content block
+Examples:
+- Spring garden checklist
+- Summer patio prep
+- Fall decluttering guide
+- Winter indoor plant care
+- Holiday home prep
+- Storm prep for homeowners
+
+7. Popular articles / trending now
+8. Email newsletter signup
+9. Footer with rich internal navigation
+
+ARTICLE STRATEGY
+Generate many educational sample articles directly in the project so the site feels full and realistic.
+
+Create at least 24–36 article entries across categories.
+
+Content themes should include:
+GARDENING
+- beginner garden setup
+- container gardening
+- raised bed basics
+- watering mistakes
+- low-maintenance plants
+- front yard curb appeal
+- vegetable garden starter guide
+
+CLEANING
+- room-by-room cleaning schedules
+- safe cleaning methods by surface
+- decluttering systems
+- natural cleaning solutions
+- deep-clean checklists
+- odor removal
+- laundry and fabric care
+
+HOME IMPROVEMENT
+- beginner DIY upgrades
+- budget bathroom refresh
+- kitchen update without remodel
+- flooring decision guide
+- paint planning guide
+- weatherproofing basics
+- home maintenance calendar
+
+DECOR & ORGANIZATION
+- small bedroom storage
+- entryway organization
+- living room refresh ideas
+- pantry organization
+- closet reset
+- apartment-friendly decor upgrades
+- affordable style upgrades
+
+OUTDOOR LIVING
+- patio upgrade ideas
+- backyard privacy ideas
+- outdoor lighting basics
+- low-budget landscaping
+- family-friendly backyard setup
+- small balcony ideas
+
+SEASONAL
+- spring reset checklist
+- summer garden care
+- back-to-school organization
+- holiday guest prep
+- hurricane/storm prep basics
+- new year home reset
+
+Each article preview should display:
+- category
+- title
+- short excerpt
+- estimated reading time
+- problem solved
+- usefulness / benefit
+- image placeholder
+- related articles
+
+ARTICLE PAGE TEMPLATE
+Each article page must include:
+- strong SEO title
+- breadcrumb navigation
+- hero image placeholder
+- intro paragraph that states the problem clearly
+- “Why this matters” box
+- step-by-step educational content
+- quick tips callout
+- tools/materials list where relevant
+- FAQs
+- related calculators/tools
+- related articles
+- newsletter block
+- ad placement zones that do not interrupt reading
+
+Every article should be structured like:
+- The Problem
+- What You Need to Know
+- Step-by-Step Solution
+- Common Mistakes
+- Cost / Time / Effort
+- Benefit / Outcome
+- FAQ
+
+TOOLS & CALCULATORS PAGE
+Create a dedicated tools hub page with polished calculator cards.
+
+Each calculator should:
+- be actually functional in the frontend
+- have clean form inputs
+- show useful results clearly
+- include contextual advice after the result
+- have a reset button
+- be mobile-friendly
+
+Required calculators:
+1. Mulch calculator
+2. Soil calculator
+3. Paint coverage calculator
+4. Room square footage calculator
+5. Fertilizer calculator
+6. Simple garden bed planner
+7. Renovation budget estimator
+8. Declutter progress tracker
+
+For each calculator result, display:
+- result summary
+- what it means
+- next recommended action
+- related educational guide links
+
+SEO REQUIREMENTS
+Build strong SEO foundations throughout:
+- semantic HTML
+- clean heading structure
+- metadata per page
+- Open Graph tags
+- Twitter cards
+- descriptive URLs
+- internal linking
+- category hubs
+- FAQ sections
+- schema markup where appropriate
+- fast performance
+- image alt text
+- good mobile usability
+
+The site should be designed around search intent clusters:
+- informational
+- practical how-to
+- checklist intent
+- calculator/tool intent
+- budget/planning intent
+- seasonal intent
+
+Include sample keyword targeting naturally in headings and content.
+Do not keyword stuff.
+Write people-first, useful content.
+
+ADS / MONETIZATION REQUIREMENTS
+The layout should be Google Ads-friendly without feeling low quality.
+Include tasteful placeholder ad slots in these locations:
+- after hero or below featured content
+- inside article body after useful sections
+- sidebar on desktop
+- between article cards in category pages
+- footer ad slot
+
+Important:
+- content should remain primary
+- calculators and educational value should be central
+- page experience must remain clean
+- do not create thin pages
+- do not create spammy clickbait
+
+ENGAGEMENT FEATURES
+Add features that increase time on site and page depth:
+- “read next” suggestions
+- related topics
+- category chips
+- save/bookmark UI placeholder
+- progress indicator on article pages
+- estimated reading time
+- FAQ accordion
+- printable checklist UI for some guides
+- comparison tables where useful
+- before/after inspiration card placeholders
+- seasonal spotlight modules
+
+HOMEPAGE CONTENT BLOCKS SHOULD FEEL LIKE A REAL PUBLISHER
+Include sections like:
+- Editor’s Picks
+- Weekend Projects
+- Smart Budget Fixes
+- Popular This Season
+- Beginner-Friendly Guides
+- Most Useful Calculators
+- Small Space Solutions
+- Garden Basics
+- Cleaning Shortcuts
+- Home Maintenance Must-Dos
+
+CONTENT QUALITY REQUIREMENTS
+Do not write vague filler.
+Every piece of content should clearly answer:
+- what problem it solves
+- who it helps
+- what action the reader can take next
+- what benefit the reader gets
+
+Tone:
+- practical
+- encouraging
+- smart
+- educational
+- human
+- non-fluffy
+
+TECHNICAL REQUIREMENTS
+- responsive design
+- fast loading
+- modular code
+- reusable components
+- accessible color contrast
+- keyboard-friendly interactions
+- clean file organization
+- scalable for many future articles
+
+If using React:
+- organize into components for cards, layouts, nav, footer, article sections, FAQ, calculators, category blocks
+- use dummy local JSON or JS data for articles and tools
+- make it easy to expand later
+
+CONTENT DATA MODEL
+Create a structured data file for sample content:
+- id
+- title
+- slug
+- category
+- excerpt
+- problem
+- benefit
+- reading time
+- tags
+- featured image
+- faq items
+- related tools
+- related posts
+
+VISUAL QUALITY
+Use polished image placeholders relevant to:
+- kitchens
+- gardens
+- patios
+- bathrooms
+- organization
+- cleaning supplies
+- plants
+- tools
+- seasonal home scenes
+
+FINAL DELIVERABLE
+Output a beautiful, realistic, content-rich website prototype that feels ready to grow into a serious educational publishing site for home and garden users who want practical solutions.
+
+The final site should feel like:
+- an editorial magazine
+- a utility website
+- a home problem-solving platform
+
+Most important:
+Make the site useful.
+Use “The Problem → Education → Benefit” throughout the design, content, tools, and page structure.

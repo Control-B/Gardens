@@ -3,7 +3,10 @@ import type { GuideArticle } from "@/lib/guides";
 export type GuidePillar =
   | "Home Improvement"
   | "Garden & Outdoor"
-  | "Exterior & Curb Appeal";
+  | "Exterior & Curb Appeal"
+  | "Cleaning & Home Care"
+  | "Decor & Organization"
+  | "Outdoor Living";
 
 export type GuideContentType =
   | "How-To"

@@ -9,6 +9,9 @@ import HomePage from "@/pages/home";
 import HomeImprovementCategory from "@/pages/home-improvement";
 import GardenCategory from "@/pages/garden";
 import ExteriorCategory from "@/pages/exterior";
+import CleaningPage from "@/pages/cleaning";
+import DecorPage from "@/pages/decor";
+import OutdoorLivingPage from "@/pages/outdoor-living";
 
 import RoofCostCalculator from "@/pages/roof-cost";
 import PaintCalculator from "@/pages/paint";
@@ -32,6 +35,9 @@ function Router() {
       <Route path="/home-improvement" component={HomeImprovementCategory} />
       <Route path="/garden" component={GardenCategory} />
       <Route path="/exterior" component={ExteriorCategory} />
+      <Route path="/cleaning" component={CleaningPage} />
+      <Route path="/decor" component={DecorPage} />
+      <Route path="/outdoor-living" component={OutdoorLivingPage} />
 
       {/* Calculators */}
       <Route path="/roof-cost-calculator" component={RoofCostCalculator} />
