@@ -4,13 +4,11 @@ import { BookOpen, ChevronRight, Clock3, Search } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AdPlaceholder } from "@/components/AdPlaceholder";
-import { EducationalContentBlock } from "@/components/EducationalContentBlock";
 import { TrustSection } from "@/components/TrustSection";
 import { Input } from "@/components/ui/input";
 import { guideArticles } from "@/lib/guides";
-import { guidesEducationContent } from "@/lib/educationContent";
 import { guidesTrustContent } from "@/lib/trustContent";
-import { getGuideMetadata, topicClusters, type GuideContentType, type GuidePillar } from "@/lib/contentHub";
+import { getGuideMetadata, type GuideContentType, type GuidePillar } from "@/lib/contentHub";
 
 const PILLARS: (GuidePillar | "All")[] = [
   "All",
@@ -27,6 +25,21 @@ const CONTENT_TYPES: (GuideContentType | "All")[] = [
   "Mistakes",
   "Value",
   "Seasonal",
+];
+
+const GUIDE_IMAGE_POOL = [
+  "https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1594064935734-30e55f835a93?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1490750967868-88df5691cc1b?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=600&q=80&auto=format&fit=crop",
 ];
 
 function pillClasses(pillar: GuidePillar) {
@@ -55,29 +68,33 @@ export default function GuidesPage() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col" style={{ background: "#FDFAF6" }}>
       <Navbar />
 
       <main className="flex-1">
-        <section className="relative overflow-hidden bg-slate-950 text-white pt-20 pb-24 border-b border-border">
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950 to-emerald-950 z-0" />
-          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-0" />
-          <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm font-medium mb-6">
+        {/* ── Photo Hero ───────────────────────────────── */}
+        <section className="relative h-[50vh] min-h-[360px] flex items-end overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1600&q=85&auto=format&fit=crop"
+            alt="Reading and learning guides"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/10" />
+          <div className="relative z-10 container mx-auto px-4 md:px-10 pb-14 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 border border-white/25 text-green-200 text-sm font-medium mb-5">
               <BookOpen className="h-4 w-4" />
-              Authority Content Hub
+              Home & Garden Knowledge Hub
             </div>
-            <h1 className="text-4xl md:text-5xl font-black mb-4">Guides Organized by Pillar, Cluster, and Intent</h1>
-            <p className="text-lg text-slate-300 max-w-3xl mx-auto mb-8">
-              Browse the educational system behind the platform: how-to guides, cost pages,
-              seasonal content, value articles, and comparisons designed to support each topic cluster.
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Expert Guides for Homeowners & Gardeners</h1>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+              How-to guides, cost breakdowns, seasonal advice, and project planning — everything you need to make smarter home and garden decisions.
             </p>
             <div className="relative max-w-lg mx-auto">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-white/50" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-white/50 pointer-events-none" />
               <Input
                 type="text"
-                placeholder="Search guides by topic, cluster, or problem..."
-                className="h-12 pl-12 text-base rounded-full bg-white/10 border-white/20 text-white placeholder:text-white/40 focus-visible:ring-emerald-500"
+                placeholder="Search guides by topic, e.g. raised garden bed, roof cost..."
+                className="h-12 pl-12 text-base rounded-full bg-white/15 border-white/25 text-white placeholder:text-white/50 focus-visible:ring-white/30"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
@@ -85,92 +102,91 @@ export default function GuidesPage() {
           </div>
         </section>
 
-        <div className="container mx-auto px-4 md:px-8 py-12 max-w-6xl">
+        <div className="container mx-auto px-4 md:px-10 py-12 max-w-6xl">
           <AdPlaceholder />
 
+          {/* ── Filters ──────────────────────────────────── */}
           <section className="my-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {topicClusters.slice(0, 6).map((cluster) => (
-                <div key={cluster.id} className="rounded-2xl border border-border bg-white p-5">
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${pillClasses(cluster.pillar)}`}>
-                      {cluster.pillar}
-                    </span>
-                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">
-                      {cluster.priority}
-                    </span>
-                  </div>
-                  <h2 className="text-lg font-black text-slate-900">{cluster.title}</h2>
-                  <p className="text-sm text-slate-500 mt-2">{cluster.description}</p>
-                </div>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="text-xs font-bold uppercase tracking-widest text-stone-400 self-center mr-1">Category:</span>
+              {PILLARS.map((pillar) => (
+                <button
+                  key={pillar}
+                  onClick={() => setActivePillar(pillar)}
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+                    activePillar === pillar
+                      ? "bg-green-700 text-white shadow-sm"
+                      : "bg-white text-stone-600 border border-stone-200 hover:border-green-300 hover:text-green-700"
+                  }`}
+                >
+                  {pillar === "All" ? `All (${guideArticles.length})` : pillar}
+                </button>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <span className="text-xs font-bold uppercase tracking-widest text-stone-400 self-center mr-1">Type:</span>
+              {CONTENT_TYPES.map((type) => (
+                <button
+                  key={type}
+                  onClick={() => setActiveType(type)}
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+                    activeType === type
+                      ? "bg-stone-800 text-white shadow-sm"
+                      : "bg-white text-stone-600 border border-stone-200 hover:border-stone-400"
+                  }`}
+                >
+                  {type}
+                </button>
               ))}
             </div>
           </section>
 
-          <div className="flex flex-wrap gap-2 my-8">
-            {PILLARS.map((pillar) => (
-              <button
-                key={pillar}
-                onClick={() => setActivePillar(pillar)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
-                  activePillar === pillar ? "bg-emerald-600 text-white" : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                }`}
-              >
-                {pillar === "All" ? `All Pillars (${guideArticles.length})` : pillar}
-              </button>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap gap-2 mb-8">
-            {CONTENT_TYPES.map((type) => (
-              <button
-                key={type}
-                onClick={() => setActiveType(type)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
-                  activeType === type ? "bg-slate-900 text-white" : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                }`}
-              >
-                {type}
-              </button>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
-            {filtered.map((guide) => {
+          {/* ── Guide Cards with Images ───────────────────── */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10">
+            {filtered.map((guide, i) => {
               const meta = getGuideMetadata(guide);
               return (
                 <Link key={guide.slug} href={`/${guide.slug}`}>
-                  <div className="group h-full flex flex-col bg-white rounded-2xl border border-border hover:border-emerald-300 hover:shadow-lg transition-all cursor-pointer overflow-hidden">
-                    <div className="p-6 flex-1 flex flex-col">
-                      <div className="flex flex-wrap items-center gap-2 mb-3">
-                        <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${pillClasses(meta.pillar)}`}>
+                  <div className="group h-full flex flex-col bg-white rounded-2xl border border-stone-100 hover:shadow-md transition-all cursor-pointer overflow-hidden">
+                    <div className="h-44 overflow-hidden relative">
+                      <img
+                        src={GUIDE_IMAGE_POOL[i % GUIDE_IMAGE_POOL.length]}
+                        alt={guide.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute top-3 left-3">
+                        <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${pillClasses(meta.pillar)}`}>
                           {meta.pillar}
                         </span>
-                        <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">
+                      </div>
+                      {guide.calculatorHref && (
+                        <div className="absolute bottom-3 right-3">
+                          <span className="text-xs font-bold px-2 py-1 rounded-full bg-white/90 text-green-700">
+                            + Calculator
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    <div className="p-5 flex-1 flex flex-col">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-stone-100 text-stone-600">
                           {meta.contentType}
                         </span>
-                        <div className="flex items-center gap-1 text-xs text-slate-400">
+                        <div className="flex items-center gap-1 text-xs text-stone-400">
                           <Clock3 className="h-3 w-3" />
                           {guide.readTime}
                         </div>
                       </div>
-                      <p className="text-xs uppercase tracking-[0.16em] text-slate-400 mb-2">{meta.cluster}</p>
-                      <h3 className="font-black text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors leading-snug flex-1">
+                      <h3 className="font-bold text-stone-900 mb-2 group-hover:text-green-700 transition-colors leading-snug flex-1">
                         {guide.title}
                       </h3>
-                      <p className="text-sm text-slate-500 mb-4 leading-relaxed">{guide.description}</p>
-                      <div className="flex items-center gap-1 text-emerald-600 text-sm font-semibold mt-auto">
+                      <p className="text-sm text-stone-500 mb-4 leading-relaxed">{guide.description}</p>
+                      <div className="flex items-center gap-1 text-green-700 text-sm font-semibold mt-auto">
                         <BookOpen className="h-4 w-4" />
                         Read guide
                         <ChevronRight className="h-4 w-4" />
                       </div>
                     </div>
-                    {guide.calculatorHref && (
-                      <div className="px-6 py-3 bg-emerald-50 border-t border-emerald-100 flex items-center gap-2">
-                        <span className="text-xs text-emerald-700 font-medium">Related tool:</span>
-                        <span className="text-xs font-bold text-emerald-800">{guide.calculatorLabel}</span>
-                      </div>
-                    )}
                   </div>
                 </Link>
               );
@@ -179,13 +195,10 @@ export default function GuidesPage() {
 
           {filtered.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-slate-500 text-lg">No guides match that filter set yet. Try a broader keyword or pillar.</p>
+              <p className="text-2xl mb-2">🔍</p>
+              <p className="text-stone-500 text-lg">No guides match that search. Try a different topic or clear the filter.</p>
             </div>
           )}
-
-          <div className="my-12">
-            <EducationalContentBlock {...guidesEducationContent} theme="emerald" />
-          </div>
 
           <AdPlaceholder />
         </div>
