@@ -1,70 +1,43 @@
 import { Link, useLocation } from "wouter";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-
-const navThemeByRoute = [
-  {
-    match: (pathname: string) => pathname.startsWith("/home-improvement"),
-    navClassName: "border-emerald-900/60 bg-gradient-to-r from-slate-950/95 via-emerald-950/92 to-slate-900/95 supports-[backdrop-filter]:bg-emerald-950/60",
-    linkClassName: "hover:text-emerald-200",
-    activeClassName: "text-emerald-200",
-    buttonClassName: "bg-emerald-600 text-white hover:bg-emerald-700",
-  },
-  {
-    match: (pathname: string) => pathname.startsWith("/garden"),
-    navClassName: "border-lime-900/60 bg-gradient-to-r from-slate-950/95 via-lime-950/92 to-slate-900/95 supports-[backdrop-filter]:bg-lime-950/60",
-    linkClassName: "hover:text-lime-200",
-    activeClassName: "text-lime-200",
-    buttonClassName: "bg-lime-700 text-white hover:bg-lime-800",
-  },
-  {
-    match: (pathname: string) => pathname.startsWith("/exterior"),
-    navClassName: "border-amber-900/60 bg-gradient-to-r from-slate-950/95 via-amber-950/92 to-slate-900/95 supports-[backdrop-filter]:bg-amber-950/60",
-    linkClassName: "hover:text-amber-200",
-    activeClassName: "text-amber-200",
-    buttonClassName: "bg-amber-600 text-white hover:bg-amber-700",
-  },
-  {
-    match: () => true,
-    navClassName: "border-emerald-900/60 bg-gradient-to-r from-slate-950/95 via-emerald-950/92 to-slate-900/95 supports-[backdrop-filter]:bg-emerald-950/60",
-    linkClassName: "hover:text-emerald-200",
-    activeClassName: "text-emerald-200",
-    buttonClassName: "bg-emerald-600 text-white hover:bg-emerald-700",
-  },
-];
 
 export function Navbar() {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const theme = navThemeByRoute.find(({ match }) => match(location)) ?? navThemeByRoute[navThemeByRoute.length - 1];
 
   const links = [
-    { label: "Home", href: "/" },
     { label: "Home Improvement", href: "/home-improvement" },
     { label: "Garden", href: "/garden" },
     { label: "Exterior", href: "/exterior" },
     { label: "Guides", href: "/guides" },
+    { label: "Calculators", href: "/roof-cost-calculator" },
   ];
 
   return (
-    <nav className={`sticky top-0 z-50 w-full border-b backdrop-blur ${theme.navClassName}`}>
+    <nav className="sticky top-0 z-50 w-full bg-white border-b border-stone-200 shadow-sm">
       <div className="container mx-auto px-4 md:px-8 flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2" data-testid="link-home-logo">
-          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-emerald-600 text-white font-bold text-sm">
-            <Leaf className="h-4 w-4" />
+        <Link href="/" className="flex items-center gap-2.5" data-testid="link-home-logo">
+          <div className="flex items-center justify-center h-9 w-9 rounded-full bg-gradient-to-br from-green-600 to-emerald-700 shadow">
+            <svg viewBox="0 0 24 24" className="h-5 w-5 text-white fill-current" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20C19 20 22 3 22 3c-1 2-8 5.5-8 5.5S11 1 3 1c0 0 2 2 3.5 4.5C8 8 9 11 9 11S11 7 17 8z" />
+            </svg>
           </div>
-          <span className="text-xl font-bold text-white">Gardens</span>
+          <div className="flex flex-col leading-none">
+            <span className="text-lg font-bold text-green-800 tracking-tight">Gardens</span>
+            <span className="text-[10px] text-stone-400 font-medium tracking-widest uppercase">Home & Garden</span>
+          </div>
         </Link>
 
-        {/* Desktop Nav — centered */}
-        <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+        <div className="hidden md:flex items-center gap-7 absolute left-1/2 -translate-x-1/2">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors ${theme.linkClassName} ${
-                location === link.href ? theme.activeClassName : "text-white/75"
+              className={`text-sm font-semibold tracking-wide transition-colors ${
+                location.startsWith(link.href)
+                  ? "text-green-700 border-b-2 border-green-600 pb-0.5"
+                  : "text-stone-600 hover:text-green-700"
               }`}
               data-testid={`link-nav-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
             >
@@ -73,16 +46,18 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* CTA stays right-aligned */}
-        <div className="hidden md:flex">
-          <Button size="sm" className={theme.buttonClassName} asChild>
-            <Link href="/roof-cost-calculator" data-testid="link-nav-cta">Get a Cost Estimate</Link>
-          </Button>
+        <div className="hidden md:flex items-center gap-3">
+          <Link
+            href="/roof-cost-calculator"
+            className="text-sm font-bold px-4 py-2 rounded-full bg-green-700 text-white hover:bg-green-800 transition-colors shadow-sm"
+            data-testid="link-nav-cta"
+          >
+            Free Cost Estimate
+          </Link>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 rounded-md text-white hover:bg-white/10 transition-colors"
+          className="md:hidden p-2 rounded-md text-stone-600 hover:bg-stone-100 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           data-testid="btn-mobile-menu"
           aria-label="Toggle menu"
@@ -91,27 +66,28 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden border-t border-white/10 bg-slate-950/95 px-4 py-4 flex flex-col gap-3">
+        <div className="md:hidden border-t border-stone-100 bg-white px-4 py-4 flex flex-col gap-3">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className={`text-base font-medium py-2 transition-colors ${theme.linkClassName} ${
-                location === link.href ? theme.activeClassName : "text-white/75"
+              className={`text-base font-semibold py-2 transition-colors ${
+                location.startsWith(link.href) ? "text-green-700" : "text-stone-600 hover:text-green-700"
               }`}
               data-testid={`link-mobile-nav-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
             >
               {link.label}
             </Link>
           ))}
-          <Button className={`mt-2 w-full ${theme.buttonClassName}`} asChild>
-            <Link href="/roof-cost-calculator" onClick={() => setIsOpen(false)}>
-              Get a Cost Estimate
-            </Link>
-          </Button>
+          <Link
+            href="/roof-cost-calculator"
+            onClick={() => setIsOpen(false)}
+            className="mt-2 text-center font-bold px-4 py-2.5 rounded-full bg-green-700 text-white hover:bg-green-800 transition-colors"
+          >
+            Free Cost Estimate
+          </Link>
         </div>
       )}
     </nav>

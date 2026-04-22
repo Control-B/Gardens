@@ -3,27 +3,18 @@ import { useLocation, Link } from "wouter";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AdPlaceholder } from "@/components/AdPlaceholder";
-import { EducationalContentBlock } from "@/components/EducationalContentBlock";
-import { TrustSection } from "@/components/TrustSection";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { parseNaturalLanguage } from "@/lib/nlParser";
-import { homeEducationContent } from "@/lib/educationContent";
-import { homeTrustContent } from "@/lib/trustContent";
 import { guideArticles } from "@/lib/guides";
 import {
-  authorityFramework,
-  contentTypeBlueprint,
   getGuideMetadata,
   seasonalPlaybook,
-  topicClusters,
-  type GuidePillar,
 } from "@/lib/contentHub";
 import {
-  BadgeDollarSign,
+  ArrowRight,
   BookOpen,
-  CalendarRange,
   ChevronRight,
   Clock,
   Fence,
@@ -32,11 +23,9 @@ import {
   Leaf,
   Paintbrush,
   Search,
-  ShieldCheck,
   Sprout,
   Star,
   TreeDeciduous,
-  Zap,
 } from "lucide-react";
 
 const CALCULATORS = [
@@ -44,49 +33,55 @@ const CALCULATORS = [
     title: "Roof Cost Calculator",
     description: "Estimate roof replacement cost by material before you compare quotes.",
     href: "/roof-cost-calculator",
-    icon: <Home className="h-6 w-6" />,
-    badge: "High CPC",
-    badgeColor: "bg-amber-100 text-amber-800",
+    icon: <Home className="h-5 w-5" />,
+    color: "bg-amber-50 text-amber-700 border-amber-200",
+    hoverColor: "hover:bg-amber-50 hover:border-amber-300",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop",
   },
   {
     title: "Paint Calculator",
     description: "Get the gallons, coats, and waste factor right before you buy paint.",
     href: "/paint-calculator",
-    icon: <Paintbrush className="h-6 w-6" />,
-    badge: "Quick Win",
-    badgeColor: "bg-blue-100 text-blue-800",
+    icon: <Paintbrush className="h-5 w-5" />,
+    color: "bg-sky-50 text-sky-700 border-sky-200",
+    hoverColor: "hover:bg-sky-50 hover:border-sky-300",
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80&auto=format&fit=crop",
   },
   {
-    title: "Lawn Care Cost Calculator",
+    title: "Lawn Care Calculator",
     description: "Compare pro vs. DIY lawn care and see where seasonal savings show up.",
     href: "/lawn-care-calculator",
-    icon: <Leaf className="h-6 w-6" />,
-    badge: "Seasonal",
-    badgeColor: "bg-emerald-100 text-emerald-800",
+    icon: <Leaf className="h-5 w-5" />,
+    color: "bg-green-50 text-green-700 border-green-200",
+    hoverColor: "hover:bg-green-50 hover:border-green-300",
+    image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=600&q=80&auto=format&fit=crop",
   },
   {
     title: "Fence Cost Calculator",
     description: "Benchmark materials, labor, gates, and post counts before the fence quote.",
     href: "/fence-cost-calculator",
-    icon: <Fence className="h-6 w-6" />,
-    badge: "Lead Gen",
-    badgeColor: "bg-orange-100 text-orange-800",
+    icon: <Fence className="h-5 w-5" />,
+    color: "bg-orange-50 text-orange-700 border-orange-200",
+    hoverColor: "hover:bg-orange-50 hover:border-orange-300",
+    image: "https://images.unsplash.com/photo-1594064935734-30e55f835a93?w=600&q=80&auto=format&fit=crop",
   },
   {
     title: "Garden Planting Calculator",
     description: "Plan spacing, soil volume, and garden bed setup costs in one tool.",
     href: "/garden-planting-calculator",
-    icon: <TreeDeciduous className="h-6 w-6" />,
-    badge: "Authority",
-    badgeColor: "bg-lime-100 text-lime-800",
+    icon: <TreeDeciduous className="h-5 w-5" />,
+    color: "bg-lime-50 text-lime-700 border-lime-200",
+    hoverColor: "hover:bg-lime-50 hover:border-lime-300",
+    image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80&auto=format&fit=crop",
   },
   {
     title: "Home Renovation Budget",
     description: "Model realistic project budgets with scope, contingency, and room type.",
     href: "/home-renovation-calculator",
-    icon: <Hammer className="h-6 w-6" />,
-    badge: "High Intent",
-    badgeColor: "bg-purple-100 text-purple-800",
+    icon: <Hammer className="h-5 w-5" />,
+    color: "bg-purple-50 text-purple-700 border-purple-200",
+    hoverColor: "hover:bg-purple-50 hover:border-purple-300",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&auto=format&fit=crop",
   },
 ];
 
@@ -95,34 +90,87 @@ const HUBS = [
     title: "Home Improvement",
     description: "Repairs, budgeting, renovation, and energy-saving decisions for the whole house.",
     href: "/home-improvement",
-    color: "from-emerald-600 to-emerald-800",
-    icon: <Hammer className="h-8 w-8" />,
+    tag: "Indoor Projects",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=85&auto=format&fit=crop",
+    color: "from-emerald-900/70 to-emerald-950/80",
+    icon: <Hammer className="h-6 w-6" />,
   },
   {
     title: "Garden & Outdoor",
     description: "Beginner gardening, seasonal planning, landscaping, and food-growing systems.",
     href: "/garden",
-    color: "from-lime-600 to-lime-800",
-    icon: <Sprout className="h-8 w-8" />,
+    tag: "Outdoor Living",
+    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=900&q=85&auto=format&fit=crop",
+    color: "from-green-900/70 to-green-950/80",
+    icon: <Sprout className="h-6 w-6" />,
   },
   {
     title: "Exterior & Curb Appeal",
     description: "Roofing, fencing, ROI, and curb-appeal projects that influence resale value.",
     href: "/exterior",
-    color: "from-amber-600 to-amber-800",
-    icon: <Home className="h-8 w-8" />,
+    tag: "Curb Appeal",
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&q=85&auto=format&fit=crop",
+    color: "from-amber-900/70 to-amber-950/80",
+    icon: <Home className="h-6 w-6" />,
   },
 ];
 
-function pillarPillars(pillar: GuidePillar) {
-  if (pillar === "Garden & Outdoor") {
-    return "bg-lime-100 text-lime-800";
-  }
-  if (pillar === "Exterior & Curb Appeal") {
-    return "bg-amber-100 text-amber-800";
-  }
-  return "bg-emerald-100 text-emerald-800";
+const SEASONAL_IMAGES: Record<string, string> = {
+  Spring: "https://images.unsplash.com/photo-1490750967868-88df5691cc1b?w=600&q=80&auto=format&fit=crop",
+  Summer: "https://images.unsplash.com/photo-1467685790346-20bfe73a81f0?w=600&q=80&auto=format&fit=crop",
+  Fall: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=600&q=80&auto=format&fit=crop",
+  Winter: "https://images.unsplash.com/photo-1518945756765-f8641d60aa75?w=600&q=80&auto=format&fit=crop",
+};
+
+const SEASONAL_COLORS: Record<string, string> = {
+  Spring: "from-pink-700/75 to-rose-900/80",
+  Summer: "from-green-700/75 to-green-900/80",
+  Fall: "from-orange-700/75 to-amber-900/80",
+  Winter: "from-blue-700/75 to-slate-900/80",
+};
+
+const GUIDE_IMAGES: string[] = [
+  "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80&auto=format&fit=crop",
+];
+
+const PILLAR_COLORS: Record<string, string> = {
+  "Garden & Outdoor": "bg-lime-100 text-lime-800",
+  "Exterior & Curb Appeal": "bg-amber-100 text-amber-800",
+  "Home Improvement": "bg-emerald-100 text-emerald-800",
+};
+
+function pillarPill(pillar: string) {
+  return PILLAR_COLORS[pillar] ?? "bg-emerald-100 text-emerald-800";
 }
+
+const TRENDING = [
+  {
+    category: "Garden",
+    title: "How to Create a Raised Garden Bed from Scratch",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=700&q=80&auto=format&fit=crop",
+    href: "/how-to-create-a-raised-garden-bed",
+  },
+  {
+    category: "Home Improvement",
+    title: "How to Fix a Leaking Faucet Without Calling a Plumber",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=700&q=80&auto=format&fit=crop",
+    href: "/how-to-fix-a-leaking-faucet",
+  },
+  {
+    category: "Exterior",
+    title: "Best Roofing Materials: Cost vs. Lifespan Compared",
+    readTime: "10 min read",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&auto=format&fit=crop",
+    href: "/how-to-choose-roof-material",
+  },
+];
 
 export default function HomePage() {
   const [, setLocation] = useLocation();
@@ -137,76 +185,65 @@ export default function HomePage() {
     }
   };
 
-  const featuredGuides = guideArticles.filter((guide) => getGuideMetadata(guide).featured).slice(0, 6);
-  const stats = [
-    { stat: String(CALCULATORS.length), label: "live calculators", icon: <Zap className="h-5 w-5" /> },
-    { stat: `${guideArticles.length}+`, label: "educational guides", icon: <BookOpen className="h-5 w-5" /> },
-    { stat: `${topicClusters.length}`, label: "topic clusters", icon: <BadgeDollarSign className="h-5 w-5" /> },
-    { stat: "4", label: "seasonal update cycles", icon: <CalendarRange className="h-5 w-5" /> },
-  ];
+  const featuredGuides = guideArticles.filter((g) => getGuideMetadata(g).featured).slice(0, 6);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col" style={{ background: "#FDFAF6" }}>
       <Navbar />
 
       <main className="flex-1">
-        <section className="relative overflow-hidden bg-slate-950 text-white pt-24 pb-32 border-b border-border">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-emerald-950 to-slate-900 z-0" />
-          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-0" />
-          <div className="absolute top-16 right-8 h-72 w-72 rounded-full bg-emerald-500/10 blur-3xl z-0" />
-          <div className="absolute bottom-8 left-8 h-48 w-48 rounded-full bg-lime-500/10 blur-3xl z-0" />
 
-          <div className="container mx-auto px-4 md:px-8 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm font-medium mb-8">
-                <Leaf className="h-4 w-4" />
-                Home & Garden Authority Platform
-              </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight leading-tight">
-                The Wikipedia + Tools Hub
-                <br />
-                <span className="text-emerald-400">for Home & Garden Projects</span>
+        {/* ── Hero ─────────────────────────────────────── */}
+        <section className="relative h-[88vh] min-h-[560px] flex items-end overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=1800&q=90&auto=format&fit=crop"
+            alt="Beautiful garden in bloom"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent" />
+
+          <div className="relative z-10 container mx-auto px-4 md:px-10 pb-16 md:pb-20">
+            <div className="max-w-2xl">
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-green-300 mb-4">
+                Home & Garden Guide
+              </span>
+              <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-5 drop-shadow-lg">
+                Make Your Best Home,<br />
+                <span className="text-green-300">Starting Today.</span>
               </h1>
-              <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-                Browse topic clusters, run cost calculators, and learn with pages built around
-                Problem → Solution → Benefit + STAR. This is structured to scale into a true
-                category-dominating education system, not a random blog.
+              <p className="text-lg text-white/85 mb-8 leading-relaxed max-w-xl">
+                Free cost calculators, expert how-to guides, and seasonal advice — everything you need to plan smarter home and garden projects.
               </p>
 
               <form
                 onSubmit={handleSearch}
-                className="max-w-2xl mx-auto relative flex items-center bg-white/10 p-2 rounded-2xl backdrop-blur-md border border-white/20 mb-8"
+                className="flex items-center bg-white/95 backdrop-blur rounded-full shadow-xl overflow-hidden max-w-xl"
               >
-                <Search className="absolute left-6 h-5 w-5 text-white/50" />
+                <Search className="ml-5 h-5 w-5 text-stone-400 shrink-0" />
                 <Input
                   type="text"
-                  placeholder="e.g. kitchen remodel cost, fence 150 linear feet, spring garden checklist..."
-                  className="h-14 pl-14 pr-40 text-base rounded-xl bg-transparent border-0 text-white placeholder:text-white/40 focus-visible:ring-0"
+                  placeholder="e.g. kitchen remodel cost, spring garden checklist..."
+                  className="flex-1 h-14 px-4 text-base bg-transparent border-0 text-stone-800 placeholder:text-stone-400 focus-visible:ring-0 focus-visible:ring-offset-0"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                 />
                 <Button
                   type="submit"
-                  className="absolute right-2 h-11 rounded-xl px-8 bg-emerald-600 hover:bg-emerald-700 text-white font-bold"
+                  className="m-1.5 h-11 px-7 rounded-full bg-green-700 hover:bg-green-800 text-white font-bold text-sm"
                 >
-                  Explore
+                  Search
                 </Button>
               </form>
 
-              <div className="flex flex-wrap justify-center gap-2 text-sm text-slate-400">
-                <span>Try:</span>
-                {[
-                  "kitchen remodel cost",
-                  "roof cost for 2000 sq ft",
-                  "spring garden checklist",
-                  "paint calculator 3 rooms",
-                ].map((example) => (
+              <div className="flex flex-wrap gap-2 mt-4">
+                {["kitchen remodel cost", "roof cost for 2000 sq ft", "spring garden checklist", "paint 3 rooms"].map((ex) => (
                   <button
-                    key={example}
-                    onClick={() => setQuery(example)}
-                    className="px-3 py-1 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors cursor-pointer"
+                    key={ex}
+                    onClick={() => setQuery(ex)}
+                    className="px-3 py-1 rounded-full text-xs font-medium bg-white/15 border border-white/25 text-white hover:bg-white/25 transition-colors cursor-pointer"
                   >
-                    {example}
+                    {ex}
                   </button>
                 ))}
               </div>
@@ -214,47 +251,56 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="bg-emerald-950 text-white border-b border-emerald-900/50">
-          <div className="container mx-auto px-4 md:px-8 py-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((item) => (
-                <div key={item.label} className="flex items-center gap-3">
-                  <div className="text-emerald-400">{item.icon}</div>
-                  <div>
-                    <div className="font-black text-lg text-white">{item.stat}</div>
-                    <div className="text-xs text-emerald-300">{item.label}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
+        {/* ── Trending strip ────────────────────────────── */}
+        <section className="bg-green-800 text-white">
+          <div className="container mx-auto px-4 md:px-10 py-3 flex items-center gap-4 overflow-x-auto">
+            <span className="text-xs font-bold uppercase tracking-widest text-green-300 whitespace-nowrap shrink-0">Trending Now</span>
+            <div className="w-px h-4 bg-green-600 shrink-0" />
+            {[
+              "How to Start a Vegetable Garden",
+              "Best Paint Colors for 2025",
+              "Roof Replacement Cost Guide",
+              "DIY Raised Garden Bed",
+              "Spring Lawn Care Checklist",
+            ].map((item, i) => (
+              <span key={item} className="flex items-center gap-3 whitespace-nowrap">
+                {i > 0 && <span className="text-green-600">•</span>}
+                <button className="text-sm hover:text-green-200 transition-colors">{item}</button>
+              </span>
+            ))}
           </div>
         </section>
 
-        <div className="container mx-auto px-4 md:px-8 py-12 max-w-6xl">
+        <div className="container mx-auto px-4 md:px-10 py-14 max-w-6xl">
           <AdPlaceholder />
 
+          {/* ── Main Hubs – photo cards ───────────────────── */}
           <section className="my-14">
-            <div className="flex items-end justify-between gap-4 mb-8 flex-wrap">
+            <div className="flex items-end justify-between gap-4 mb-8">
               <div>
-                <h2 className="text-3xl font-black text-slate-900">Start With the Main Hubs</h2>
-                <p className="text-slate-500 mt-1">
-                  Three parent silos organize the content architecture and make internal linking clearer.
-                </p>
+                <p className="text-xs font-bold uppercase tracking-widest text-green-700 mb-1">Explore by Category</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-stone-900">Start With What You Love</h2>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {HUBS.map((hub) => (
                 <Link key={hub.href} href={hub.href}>
-                  <div
-                    className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br ${hub.color} text-white p-8 cursor-pointer hover:scale-[1.02] transition-transform h-full`}
-                  >
-                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
-                    <div className="relative z-10">
-                      <div className="mb-4 opacity-90">{hub.icon}</div>
-                      <h3 className="text-xl font-black mb-3">{hub.title}</h3>
-                      <p className="text-sm opacity-85 leading-relaxed mb-5">{hub.description}</p>
-                      <div className="flex items-center gap-1 text-sm font-bold opacity-90 group-hover:opacity-100">
-                        Explore hub <ChevronRight className="h-4 w-4" />
+                  <div className="group relative overflow-hidden rounded-2xl cursor-pointer h-72 md:h-80 shadow-md hover:shadow-xl transition-shadow">
+                    <img
+                      src={hub.image}
+                      alt={hub.title}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-t ${hub.color}`} />
+                    <div className="absolute inset-0 p-7 flex flex-col justify-end">
+                      <div className="flex items-center gap-2 mb-2 text-white/75 text-xs font-semibold uppercase tracking-widest">
+                        {hub.icon}
+                        {hub.tag}
+                      </div>
+                      <h3 className="text-2xl font-extrabold text-white mb-2">{hub.title}</h3>
+                      <p className="text-sm text-white/80 leading-relaxed mb-4">{hub.description}</p>
+                      <div className="flex items-center gap-1 text-green-300 text-sm font-bold group-hover:gap-2 transition-all">
+                        Explore <ArrowRight className="h-4 w-4" />
                       </div>
                     </div>
                   </div>
@@ -263,100 +309,83 @@ export default function HomePage() {
             </div>
           </section>
 
+          {/* ── Trending Articles ─────────────────────────── */}
           <section className="my-14">
-            <div className="flex items-end justify-between gap-4 mb-8 flex-wrap">
+            <div className="flex items-end justify-between gap-4 mb-8">
               <div>
-                <h2 className="text-3xl font-black text-slate-900">Topic Clusters Built to Scale</h2>
-                <p className="text-slate-500 mt-1">
-                  These silos turn the site into a structured authority platform for 100+ pages.
-                </p>
+                <p className="text-xs font-bold uppercase tracking-widest text-green-700 mb-1">Editor's Picks</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-stone-900">Trending This Season</h2>
               </div>
-              <Link
-                href="/guides"
-                className="hidden md:flex items-center gap-1 text-emerald-600 hover:text-emerald-700 font-semibold text-sm"
-              >
-                Browse all guides <ChevronRight className="h-4 w-4" />
+              <Link href="/guides" className="hidden md:flex items-center gap-1 text-green-700 hover:text-green-800 font-semibold text-sm">
+                All articles <ChevronRight className="h-4 w-4" />
               </Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {topicClusters.map((cluster) => (
-                <div key={cluster.id} className="rounded-2xl border border-border bg-white p-6 shadow-sm">
-                  <div className="flex flex-wrap items-center gap-2 mb-3">
-                    <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${pillarPillars(cluster.pillar)}`}>
-                      {cluster.pillar}
-                    </span>
-                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">
-                      {cluster.priority}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-black text-slate-900">{cluster.title}</h3>
-                  <p className="text-sm text-slate-500 mt-2 leading-relaxed">{cluster.description}</p>
-                  <p className="text-sm text-slate-700 mt-4 font-medium">{cluster.intent}</p>
-                  <div className="mt-4 space-y-2">
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.16em] text-slate-400 mb-1">Article ideas</p>
-                      <p className="text-sm text-slate-700">{cluster.articleIdeas.join(" • ")}</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {TRENDING.map((article, i) => (
+                <Link key={article.href} href={article.href}>
+                  <div className="group cursor-pointer h-full flex flex-col">
+                    <div className="relative overflow-hidden rounded-2xl mb-4 shadow-sm">
+                      <img
+                        src={article.image}
+                        alt={article.title}
+                        className={`w-full object-cover transition-transform duration-500 group-hover:scale-105 ${i === 0 ? "h-64" : "h-48"}`}
+                      />
+                      <div className="absolute top-3 left-3">
+                        <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/90 text-green-800">
+                          {article.category}
+                        </span>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.16em] text-slate-400 mb-1">Tool ideas</p>
-                      <p className="text-sm text-slate-700">{cluster.toolIdeas.join(" • ")}</p>
+                    <div className="flex items-center gap-2 text-xs text-stone-400 mb-2">
+                      <Clock className="h-3 w-3" />
+                      {article.readTime}
+                    </div>
+                    <h3 className="font-bold text-stone-900 text-lg leading-snug group-hover:text-green-700 transition-colors">
+                      {article.title}
+                    </h3>
+                    <div className="mt-3 flex items-center gap-1 text-green-700 text-sm font-semibold">
+                      Read more <ChevronRight className="h-4 w-4" />
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </section>
 
           <AdPlaceholder />
 
+          {/* ── Free Calculators ─────────────────────────── */}
           <section className="my-14">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl font-black text-slate-900">Educational System</h2>
-              <p className="text-slate-500 mt-2">
-                Every strong page should teach, prove, and convert. This framework makes the site more
-                useful to readers and more coherent to search engines.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-8">
-              {authorityFramework.map((item, index) => (
-                <div key={item.title} className="rounded-2xl border border-border bg-white p-6">
-                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-emerald-700 font-black mb-4">
-                    {index + 1}
-                  </div>
-                  <h3 className="font-black text-slate-900">{item.title}</h3>
-                  <p className="text-sm text-slate-500 mt-2 leading-relaxed">{item.detail}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="my-14">
-            <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
+            <div className="flex items-end justify-between gap-4 mb-8">
               <div>
-                <h2 className="text-3xl font-black text-slate-900">Free Cost Calculators</h2>
-                <p className="text-slate-500 mt-1">
-                  Monetizable, high-intent tools that support the content clusters.
-                </p>
+                <p className="text-xs font-bold uppercase tracking-widest text-green-700 mb-1">Plan Smarter</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-stone-900">Free Cost Calculators</h2>
+                <p className="text-stone-500 mt-1">Know what your project should cost before you get the first quote.</p>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {CALCULATORS.map((calc) => (
                 <Link key={calc.href} href={calc.href}>
-                  <div className="group p-6 bg-white rounded-2xl border border-border hover:border-emerald-300 hover:shadow-lg transition-all cursor-pointer h-full">
-                    <span className={`inline-block text-xs font-bold px-2 py-0.5 rounded-full mb-3 ${calc.badgeColor}`}>
-                      {calc.badge}
-                    </span>
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 transition-colors">
+                  <div className={`group relative overflow-hidden rounded-2xl border bg-white hover:shadow-lg transition-all cursor-pointer h-full`}>
+                    <div className="h-40 overflow-hidden">
+                      <img
+                        src={calc.image}
+                        alt={calc.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <div className={`inline-flex items-center gap-2 text-xs font-bold px-3 py-1 rounded-full mb-3 border ${calc.color}`}>
                         {calc.icon}
+                        {calc.title.split(" ")[0]}
                       </div>
-                      <h3 className="font-black text-slate-900 group-hover:text-emerald-700 transition-colors">
+                      <h3 className="font-bold text-stone-900 mb-1.5 group-hover:text-green-700 transition-colors">
                         {calc.title}
                       </h3>
-                    </div>
-                    <p className="text-sm text-slate-500 leading-relaxed">{calc.description}</p>
-                    <div className="mt-4 flex items-center gap-1 text-emerald-600 text-sm font-semibold">
-                      Open calculator <ChevronRight className="h-4 w-4" />
+                      <p className="text-sm text-stone-500 leading-relaxed">{calc.description}</p>
+                      <div className="mt-4 flex items-center gap-1 text-green-700 text-sm font-semibold">
+                        Open calculator <ArrowRight className="h-4 w-4" />
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -364,74 +393,87 @@ export default function HomePage() {
             </div>
           </section>
 
-          <div className="my-14">
-            <EducationalContentBlock {...homeEducationContent} theme="emerald" />
-          </div>
-
-          <section className="my-14 bg-slate-950 rounded-3xl p-10 text-white">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          {/* ── Seasonal Playbook ─────────────────────────── */}
+          <section className="my-14">
+            <div className="flex items-end justify-between gap-4 mb-8">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm font-medium mb-4">
-                  <ShieldCheck className="h-4 w-4" />
-                  Content Engine
-                </div>
-                <h2 className="text-3xl font-black mb-4">The platform wins by mixing tools, education, and recurring content.</h2>
-                <p className="text-slate-300 leading-relaxed">
-                  Instead of publishing disconnected articles, the site now centers on reusable content types
-                  that can be expanded cluster by cluster with better internal linking and stronger keyword coverage.
-                </p>
+                <p className="text-xs font-bold uppercase tracking-widest text-green-700 mb-1">Year-Round Guidance</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-stone-900">Seasonal Home & Garden Guide</h2>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {contentTypeBlueprint.map((type) => (
-                  <div key={type} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="font-semibold text-white">{type}</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+              {seasonalPlaybook.map((season) => (
+                <div key={season.season} className="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer h-80">
+                  <img
+                    src={SEASONAL_IMAGES[season.season] ?? "https://images.unsplash.com/photo-1490750967868-88df5691cc1b?w=600&q=80&auto=format&fit=crop"}
+                    alt={season.season}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${SEASONAL_COLORS[season.season] ?? "from-green-900/80 to-transparent"}`} />
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    <div className="flex items-center gap-2 text-white/80 text-xs font-bold uppercase tracking-widest mb-2">
+                      <Star className="h-3.5 w-3.5" />
+                      {season.season}
+                    </div>
+                    <p className="text-sm text-white/90 leading-relaxed mb-3">{season.focus}</p>
+                    <ul className="space-y-1.5">
+                      {season.pages.slice(0, 3).map((page) => (
+                        <li key={page} className="text-xs text-white/75 flex items-start gap-2">
+                          <span className="mt-1.5 h-1 w-1 rounded-full bg-white/60 shrink-0" />
+                          {page}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </section>
 
+          <AdPlaceholder />
+
+          {/* ── Featured Guides ───────────────────────────── */}
           <section className="my-14">
-            <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
+            <div className="flex items-end justify-between gap-4 mb-8">
               <div>
-                <h2 className="text-3xl font-black text-slate-900">Featured Guides</h2>
-                <p className="text-slate-500 mt-1">
-                  Practical pages selected across high-traffic, high-CPC, and seasonal clusters.
-                </p>
+                <p className="text-xs font-bold uppercase tracking-widest text-green-700 mb-1">Learn & Do</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-stone-900">Featured Guides</h2>
               </div>
-              <Link
-                href="/guides"
-                className="hidden md:flex items-center gap-1 text-emerald-600 hover:text-emerald-700 font-semibold text-sm"
-              >
+              <Link href="/guides" className="hidden md:flex items-center gap-1 text-green-700 hover:text-green-800 font-semibold text-sm">
                 All guides <ChevronRight className="h-4 w-4" />
               </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {featuredGuides.map((guide) => {
+              {featuredGuides.map((guide, i) => {
                 const meta = getGuideMetadata(guide);
                 return (
                   <Link key={guide.slug} href={`/${guide.slug}`}>
-                    <div className="group p-6 bg-white rounded-2xl border border-border hover:border-emerald-300 hover:shadow-md transition-all cursor-pointer h-full flex flex-col">
-                      <div className="flex flex-wrap items-center gap-2 mb-3">
-                        <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${pillarPillars(meta.pillar)}`}>
-                          {meta.pillar}
-                        </span>
-                        <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-full">
-                          {meta.contentType}
-                        </span>
-                        <div className="flex items-center gap-1 text-xs text-slate-400">
-                          <Clock className="h-3 w-3" />
-                          {guide.readTime}
-                        </div>
+                    <div className="group cursor-pointer bg-white border border-stone-100 rounded-2xl overflow-hidden hover:shadow-md transition-all h-full flex flex-col">
+                      <div className="h-44 overflow-hidden">
+                        <img
+                          src={GUIDE_IMAGES[i % GUIDE_IMAGES.length]}
+                          alt={guide.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
                       </div>
-                      <h3 className="font-bold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors flex-1">
-                        {guide.title}
-                      </h3>
-                      <p className="text-sm text-slate-500 mb-4">{guide.description}</p>
-                      <div className="flex items-center gap-1 text-emerald-600 text-sm font-semibold mt-auto">
-                        <BookOpen className="h-4 w-4" />
-                        Read guide
-                        <ChevronRight className="h-4 w-4" />
+                      <div className="p-5 flex flex-col flex-1">
+                        <div className="flex flex-wrap items-center gap-2 mb-3">
+                          <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${pillarPill(meta.pillar)}`}>
+                            {meta.pillar}
+                          </span>
+                          <div className="flex items-center gap-1 text-xs text-stone-400">
+                            <Clock className="h-3 w-3" />
+                            {guide.readTime}
+                          </div>
+                        </div>
+                        <h3 className="font-bold text-stone-900 mb-2 group-hover:text-green-700 transition-colors flex-1 leading-snug">
+                          {guide.title}
+                        </h3>
+                        <p className="text-sm text-stone-500 mb-4 leading-relaxed">{guide.description}</p>
+                        <div className="flex items-center gap-1 text-green-700 text-sm font-semibold mt-auto">
+                          <BookOpen className="h-4 w-4" />
+                          Read guide <ChevronRight className="h-4 w-4" />
+                        </div>
                       </div>
                     </div>
                   </Link>
@@ -440,63 +482,59 @@ export default function HomePage() {
             </div>
           </section>
 
-          <section className="my-14">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl font-black text-slate-900">Seasonal SEO Playbook</h2>
-              <p className="text-slate-500 mt-2">
-                Seasonal pages keep the site relevant all year and create natural refresh cycles for search.
+          {/* ── Inspiration Banner ─────────────────────────── */}
+          <section className="my-14 relative rounded-3xl overflow-hidden shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?w=1400&q=85&auto=format&fit=crop"
+              alt="Beautiful home garden inspiration"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-green-950/85 via-green-900/70 to-transparent" />
+            <div className="relative z-10 p-12 md:p-16 max-w-lg">
+              <p className="text-xs font-bold uppercase tracking-widest text-green-300 mb-3">Make Your Best Home</p>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight">
+                Your Dream Garden Starts With the Right Plan
+              </h2>
+              <p className="text-white/80 mb-8 leading-relaxed">
+                Use our free planning tools and step-by-step guides to design outdoor spaces you'll love all year long.
               </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-8">
-              {seasonalPlaybook.map((season) => (
-                <div key={season.season} className="rounded-2xl border border-border bg-white p-6">
-                  <div className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full mb-4">
-                    <Star className="h-4 w-4" />
-                    {season.season}
-                  </div>
-                  <p className="text-sm text-slate-600 leading-relaxed">{season.focus}</p>
-                  <ul className="mt-4 space-y-2">
-                    {season.pages.map((page) => (
-                      <li key={page} className="text-sm text-slate-800 flex items-start gap-2">
-                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-600" />
-                        <span>{page}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              <Link
+                href="/garden"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-green-800 font-bold hover:bg-green-50 transition-colors shadow"
+              >
+                Explore the Garden Hub <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </section>
 
+          {/* ── FAQ ───────────────────────────────────────── */}
           <section className="my-14">
-            <h2 className="text-3xl font-black text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="text-center mb-10">
+              <p className="text-xs font-bold uppercase tracking-widest text-green-700 mb-2">Got Questions?</p>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-stone-900">Frequently Asked Questions</h2>
+            </div>
             <div className="max-w-2xl mx-auto">
               <FAQAccordion
                 items={[
                   {
                     question: "Are these calculators and guides free to use?",
-                    answer:
-                      "Yes. The calculators and educational pages are free to access and do not require an account.",
+                    answer: "Yes. All calculators and educational pages are completely free to access and require no account or sign-up.",
                   },
                   {
-                    question: "How is the site structured for SEO growth?",
-                    answer:
-                      "The site is organized around parent hubs, topic clusters, calculators, and supporting guides so related pages can strengthen each other instead of competing randomly.",
-                  },
-                  {
-                    question: "Do the guides follow the same educational format?",
-                    answer:
-                      "That is the goal. The strongest pages use Problem → Solution → Benefit plus a STAR scenario so each article teaches clearly and proves the advice with a real example.",
+                    question: "How accurate are the cost estimates?",
+                    answer: "Estimates are based on national averages and are designed to help you benchmark quotes and ask better questions. Always get multiple professional quotes for your specific location.",
                   },
                   {
                     question: "Can I use these estimates when talking to contractors?",
-                    answer:
-                      "Yes. The calculators are designed to help you benchmark quotes, ask better questions, and understand where material and labor costs are coming from.",
+                    answer: "Absolutely. The calculators are designed to help you benchmark quotes, understand where costs come from, and negotiate more confidently.",
                   },
                   {
-                    question: "Why include seasonal pages on a home and garden site?",
-                    answer:
-                      "Seasonal content captures recurring search demand and gives homeowners timely guidance when they are most likely to act.",
+                    question: "Why include seasonal guides on a home and garden site?",
+                    answer: "Seasonal content helps homeowners act at the right time of year, capturing timely opportunities to save money and get the best results from their projects.",
+                  },
+                  {
+                    question: "Do the guides cover beginner topics?",
+                    answer: "Yes! Many guides are written specifically for first-time homeowners and beginner gardeners, walking you through projects step by step.",
                   },
                 ]}
               />
@@ -506,7 +544,38 @@ export default function HomePage() {
           <AdPlaceholder />
         </div>
 
-        <TrustSection {...homeTrustContent} />
+        {/* ── Trust Footer Banner ───────────────────────── */}
+        <section className="bg-green-50 border-t border-green-100 py-14">
+          <div className="container mx-auto px-4 md:px-10 max-w-6xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              {[
+                {
+                  icon: "🌿",
+                  title: "Practical Advice",
+                  desc: "Every guide is written to help you actually do the project — not just read about it.",
+                },
+                {
+                  icon: "💰",
+                  title: "Know Before You Spend",
+                  desc: "Our free calculators give you real cost ranges so you're never surprised by a contractor's quote.",
+                },
+                {
+                  icon: "📅",
+                  title: "Seasonal & Up-to-Date",
+                  desc: "Guides are refreshed seasonally so the advice you get matches what's happening in your yard right now.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="flex gap-4">
+                  <span className="text-3xl">{item.icon}</span>
+                  <div>
+                    <h3 className="font-bold text-stone-900 mb-1">{item.title}</h3>
+                    <p className="text-sm text-stone-500 leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
